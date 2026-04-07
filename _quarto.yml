@@ -7,7 +7,7 @@ website:
   navbar:
     pinned: false
     right:
-      - href: 1-home.qmd
+      - href: index.qmd
         text: Home
       - href: 2-about.qmd
         text: CV

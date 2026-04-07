@@ -1,0 +1,39 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: ""
+  navbar:
+    pinned: false
+    right:
+      - href: 1-home.qmd
+        text: Home
+      - href: 2-about.qmd
+        text: CV
+      - href: 3-visuals.qmd
+        text: Maps
+      - href: 4-art.qmd
+        text: Climate&Art
+      - href: 5-women.qmd
+        text: FemaleVoices
+      - href: 6-contact.qmd
+        text: Contact
+  page-footer:
+    left: "©2026 · Crafted with care, coffee <i class='bi bi-cup-hot-fill'></i> and <a href='https://quarto.org' target='_blank'>Quarto</a>"
+    right: "<a href='https://www.linkedin.com/in/sabelasanfiz' target='_blank'><i class='bi bi-linkedin'></i></a> &nbsp; <a href='https://github.com/Sanfiz' target='_blank'><i class='bi bi-github'></i></a> &nbsp; <a href='https://bsky.app/profile/sabelasanfiz.bsky.social' target='_blank'><i class='bi bi-cloud-fill'></i></a> &nbsp; <a href='mailto:sabelsanfiz@gmail.com'><i class='bi bi-envelope-fill'></i></a>"
+
+format:
+  html:
+    theme: flatly
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    smooth-scroll: true
+    embed-resources: true
+    lightbox: true
+
+execute:
+  echo: false
+
+  

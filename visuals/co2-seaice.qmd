@@ -1,0 +1,86 @@
+---
+title: ""
+toc: false
+---
+
+```{=html}
+<div class="visual-detail">
+
+  <a href="../3-visuals.html" class="back-link">← Back to Visuals</a>
+
+  <h2 class="visual-title">CO₂ and Sea Ice Extent — Animated Time Series</h2>
+
+  <div class="visual-detail-media">
+    <video autoplay loop muted playsinline>
+      <source src="../images/visuals/co2-seaice.mp4" type="video/mp4"/>
+    </video>
+  </div>
+
+  <div class="visual-meta">
+    <p class="visual-desc">Animated dual time series showing the parallel evolution of atmospheric CO₂ concentration (Mauna Loa) and Arctic sea ice extent from the 1970s to the present. The animation highlights the inverse relationship between rising greenhouse gas levels and the long-term decline of sea ice.</p>
+    <table class="visual-info">
+      <tr><td class="meta-label">Tools</td><td>Python · Matplotlib · FuncAnimation</td></tr>
+      <tr><td class="meta-label">Context</td><td>Climate communication · Personal project</td></tr>
+      <tr><td class="meta-label">Data</td><td>NOAA / NSIDC</td></tr>
+    </table>
+  </div>
+
+</div>
+
+<style>
+.visual-detail {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem 1rem 3rem 1rem;
+}
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: #92a7f2 !important;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.back-link:hover {
+  text-decoration: underline;
+}
+.visual-title {
+  font-size: 1.6rem;
+  color: #e8a020 !important;
+  margin-bottom: 1.5rem;
+}
+.visual-detail-media img,
+.visual-detail-media video {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+  display: block;
+}
+.visual-meta {
+  margin-top: 1.8rem;
+}
+.visual-desc {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 1.2rem;
+  text-align: justify;
+}
+.visual-info {
+  border: none;
+  width: 100%;
+  font-size: 0.9rem;
+}
+.visual-info td {
+  padding: 0.4rem 0.8rem 0.4rem 0;
+  border: none;
+  vertical-align: top;
+}
+.meta-label {
+  font-weight: 600;
+  color: #94805c;
+  white-space: nowrap;
+  width: 80px;
+}
+</style>
+```

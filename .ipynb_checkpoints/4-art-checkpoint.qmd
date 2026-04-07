@@ -1,0 +1,38 @@
+---
+title: "Projects"
+---
+
+# Projects
+
+## Climate dashboards
+
+I have contributed to the development of digital dashboards that present climate-service results in a structured and visual way.
+
+These projects combine:
+
+- scientific analysis
+- user-oriented design
+- clear visual hierarchy
+- communication of technical outputs
+
+## Seasonal forecasting communication
+
+I work with seasonal prediction systems and related verification products, helping translate technical information into forms that are easier to interpret.
+
+Topics include:
+
+- forecast skill
+- uncertainty
+- circulation patterns
+- precipitation outlooks
+- postprocessed products
+
+## Future direction
+
+I am increasingly interested in science communication for:
+
+- Destination Earth
+- digital twins
+- Earth-system simulation
+- climate services
+- educational and stakeholder-facing storytelling

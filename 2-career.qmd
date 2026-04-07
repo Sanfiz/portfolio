@@ -1,0 +1,659 @@
+---
+title: ""
+---
+
+## Studies
+
+```{=html}
+<div class="timeline">
+
+  <div class="tl-item" onclick="toggleItem(this)">
+    <div class="tl-year">2027</div>
+    <div class="tl-dot"></div>
+    <div class="tl-card">
+      <div class="tl-card-top">
+        <div class="tl-summary">
+          <p class="tl-name">Postgraduate in Science Communication</p>
+          <p class="tl-org">International University of Valencia</p>
+          <p class="tl-hint">▼ read more</p>
+        </div>
+      </div>
+      <div class="tl-body">
+        <p><em>In progress · Part-time online while working full time</em></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tl-item" onclick="toggleItem(this)">
+    <div class="tl-year">2020</div>
+    <div class="tl-dot"></div>
+    <div class="tl-card">
+      <div class="tl-card-top">
+        <div class="tl-summary">
+          <p class="tl-name">PhD in Atmospheric Physics</p>
+          <p class="tl-org">University of Santiago de Compostela</p>
+          <p class="tl-hint">▼ read more</p>
+        </div>
+      </div>
+      <div class="tl-body">
+        <p><em>Grade: Merit · European Doctorate Mention</em></p>
+        <p>Thesis: <em>Precipitation Recycling and the Importance of the Land-Atmosphere Interactions over the European Continent</em></p>
+        <p><a href="http://hdl.handle.net/10347/23330" target="_blank" class="link-link">Access full PhD dissertation</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tl-item" onclick="toggleItem(this)">
+    <div class="tl-year">2014</div>
+    <div class="tl-dot"></div>
+    <div class="tl-card">
+      <div class="tl-card-top">
+        <div class="tl-summary">
+          <p class="tl-name">MSc in Meteorology</p>
+          <p class="tl-org">Universitat de Barcelona</p>
+          <p class="tl-hint">▼ read more</p>
+        </div>
+      </div>
+      <div class="tl-body">
+        <p>Relevant subjects: Dynamic Meteorology · Physics of the Atmosphere · Climate and Climate Change · Atmospheric Pollution · Hydrometeorology · Meteorological Modelling · Forecasting</p>
+        <p>Master's thesis: <em>Effect of lateral boundary conditions in the WRF limited-area model</em></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tl-item" onclick="toggleItem(this)">
+    <div class="tl-year">2013</div>
+    <div class="tl-dot"></div>
+    <div class="tl-card">
+      <div class="tl-card-top">
+        <div class="tl-summary">
+          <p class="tl-name">BSc in Physics</p>
+          <p class="tl-org">University of Santiago de Compostela</p>
+          <p class="tl-hint">▼ read more</p>
+        </div>
+      </div>
+      <div class="tl-body">
+        <p>Degree thesis <em>(with honours)</em>: <em>Precipitation recycling in Europe. Moisture tracers method for computation of recycling rate</em></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+```
+
+## Positions
+
+```{=html}
+<div class="timeline">
+
+  <div class="tl-item" onclick="toggleItem(this)">
+    <div class="tl-year">2024</div>
+    <div class="tl-dot"></div>
+    <div class="tl-card">
+      <div class="tl-card-top">
+        <div class="tl-summary">
+          <p class="tl-name">Climate Scientist</p>
+          <p class="tl-org">Tragsatec – AEMET · 2024–Present</p>
+          <p class="tl-hint">▼ read more</p>
+        </div>
+      </div>
+      <div class="tl-body">
+        <p>Working at the interface between climate science and user-oriented services, translating seasonal prediction outputs into accessible information for decision-making contexts such as agriculture and water management.</p>
+        <ul>
+          <li>Developed interactive web dashboards and graphics to communicate seasonal weather prediction to non-specialist users</li>
+          <li>Translated climate data into visual narratives through maps, plots and digital interfaces</li>
+          <li>Produced written briefings and communication materials for institutional stakeholders such as AEMET, ECMWF and DWD</li>
+        </ul>
+        <p style="text-align:center; margin-top: 0.8rem;"><a href="https://dashboard-tragsatec.onrender.com/" target="_blank" class="link-link">View Project Results</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tl-item" onclick="toggleItem(this)">
+    <div class="tl-year">2023</div>
+    <div class="tl-dot"></div>
+    <div class="tl-card">
+      <div class="tl-card-top">
+        <div class="tl-summary">
+          <p class="tl-name">WRF Specialist</p>
+          <p class="tl-org">MeteoGRID S.L. · 2023–2024</p>
+          <p class="tl-hint">▼ read more</p>
+        </div>
+      </div>
+      <div class="tl-body">
+        <p>Designed and executed high-resolution WRF-SFIRE coupled atmosphere–fire simulations for wildfire risk assessment and post-fire analysis across diverse terrain and fuel types in the Iberian Peninsula.</p>
+        <p><em>Tools: Python · R · WRF-SFIRE · HPC · Bash · NCO · GrADS</em></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tl-item" onclick="toggleItem(this)">
+    <div class="tl-year">2018</div>
+    <div class="tl-dot"></div>
+    <div class="tl-card">
+      <div class="tl-card-top">
+        <div class="tl-summary">
+          <p class="tl-name">Climate Scientist</p>
+          <p class="tl-org">Meteogalicia · 2018–2021</p>
+          <p class="tl-hint">▼ read more</p>
+        </div>
+      </div>
+      <div class="tl-body">
+        <ul>
+          <li>Participated in a multi-institutional oceanic research project, coordinating data and deliverables exchange among partner institutions</li>
+          <li>Processed and quality-controlled large oceanographic datasets (SST, salinity, currents, reanalysis fields) from in-situ buoys and model outputs</li>
+          <li>Conducted statistical analyses to characterise interannual variability and trend signals along the Galician coastlines</li>
+          <li>Authored technical reports and scientific deliverables for national and EU-funded project milestones</li>
+        </ul>
+        <p><em>Tools: Python · HPC · Bash · LaTeX · QGIS</em></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tl-item" onclick="toggleItem(this)">
+    <div class="tl-year">2018</div>
+    <div class="tl-dot"></div>
+    <div class="tl-card">
+      <div class="tl-card-top">
+        <div class="tl-summary">
+          <p class="tl-name">Paleoclimate Researcher</p>
+          <p class="tl-org">University College London · 2018</p>
+          <p class="tl-hint">▼ read more</p>
+        </div>
+      </div>
+      <div class="tl-body">
+        <ul>
+          <li>Developed a Python numerical model to simulate speleothem (stalagmite) growth dynamics as a function of drip rate, cave temperature and pCO₂</li>
+          <li>Designed and populated a MySQL relational database to store and query multi-proxy palaeoclimate datasets from the North Atlantic region</li>
+        </ul>
+        <p><em>Tools: Python · MySQL · NumPy · Matplotlib</em></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tl-item" onclick="toggleItem(this)">
+    <div class="tl-year">2015</div>
+    <div class="tl-dot"></div>
+    <div class="tl-card">
+      <div class="tl-card-top">
+        <div class="tl-summary">
+          <p class="tl-name">Broadcast Meteorologist</p>
+          <p class="tl-org">Santiago TV · 2015–2016</p>
+          <p class="tl-hint">▼ read more</p>
+        </div>
+      </div>
+      <div class="tl-body">
+        <ul>
+          <li>Delivered daily on-air weather reports for a general audience, translating complex meteorological data into clear, engaging narratives</li>
+          <li>Designed broadcast graphics and visual storytelling materials to support forecast communication in a live news organisation environment</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="tl-item" onclick="toggleItem(this)">
+    <div class="tl-year">2014</div>
+    <div class="tl-dot"></div>
+    <div class="tl-card">
+      <div class="tl-card-top">
+        <div class="tl-summary">
+          <p class="tl-name">PhD Candidate</p>
+          <p class="tl-org">University of Santiago de Compostela · 2014–2017</p>
+          <p class="tl-hint">▼ read more</p>
+        </div>
+      </div>
+      <div class="tl-body">
+        <ul>
+          <li>Designed and carried out WRF mesoscale simulations to study land-surface–atmosphere feedbacks over the Iberian Peninsula and Europe</li>
+          <li>Developed post-processing scripts in Python and GrADS for automated extraction, statistical analysis and publication visualisation of model output fields</li>
+          <li>Presented results at international conferences</li>
+          <li>Mentored undergraduate students in programming and atmospheric modelling tasks</li>
+          <li>Successfully defended the doctoral thesis before an international jury in 2020</li>
+        </ul>
+        <p><em>Including a six-month research visit to the Instituto Dom Luiz (IDL), University of Lisbon, collaborating on WRF–LEAF-Hydro experiments.</em></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+```
+
+## Languages & Skills
+
+```{=html}
+<div class="skills-box">
+
+  <h3>Languages</h3>
+
+  <div class="lang-row">
+    <span class="lang-name"> Spanish</span>
+    <div class="lang-bar-bg"><div class="lang-bar" style="width:100%"></div></div>
+    <span class="lang-level">Native</span>
+  </div>
+  <div class="lang-row">
+    <span class="lang-name">󠁥󠁳󠁧 Galician</span>
+    <div class="lang-bar-bg"><div class="lang-bar" style="width:100%"></div></div>
+    <span class="lang-level">Native</span>
+  </div>
+  <div class="lang-row">
+    <span class="lang-name"> English</span>
+    <div class="lang-bar-bg"><div class="lang-bar" style="width:82%"></div></div>
+    <span class="lang-level">C1 · 2024</span>
+  </div>
+  <div class="lang-row">
+    <span class="lang-name"> Portuguese</span>
+    <div class="lang-bar-bg"><div class="lang-bar" style="width:65%"></div></div>
+    <span class="lang-level">B2 · 2017</span>
+  </div>
+
+  <hr class="skills-divider"/>
+
+  <h3>Skills & Tools</h3>
+
+  <div class="skills-cat">
+    <p class="cat-label">Communication & Design</p>
+    <div class="logos-row">
+
+      <div class="logo-chip">
+        <div class="img-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg"/></div>
+        <span>Canva</span>
+      </div>
+
+      <div class="logo-chip">
+        <div class="img-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg"/></div>
+        <span>Illustrator</span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="skills-cat">
+    <p class="cat-label">Scientific & Data</p>
+    <div class="logos-row">
+
+      <div class="logo-chip">
+        <div class="img-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/></div>
+        <span>Python</span>
+      </div>
+
+      <div class="logo-chip">
+        <div class="img-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/d3js/d3js-original.svg"/></div>
+        <span>D3.js</span>
+      </div>
+
+      <div class="logo-chip">
+        <div class="img-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"/></div>
+        <span>SQL</span>
+      </div>
+
+      <div class="logo-chip">
+        <div class="img-wrap"><img src="https://images.plot.ly/logo/new-branding/plotly-logomark.png"/></div>
+        <span>Plotly</span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="skills-cat">
+    <p class="cat-label">Technical</p>
+    <div class="logos-row">
+
+      <div class="logo-chip">
+        <div class="img-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg"/></div>
+        <span>Bash</span>
+      </div>
+
+      <div class="logo-chip">
+        <div class="img-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"/></div>
+        <span>Linux</span>
+      </div>
+
+      <div class="logo-chip">
+        <div class="img-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/latex/latex-original.svg"/></div>
+        <span>LaTeX</span>
+      </div>
+
+      <div class="logo-chip">
+        <div class="img-wrap"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"/></div>
+        <span>GitHub</span>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+```
+
+## Selected Training
+
+::: {.women-box}
+###### 2025 — Communication Course for Scientific Professionals
+Specialised training in science communication for technical and research profiles. *14 hours*
+
+###### 2022 — Introductory Course on GIS and Mapping with R
+Foundations of geospatial analysis and cartographic workflows in R. *20 hours*
+
+###### 2021 — Microsoft PowerPoint and Presentation Software – Intermediate Level
+Training in presentation design, multimedia content, animations and effective communication using PowerPoint. *25 hours*
+
+###### 2018 — ArcGIS Enterprise Workflows
+Training in enterprise GIS environments and workflow management. *20 hours*
+:::
+
+## Some Contributions
+
+::: {.women-box}
+###### 2025 — Hidden Women in Meteorology: Uncovering the Forgotten Pioneers and Their Legacy
+[*Article* · Revista Tiempo y Clima]{.textopeque}
+[Science communication article translating the history of women in meteorology for a broad, non-specialist audience.]{.textopeque}
+[**Sabela Sanfiz**]{.textopeque}
+
+---
+
+###### 2024 — HiDALGO2 D3.1 Scalability, Optimization and Co-Design Activities
+[*Experiment Findings*]{.textopeque}
+[K. Nikas · P. Anastasiadis · A. Rivera Campos · M. Lawenda · et al.]{.textopeque}
+
+---
+
+###### 2020 — Precipitation Recycling and the Importance of the Land-Atmosphere Interactions over the European Continent
+[*PhD Thesis* · University of Santiago de Compostela]{.textopeque}
+[**Sabela Sanfiz** · G. Miguez-Macho]{.textopeque}
+[[hdl.handle.net/10347/23330](http://hdl.handle.net/10347/23330){.link-link}]{.textopeque}
+
+---
+
+###### 2020 — The Utility of Land-Surface Model Simulations to Provide Drought Information in a Water Management Context
+[*Article* · Water Resources Management]{.textopeque}
+[P. Quintana Seguí · A. Barella-Ortiz · **Sabela Sanfiz** · G. Miguez-Macho]{.textopeque}
+
+---
+
+###### 2019 — An Integrated Perspective of the Operational Forecasting System in Rías Baixas (Galicia, Spain)
+[*Book Chapter* · Lecture Notes in Computer Science]{.textopeque}
+[A. Venâncio · P. Montero · P. Melo Costa · J. J. Taboada · et al.]{.textopeque}
+:::
+
+```{=html}
+<style>
+/* ── Timeline ── */
+.timeline {
+  position: relative;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0.5rem 1rem 2rem 1rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 85px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, #b2c5fc 6%, #b2c5fc 94%, transparent);
+}
+
+.tl-item {
+  display: grid;
+  grid-template-columns: 60px 24px 1fr;
+  gap: 0 16px;
+  align-items: start;
+  margin-bottom: 1.2rem;
+  cursor: pointer;
+}
+
+.tl-year {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #92a7f2;
+  text-align: right;
+  padding-top: 16px;
+  letter-spacing: 0.04em;
+}
+
+.tl-dot {
+  width: 13px;
+  height: 13px;
+  background: #fff;
+  border: 2.5px solid #92a7f2;
+  border-radius: 50%;
+  margin-top: 15px;
+  justify-self: center;
+  transition: background 0.2s, transform 0.2s;
+  flex-shrink: 0;
+}
+
+.tl-item:hover .tl-dot,
+.tl-item.open .tl-dot {
+  background: #92a7f2;
+  transform: scale(1.2);
+}
+
+.tl-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  border: 1px solid #eeebe4;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+}
+
+.tl-item:hover .tl-card {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.11);
+}
+
+.tl-card-top {
+  padding: 0.8rem 1.1rem;
+}
+
+.tl-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 0.15rem 0;
+  line-height: 1.3;
+}
+
+.tl-org {
+  font-size: 0.78rem;
+  color: #888;
+  margin: 0 0 0.35rem 0;
+}
+
+.tl-hint {
+  font-size: 0.7rem;
+  color: #999;
+  margin: 0;
+}
+
+.tl-body {
+  display: none;
+  padding: 0 1.1rem 1rem 1.1rem;
+  border-top: 1px solid #f0ece4;
+  animation: fadeSlide 0.3s ease;
+}
+
+.tl-item.open .tl-body {
+  display: block;
+}
+
+.tl-body p, .tl-body li {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: #444;
+  margin: 0.7rem 0 0 0;
+  text-align: justify;
+}
+
+.tl-body ul {
+  margin: 0.7rem 0 0 0;
+  padding-left: 1.2rem;
+}
+
+.tl-body li {
+  margin: 0.3rem 0;
+}
+
+/* ── Skills ── */
+.skills-box {
+  background: #f5f5f5;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skills-box h3 {
+  color: #b2c5fc !important;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.lang-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.7rem;
+}
+
+.lang-name {
+  width: 110px;
+  font-size: 0.85rem;
+  color: #333;
+  flex-shrink: 0;
+}
+
+.lang-bar-bg {
+  flex: 1;
+  height: 7px;
+  background: #e0e0e0;
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.lang-bar {
+  height: 100%;
+  border-radius: 99px;
+  background: #e8a020;
+}
+
+.lang-level {
+  font-size: 0.75rem;
+  color: #999;
+  width: 70px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.skills-divider {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 1.2rem 0;
+}
+
+.skills-cat { margin-bottom: 1.2rem; }
+
+.cat-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #94805c;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.6rem;
+}
+
+.logos-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.logo-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 56px;
+}
+
+.logo-chip .img-wrap {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-chip .img-wrap img {
+  width: 32px !important;
+  height: 32px !important;
+  max-width: 32px !important;
+  max-height: 32px !important;
+  object-fit: contain;
+  display: block;
+}
+
+.logo-chip span {
+  font-size: 0.6rem;
+  color: #666;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* ── Resto ── */
+.textopeque {
+  font-size: 0.82rem;
+  color: #777;
+  display: block;
+  line-height: 1.4;
+  margin-bottom: 0.1rem;
+}
+
+.women-box h3 {
+  margin-top: 1.8rem;
+  margin-bottom: 0.2rem;
+}
+
+.women-box h3:first-child {
+  margin-top: 0;
+}
+
+.link-link {
+  color: inherit !important;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: #94805c;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s;
+}
+
+.link-link:hover {
+  text-decoration-color: #a3aabf;
+}
+
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(-5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 500px) {
+  .timeline::before { left: 52px; }
+  .tl-item { grid-template-columns: 44px 20px 1fr; gap: 0 10px; }
+  .tl-year { font-size: 0.65rem; }
+}
+</style>
+
+<script>
+function toggleItem(item) {
+  item.classList.toggle('open');
+  const hint = item.querySelector('.tl-hint');
+  hint.textContent = item.classList.contains('open') ? '▲ close' : '▼ read more';
+}
+</script>
+```

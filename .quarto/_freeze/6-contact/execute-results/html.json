@@ -1,0 +1,12 @@
+{
+  "hash": "68ba388f066c47f7deef67b3d0294b64",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"\"\njupyter: python3\n---\n\n\n\n\n::: {.contact-container}\n\n::: {.contact-left}\n\n<br>\n\nYou can reach me about collaborations, climate & arts projects,\nscience communication or simply to say hello :)\n\nAnd you can also find me on social media:\n\n::: {.contact-buttons}\n<a href=\"http://www.linkedin.com/in/sabelasanfiz\" target=\"_blank\" class=\"contact-btn\">\n  <i class=\"bi bi-linkedin\"></i> LinkedIn\n</a>\n\n<a href=\"https://bsky.app/profile/sabelasanfiz.bsky.social\" target=\"_blank\" class=\"contact-btn\">\n  <i class=\"bi bi-cloud-fill\"></i> Bluesky\n</a>\n:::\n\n:::\n\n::: {.contact-right}\n<div class=\"contact-form\">\n\n<label for=\"name\">Your Name</label>\n<input type=\"text\" id=\"name\" placeholder=\"First and Last\" />\n\n<label for=\"message\">Message</label>\n<textarea id=\"message\" rows=\"6\" placeholder=\"Your message here...\"></textarea>\n\n<button onclick=\"sendEmail()\">Press to Send</button>\n\n</div>\n:::\n\n:::\n\n\n<script>\nfunction sendEmail() {\n  const name = document.getElementById('name').value;\n  const message = document.getElementById('message').value;\n  const subject = encodeURIComponent('Message from ' + name);\n  const body = encodeURIComponent('From: ' + name + '\\n\\n' + message);\n  window.location.href = 'mailto:sabelasanfiz@gmail.com?subject=' + subject + '&body=' + body;\n}\n</script>\n\n",
+    "supporting": [
+      "6-contact_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "projects.qmd": {
+    "projects.html": "9867374d"
+  },
+  "about.qmd": {
+    "about.html": "10b684f7"
+  },
+  "contact.qmd": {
+    "contact.html": "f4cf26d2"
+  },
+  "index.qmd": {
+    "index.html": "424a936c"
+  },
+  "portfolio.qmd": {
+    "portfolio.html": "59c58261"
+  },
+  "cv.qmd": {
+    "cv.html": "ac1bd44d"
+  },
+  "2-career.qmd": {
+    "2-career.html": "e0df9b2b"
+  },
+  "3-science.qmd": {
+    "3-science.html": "cf1759cf"
+  },
+  "3-visuals.qmd": {
+    "3-visuals.html": "1a3fa192"
+  },
+  "4-art.qmd": {
+    "4-art.html": "122ce04a"
+  },
+  "5-art.qmd": {
+    "5-art.html": "9c2e54ef"
+  },
+  "4-visuals.qmd": {
+    "4-visuals.html": "eaef6432"
+  },
+  "6-women.qmd": {
+    "6-women.html": "5b9242e4"
+  },
+  "7-contact.qmd": {
+    "7-contact.html": "bf0dc9f5"
+  },
+  "1-home.qmd": {
+    "1-home.html": "235938a8"
+  },
+  "2-career-academic.qmd": {
+    "2-career-academic.html": "01601556"
+  },
+  "2-career-old.qmd": {
+    "2-career-old.html": "57c06457"
+  },
+  "2-career-positions.qmd": {
+    "2-career-positions.html": "3007bce4"
+  },
+  "6-contact.qmd": {
+    "6-contact.html": "32794af4"
+  },
+  "5-women.qmd": {
+    "5-women.html": "5d605af3"
+  },
+  "2-about.qmd": {
+    "2-about.html": "3443cbeb"
+  },
+  "visuals/co2-seaice.qmd": {
+    "co2-seaice.html": "b412a13c"
+  },
+  "visuals/plot2.qmd": {
+    "plot2.html": "940f09e6"
+  },
+  "visuals/plot1.qmd": {
+    "plot1.html": "57294769"
+  },
+  "visuals/rivers-europe.qmd": {
+    "rivers-europe.html": "438926d2"
+  }
+}

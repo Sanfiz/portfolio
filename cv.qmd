@@ -94,13 +94,13 @@ toc: false
         <div class="one-downloads">
           <p class="one-card-title">Download a PDF version</p>
           <div class="one-pdfs">
-            <a href="files/cv-latex.pdf" download="cv-latex.pdf" class="cv-dl-card">
+            <a href="cv-latex.pdf" download="cv-latex.pdf" class="cv-dl-card">
               <img src="images/cv-latex-thumb.png" alt="CV LaTeX" class="cv-dl-thumb"/>
               <span class="cv-dl-name">LaTeX</span>
               <span class="cv-dl-hint">↓ download</span>
             </a>
 
-            <a href="files/cv-canva.pdf" download="cv-canva.pdf" class="cv-dl-card">
+            <a href="cv-canva.pdf" download="cv-canva.pdf" class="cv-dl-card">
               <img src="images/cv-canva-thumb.png" alt="CV Canva" class="cv-dl-thumb"/>
               <span class="cv-dl-name">Canva</span>
               <span class="cv-dl-hint">↓ download</span>

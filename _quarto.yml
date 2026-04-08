@@ -2,7 +2,8 @@ project:
   type: website
   output-dir: docs
   resources:
-    - files/
+    - cv-latex.pdf
+    - cv-canva.pdf
     
 website:
   title: ""

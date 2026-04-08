@@ -6,7 +6,8 @@ project:
     - cv-canva.pdf
     
 website:
-  title: ""
+  title: "Sanfiz"
+  favicon: favicon.png
   navbar:
     pinned: false
     right:

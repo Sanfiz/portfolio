@@ -1,13 +1,14 @@
 project:
+  title: "Sanfiz"
   type: website
   output-dir: docs
   resources:
     - cv-latex.pdf
     - cv-canva.pdf
+    - favicon.png
     
 website:
-  title: "Sanfiz"
-  favicon: favicon.png
+  title: ""
   navbar:
     pinned: false
     right:

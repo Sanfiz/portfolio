@@ -73,5 +73,20 @@
   },
   "visuals/rivers-europe.qmd": {
     "rivers-europe.html": "438926d2"
+  },
+  "maps.qmd": {
+    "maps.html": "ced62a95"
+  },
+  "cv-career.qmd": {
+    "cv-career.html": "9b889c8c"
+  },
+  "climateart.qmd": {
+    "climateart.html": "ba87fa91"
+  },
+  "women.qmd": {
+    "women.html": "8940702f"
+  },
+  "femalevoices.qmd": {
+    "femalevoices.html": "c1e216d5"
   }
 }

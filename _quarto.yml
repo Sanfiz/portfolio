@@ -9,15 +9,15 @@ website:
     right:
       - href: index.qmd
         text: Home
-      - href: 2-about.qmd
+      - href: cv.qmd
         text: CV
-      - href: 3-visuals.qmd
+      - href: maps.qmd
         text: Maps
-      - href: 4-art.qmd
+      - href: climateart.qmd
         text: Climate&Art
-      - href: 5-women.qmd
+      - href: femalevoices.qmd
         text: FemaleVoices
-      - href: 6-contact.qmd
+      - href: contact.qmd
         text: Contact
   page-footer:
     left: "©2026 · Crafted with care, coffee <i class='bi bi-cup-hot-fill'></i> and <a href='https://quarto.org' target='_blank'>Quarto</a>"

@@ -1,0 +1,4 @@
+quarto render   
+git add .
+git commit -m "cambio num 134"
+git push

@@ -13,15 +13,15 @@ website:
     right:
       - href: index.qmd
         text: Home
-      - href: cv.qmd
+      - href: CV.qmd
         text: CV
-      - href: maps.qmd
+      - href: Maps.qmd
         text: Maps
-      - href: climateart.qmd
+      - href: ClimateArt.qmd
         text: Climate&Art
-      - href: femalevoices.qmd
+      - href: FemaleVoices.qmd
         text: FemaleVoices
-      - href: contact.qmd
+      - href: Contact.qmd
         text: Contact
   page-footer:
     left: "©2026 · Built by Sabela with care, coffee <i class='bi bi-cup-hot-fill'></i> and <a href='https://quarto.org' target='_blank'>Quarto</a>"

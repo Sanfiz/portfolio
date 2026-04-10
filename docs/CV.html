@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>climateart</title>
+<title>cv</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -90,23 +90,23 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./cv.html"> 
+    <a class="nav-link active" href="./CV.html" aria-current="page"> 
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./maps.html"> 
+    <a class="nav-link" href="./Maps.html"> 
 <span class="menu-text">Maps</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./climateart.html" aria-current="page"> 
+    <a class="nav-link" href="./ClimateArt.html"> 
 <span class="menu-text">Climate&amp;Art</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./femalevoices.html"> 
+    <a class="nav-link" href="./FemaleVoices.html"> 
 <span class="menu-text">FemaleVoices</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./contact.html"> 
+    <a class="nav-link" href="./Contact.html"> 
 <span class="menu-text">Contact</span></a>
   </li>  
 </ul>
@@ -127,195 +127,329 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="art-intro">
-  <p>Where climate science meets <del>Adobe Illustrator</del> visual storytelling.</p>
-</div>
+<div class="dashboard">
 
-<div class="poster-wall">
+  <!-- INTRO -->
+  <div class="widget widget-intro">
+    <div class="widget-header">
+      <span class="widget-label">// profile.txt</span>
+      <span class="widget-dot red"></span>
+      <span class="widget-dot yellow"></span>
+      <span class="widget-dot green"></span>
+    </div>
+    <div class="widget-body intro-body">
 
-  <div class="poster" style="--r: -3deg; --tx: 0px; --ty: 10px;" onclick="openLightbox(this)">
-    <div class="pin"></div>
-    <img src="images/art/inconvenientdata.jpeg" alt="An Inconvenient Data">
-    <p class="poster-title">an inconvenient data</p>
+      <div class="flip-card" onclick="this.classList.toggle('is-flipped')">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images/index/pic-profile.jpeg" alt="Self-Portrait" class="profile-img">
+          </div>
+          <div class="flip-card-back">
+            <div class="flip-card-back-content">
+              <h3 class="anchored">Self-Portrait</h3>
+              <p>Created in Adobe Illustrator using an iPad.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="intro-text">
+        <p class="dash-hi">Hi, I'm <strong>Sabela Sanfiz</strong>.</p>
+        <p class="dash-text">I am a <strong>Climate Scientist</strong> with over ten years of experience working with climate data, building visualisation products and communicating science in a meaningful way.</p>
+        <p class="dash-text">My career has taken me from pure research to interactive dashboards and communication materials. That intersection — between pure science and climate storytelling — is where I am happy to be.</p>
+        <p class="dash-italic"><em>Where does my work sit?</em> Somewhere between climate science and narrative. A challenging space, but a necessary one.</p>
+      </div>
+
+    </div>
   </div>
 
-  <div class="poster" style="--r: 2deg; --tx: 5px; --ty: 0px;" onclick="openLightbox(this)">
-    <div class="pin"></div>
-    <img src="images/art/movie-temps.jpeg" alt="Movie Temps">
-    <p class="poster-title">climate data, cinematic cut</p>
+  <!-- STATS -->
+  <div class="widget widget-metrics">
+    <div class="widget-header">
+      <span class="widget-label">// stats.csv</span>
+      <span class="widget-dot red"></span>
+      <span class="widget-dot yellow"></span>
+      <span class="widget-dot green"></span>
+    </div>
+    <div class="metrics-grid">
+      <div class="metric">
+        <span class="metric-value">10+</span>
+        <span class="metric-label">years in climate science</span>
+      </div>
+      <div class="metric">
+        <span class="metric-value">4</span>
+        <span class="metric-label">countries worked in</span>
+      </div>
+      <div class="metric">
+        <span class="metric-value">1 PhD</span>
+        <span class="metric-label">in Climate</span>
+      </div>
+      <div class="metric">
+        <span class="metric-value" style="font-size: 2.4rem;">∞</span>
+        <span class="metric-label">coffees consumed</span>
+      </div>
+    </div>
   </div>
 
-  <div class="poster" style="--r: -1.5deg; --tx: -5px; --ty: 15px;" onclick="openLightbox(this)">
-    <div class="pin"></div>
-    <img src="images/art/cassette.jpeg" alt="Good Quality Air">
-    <p class="poster-title">good quality air? as retro as cassettes</p>
+  <!-- CAREER -->
+  <div class="widget widget-full">
+    <div class="widget-header">
+      <span class="widget-label">// career.log</span>
+      <span class="widget-dot red"></span>
+      <span class="widget-dot yellow"></span>
+      <span class="widget-dot green"></span>
+    </div>
+    <div class="widget-body one-box">
+
+      <p class="one-tagline">Online version or download it. Your call.</p>
+
+      <div class="one-options">
+
+        <a href="cv-career.html" class="one-card one-card-online">
+          <img src="images/grad.png" alt="Career" class="one-icon">
+          <p class="one-card-title">Browse my CV</p>
+          <p class="one-card-sub">Studies · Positions · Skills</p>
+          <p class="one-cta">→ open</p>
+        </a>
+
+        <div class="one-or">or</div>
+
+        <div class="one-downloads">
+          <p class="one-card-title">Download a PDF version</p>
+          <div class="one-pdfs">
+            <a href="cv-latex.pdf" download="cv-latex.pdf" class="cv-dl-card">
+              <img src="images/cv-latex-thumb.png" alt="CV LaTeX" class="cv-dl-thumb">
+              <span class="cv-dl-name">LaTeX</span>
+              <span class="cv-dl-hint">↓ download</span>
+            </a>
+
+            <a href="cv-canva.pdf" download="cv-canva.pdf" class="cv-dl-card">
+              <img src="images/cv-canva-thumb.png" alt="CV Canva" class="cv-dl-thumb">
+              <span class="cv-dl-name">Canva</span>
+              <span class="cv-dl-hint">↓ download</span>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
 
-  <div class="poster" style="--r: 3.5deg; --tx: 8px; --ty: 5px;" onclick="openLightbox(this)">
-    <div class="pin"></div>
-    <img src="images/art/reminder.jpeg" alt="There is no Planet B">
-    <p class="poster-title">there is no planet b</p>
-  </div>
-
-</div>
-
-<div class="lb-overlay" id="lb-overlay" onclick="closeLightbox()">
-  <button class="lb-close" onclick="closeLightbox()">✕</button>
-  <img class="lb-img" id="lb-img" src="" alt="">
-  <p class="lb-caption" id="lb-caption"></p>
 </div>
 
 <style>
-.art-intro {
-  text-align: center;
-  font-family: Georgia, serif;
-  font-size: 1.05rem;
-  color: #555;
-  margin: 2rem 0 3rem 0;
-  letter-spacing: 0.04em;
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  max-width: 860px;
+  margin: 2rem auto 3rem auto;
+  padding: 0 1rem;
 }
 
-.poster-wall {
+.widget {
+  background: rgba(255,255,255,0.82);
+  border: 1px solid var(--softgray);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.widget-header {
+  background: color-mix(in srgb, var(--softgray) 30%, white);
+  padding: 6px 12px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 3rem 2.5rem;
-  padding: 1rem 2rem 5rem 2rem;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1px solid var(--softgray);
 }
 
-.poster {
-  position: relative;
-  width: 220px;
-  background: #fff;
-  padding: 10px 10px 40px 10px;
-  box-shadow: 2px 2px 4px rgba(0,0,0,0.10), 6px 8px 20px rgba(0,0,0,0.18);
-  transform: rotate(var(--r)) translate(var(--tx), var(--ty));
-  transition: transform 0.35s cubic-bezier(.22,.68,0,1.2), box-shadow 0.35s ease;
-  cursor: pointer;
+.widget-label {
+  font-family: monospace;
+  font-size: 0.65rem;
+  color: var(--vanilla);
+  flex: 1;
+  letter-spacing: 0.03em;
 }
 
-.poster:hover {
-  transform: rotate(0deg) translate(0, -8px) scale(1.04);
-  box-shadow: 4px 4px 8px rgba(0,0,0,0.12), 12px 18px 36px rgba(0,0,0,0.22);
-  z-index: 10;
-}
+.widget-dot { width: 9px; height: 9px; border-radius: 50%; }
+.widget-dot.red    { background: #ff5f57; }
+.widget-dot.yellow { background: #febc2e; }
+.widget-dot.green  { background: #28c840; }
 
-.pin {
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 14px;
-  height: 14px;
-  background: radial-gradient(circle at 40% 35%, #f5c842, #c8960a);
-  border-radius: 50%;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.35);
-  z-index: 2;
-}
+.widget-body { padding: 1.2rem 1.4rem; }
 
-.pin::after {
-  content: '';
-  position: absolute;
-  bottom: -6px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 2px;
-  height: 8px;
-  background: #aaa;
-  border-radius: 1px;
-}
+.widget-intro   { grid-column: 1 / 3; }
+.widget-metrics { grid-column: 1 / 3; }
+.widget-full    { grid-column: 1 / 3; }
 
-.poster img {
-  width: 100%;
-  display: block;
-  object-fit: cover;
-  aspect-ratio: 3/4;
+.dash-hi {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 0.8rem;
 }
-
-.poster-title {
-  font-family: Georgia, serif;
+.dash-text {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 0.6rem;
+  text-align: justify;
+}
+.dash-italic {
+  font-size: 0.88rem;
+  color: #777;
   font-style: italic;
-  font-size: 1.05rem;
-  color: #333;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+  padding: 1rem 1.4rem 1.2rem;
+}
+.metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  margin: 8px 0 0 0;
+  padding: 0.8rem 0.5rem;
+  background: color-mix(in srgb, var(--mustard) 8%, white);
+  border-radius: 8px;
+  border: 1px solid color-mix(in srgb, var(--softgray) 60%, white);
+}
+.metric-value {
+  font-family: monospace;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--mustard);
+  line-height: 1.1;
+}
+.metric-label {
+  font-size: 0.68rem;
+  color: #888;
+  margin-top: 0.3rem;
   line-height: 1.3;
 }
 
-.lb-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.88);
-  z-index: 9999;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 2rem;
-  cursor: zoom-out;
-}
+.one-box { display: flex; flex-direction: column; gap: 1rem; }
 
-.lb-overlay.active { display: flex; }
-
-.lb-img {
-  max-width: 90vw;
-  max-height: 82vh;
-  object-fit: contain;
-  border-radius: 4px;
-  box-shadow: 0 8px 48px rgba(0,0,0,0.6);
-  animation: lbFadeIn 0.25s ease;
-}
-
-.lb-caption {
-  font-family: Georgia, serif;
+.one-tagline {
+  font-size: 0.9rem;
   font-style: italic;
-  font-size: 1.1rem;
-  color: #e8d8b0;
-  margin-top: 1rem;
+  color: #666;
+  text-align: center;
+  margin: 0;
 }
 
-.lb-close {
-  position: fixed;
-  top: 1.2rem;
-  right: 1.5rem;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 1.6rem;
-  cursor: pointer;
-  opacity: 0.7;
-  transition: opacity 0.2s;
+.one-options {
+  display: flex;
+  align-items: stretch;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.lb-close:hover { opacity: 1; }
+.one-card-online {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.3rem;
+  text-decoration: none;
+  padding: 1.2rem 1.5rem;
+  background: color-mix(in srgb, var(--mustard) 8%, white);
+  border: 1px solid color-mix(in srgb, var(--softgray) 60%, white);
+  border-radius: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  min-width: 160px;
+}
+.one-card-online:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
 
-@keyframes lbFadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to   { opacity: 1; transform: scale(1); }
+.one-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  margin-bottom: 0.3rem;
+}
+
+.one-card-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.one-card-sub {
+  font-size: 0.7rem;
+  color: #999;
+  margin: 0;
+}
+
+.one-cta {
+  font-family: monospace;
+  font-size: 0.72rem;
+  color: var(--mustard);
+  margin: 0.3rem 0 0 0;
+}
+
+.one-or {
+  font-size: 0.8rem;
+  color: #bbb;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.one-downloads {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1.2rem 1.5rem;
+  background: color-mix(in srgb, var(--mustard) 8%, white);
+  border: 1px solid color-mix(in srgb, var(--softgray) 60%, white);
+  border-radius: 10px;
+}
+
+.one-pdfs { display: flex; gap: 1.2rem; }
+
+.cv-dl-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+.cv-dl-card:hover { transform: translateY(-3px); }
+
+.cv-dl-thumb {
+  width: 52px;
+  height: 74px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+.cv-dl-name { font-size: 0.65rem; color: #666; }
+.cv-dl-hint { font-family: monospace; font-size: 0.6rem; color: var(--mustard); }
+
+@media (max-width: 600px) {
+  .dashboard { grid-template-columns: 1fr; }
+  .widget-intro, .widget-metrics, .widget-full { grid-column: 1; }
+  .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+  .one-options { flex-direction: column; }
 }
 </style>
-
-<script>
-function openLightbox(poster) {
-  const img = poster.querySelector('img');
-  const title = poster.querySelector('.poster-title');
-  document.getElementById('lb-img').src = img.src;
-  document.getElementById('lb-img').alt = img.alt;
-  document.getElementById('lb-caption').textContent = title.textContent;
-  document.getElementById('lb-overlay').classList.add('active');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeLightbox() {
-  document.getElementById('lb-overlay').classList.remove('active');
-  document.body.style.overflow = '';
-}
-
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') closeLightbox();
-});
-</script>
 
 
 

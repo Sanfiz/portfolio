@@ -128,6 +128,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="women-header">
+  <p class="women-label">HISTORY OF SCIENCE</p>
   <h2 class="women-title anchored">Pioneer Women in Climate</h2>
   <p class="women-intro">A glimpse into the past: the women who shaped climate science.</p>
 </div>
@@ -136,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
 
   <!-- Eunice Newton Foote -->
   <div class="file-card" onclick="toggleFile(this)">
-    <div class="file-tab">1819 — 1888</div>
+    <div class="file-tab">FILE Nº 001</div>
     <div class="file-front">
       <div class="file-stamp">OVERLOOKED</div>
       <div class="file-photo">
@@ -291,162 +292,156 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 <div class="women-footer">
-  <p>*Text extracted and adapted from the Preface of <a href="https://aplicaciones.ciencia.gob.es/teseo/#/tesis/O628053/detalle" target="_blank" class="link-link">my PhD dissertation</a>, submitted and defended in 2020.</p>
+  <p>Text extracted and adapted from the Preface of <a href="https://aplicaciones.ciencia.gob.es/teseo/#/tesis/O628053/detalle" target="_blank" class="link-link">my PhD dissertation</a>, submitted and defended in 2020.</p>
 </div>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap');
-
+/* ── Layout ─────────────────────────────────────────── */
 .women-header {
   text-align: center;
-  padding: 2.5rem 1rem 1rem 1rem;
-  margin-bottom: 2.5rem;
+  padding: 2.5rem 1rem 1.5rem 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e4e4e4;
 }
 
-.women-subtitle {
-  font-family: 'Courier Prime', monospace;
-  font-size: 0.8rem;
-  letter-spacing: 0.18em;
-  color: #999;
+.women-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: #92a7f2;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
 .women-title {
-  font-family: 'Special Elite', serif;
-  font-size: 2.2rem;
-  color: #92a7f2 !important;
-  margin: 0.3rem 0;
+  font-size: 1.9rem;
+  color: #1a1a1a !important;
+  font-weight: 700;
+  margin: 0.25rem 0 0.6rem 0;
+  letter-spacing: -0.01em;
 }
 
 .women-intro {
-  font-family: 'Courier Prime', monospace;
+  color: #777;
+  font-size: 0.95rem;
+  margin-top: 0.3rem;
   font-style: italic;
-  color: #666;
-  font-size: 1rem;
-  margin-top: 0.5rem;
 }
 
+/* ── Grid ────────────────────────────────────────────── */
 .files-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.8rem;
-  padding: 0 1rem 3rem 1rem;
+  gap: 1.4rem;
+  padding: 0 0 3rem 0;
 }
 
+/* ── Card ────────────────────────────────────────────── */
 .file-card {
-  background: #f5f0e8;
-  border: 1px solid #c8b89a;
-  border-radius: 2px;
+  background: #fafafa;
+  border: 1px solid #e4e4e4;
+  border-radius: 4px;
   position: relative;
   cursor: pointer;
-  box-shadow:
-    2px 2px 0 #c8b89a,
-    4px 4px 0 #b8a88a,
-    0 6px 20px rgba(0,0,0,0.10);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  font-family: 'Courier Prime', monospace;
 }
 
 .file-card:hover {
-  transform: translateY(-3px);
-  box-shadow:
-    2px 2px 0 #c8b89a,
-    4px 4px 0 #b8a88a,
-    0 12px 28px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
 }
 
+/* ── Tab ─────────────────────────────────────────────── */
 .file-tab {
-  background: #c8b89a;
-  color: #5a4a2a;
-  font-size: 0.65rem;
-  letter-spacing: 0.12em;
+  background: #f0f0f0;
+  color: #888;
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
   padding: 3px 10px;
   display: inline-block;
   margin: 8px 0 0 8px;
-  border-radius: 1px;
+  border-radius: 2px;
+  text-transform: uppercase;
 }
 
+/* ── Front ───────────────────────────────────────────── */
 .file-front {
   padding: 0.8rem 1.2rem 1.2rem 1.2rem;
   position: relative;
 }
 
+/* ── Stamp ───────────────────────────────────────────── */
 .file-stamp {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  border: 2.5px solid #c0392b;
-  color: #c0392b;
-  font-size: 0.6rem;
+  border: 1.5px solid #92a7f2;
+  color: #92a7f2;
+  font-size: 0.55rem;
   letter-spacing: 0.15em;
-  padding: 3px 7px;
+  padding: 2px 6px;
   border-radius: 2px;
-  opacity: 0.75;
-  transform: rotate(8deg);
+  opacity: 0.85;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
+/* ── Photo placeholder ───────────────────────────────── */
 .file-photo {
-  width: 70px;
-  height: 85px;
-  background: #ddd5c0;
-  border: 1px solid #c8b89a;
+  width: 64px;
+  height: 78px;
+  background: #ececec;
+  border: 1px solid #ddd;
   margin: 0.6rem 0 0.8rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
 }
 
 .photo-placeholder {
-  font-family: 'Courier Prime', monospace;
-  font-size: 0.75rem;
-  color: #8a7a5a;
-  letter-spacing: 0.1em;
+  font-size: 0.7rem;
+  color: #aaa;
+  letter-spacing: 0.08em;
 }
 
+/* ── Meta ────────────────────────────────────────────── */
 .file-name {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 700;
-  letter-spacing: 0.06em;
-  color: #2a1a0a;
+  letter-spacing: 0.05em;
+  color: #1a1a1a;
   margin: 0 0 0.2rem 0;
   line-height: 1.3;
 }
 
 .file-dates {
-  font-size: 0.75rem;
-  color: #6a5a3a;
-  margin: 0 0 0.2rem 0;
+  font-size: 0.74rem;
+  color: #888;
+  margin: 0 0 0.15rem 0;
 }
 
 .file-role {
-  font-size: 0.75rem;
-  color: #6a5a3a;
+  font-size: 0.74rem;
+  color: #888;
   font-style: italic;
   margin: 0 0 0.6rem 0;
   line-height: 1.4;
 }
 
 .file-hint {
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   color: #92a7f2;
   margin: 0;
   letter-spacing: 0.05em;
-  transition: opacity 0.2s;
 }
 
-.file-card.open .file-hint {
-  content: '▲ close file';
-}
-
+/* ── Body ────────────────────────────────────────────── */
 .file-body {
   display: none;
-  padding: 0 1.2rem 1.2rem 1.2rem;
-  border-top: 1px dashed #c8b89a;
-  margin-top: 0.3rem;
-  animation: slideDown 0.3s ease;
+  padding: 0.8rem 1.2rem 1.2rem 1.2rem;
+  border-top: 1px solid #e8e8e8;
+  animation: slideDown 0.25s ease;
 }
 
 .file-card.open .file-body {
@@ -454,9 +449,9 @@ ul.task-list li input[type="checkbox"] {
 }
 
 .file-body p {
-  font-size: 0.82rem;
-  line-height: 1.65;
-  color: #3a2a0a;
+  font-size: 0.83rem;
+  line-height: 1.7;
+  color: #444;
   margin-bottom: 0.7rem;
   text-align: justify;
 }
@@ -465,19 +460,21 @@ ul.task-list li input[type="checkbox"] {
   margin-bottom: 0;
 }
 
+/* ── Footer ──────────────────────────────────────────── */
 .women-footer {
   text-align: center;
   padding: 0 1rem 3rem 1rem;
-  font-size: 0.8rem;
-  color: #888;
-  font-family: 'Courier Prime', monospace;
+  font-size: 0.78rem;
+  color: #aaa;
+  border-top: 1px solid #e4e4e4;
+  padding-top: 1.5rem;
 }
 
 .link-link {
   color: inherit !important;
   font-weight: 600;
   text-decoration: underline;
-  text-decoration-color: #94805c;
+  text-decoration-color: #ccc;
   text-underline-offset: 3px;
   transition: text-decoration-color 0.2s;
 }
@@ -487,7 +484,7 @@ ul.task-list li input[type="checkbox"] {
 }
 
 @keyframes slideDown {
-  from { opacity: 0; transform: translateY(-6px); }
+  from { opacity: 0; transform: translateY(-5px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 </style>

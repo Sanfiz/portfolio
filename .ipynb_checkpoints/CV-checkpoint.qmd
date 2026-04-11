@@ -21,6 +21,7 @@ toc: false
         <div class="flip-poster-inner">
           <div class="flip-poster-front">
             <img src="images/index/pic-profile.jpeg" alt="Self-Portrait"/>
+            <p class="poster-title">self-portrait</p>
           </div>
           <div class="flip-poster-back">
             <p class="poster-back-title">Self-Portrait</p>
@@ -199,7 +200,7 @@ toc: false
 /* ── Flip Poster ─────────────────────────────────────── */
 .flip-poster {
   position: relative;
-  width: 200px;
+  width: 160px;
   flex-shrink: 0;
   padding-top: 14px; /* room for pin */
   cursor: pointer;
@@ -218,7 +219,7 @@ toc: false
 
 .pin {
   position: absolute;
-  top: 8px;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 14px;
@@ -238,30 +239,34 @@ toc: false
   width: 2px;
   height: 8px;
   background: #aaa;
-  border-radius: 1px;}
+  border-radius: 1px;
+}
 
 .flip-poster-inner {
   width: 100%;
   transform-style: preserve-3d;
   transition: transform 0.55s cubic-bezier(.4,0,.2,1);
   background: #fff;
-  padding: 8px 8px 16px 8px;
-  box-shadow: 2px 2px 4px rgba(0,0,0,0.10), 6px 8px 20px rgba(0,0,0,0.18);}
+  padding: 8px 8px 32px 8px;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.10), 6px 8px 20px rgba(0,0,0,0.18);
+}
 
 .flip-poster.is-flipped .flip-poster-inner {
-  transform: rotateY(180deg);}
+  transform: rotateY(180deg);
+}
 
 .flip-poster-front,
 .flip-poster-back {
   backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;}
+  -webkit-backface-visibility: hidden;
+}
 
 .flip-poster-front img {
-  object-position: top;
   width: 100%;
   display: block;
   object-fit: cover;
-  aspect-ratio: 4/5;}
+  aspect-ratio: 3/4;
+}
 
 .flip-poster-back {
   position: absolute;

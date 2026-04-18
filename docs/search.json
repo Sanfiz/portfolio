@@ -11,21 +11,21 @@
     "href": "Maps.html",
     "title": "",
     "section": "",
-    "text": "[Under Construction] Some maps, charts and animations made with Python\n  \n\n\n\n\n  \n    \n    Weather station coverage across Spain · #30DayMapChallenge\n  \n\n  \n    \n    Spanish river basin districts with HydroRIVERS · #30DayMapChallenge\n  \n\n  \n    \n    European rivers — minimal map · #30DayMapChallenge\n  \n\n  \n    \n      \n    \n    CO₂ and sea ice extent — animated time series"
+    "text": "[Under Construction] Some maps, charts and animations made with Python\n\n\n\nMeteorology\n\n  \n    \n    Weather station coverage across Spain · Static map\n  \n\n\n\n\nWater\n\n  \n    \n    Spanish river basin districts with HydroRIVERS · Static map\n  \n  \n    \n    European rivers · Static map\n  \n\n\n\n\nClimate Change\n\n  \n    \n      \n    \n    CO₂ and sea ice extent · Animated time series"
   },
   {
-    "objectID": "visuals/plot1.html",
-    "href": "visuals/plot1.html",
+    "objectID": "maps/plot1.html",
+    "href": "maps/plot1.html",
     "title": "",
     "section": "",
-    "text": "← Back to Visuals\n\n  Weather Station Coverage across Spain\n\n  \n    \n  \n\n  \n    Choropleth map showing the distance from each Spanish municipality to the nearest AEMET weather station. Areas in deep blue are more than 15 km away from the closest station, revealing coverage gaps across the interior plateau and mountain ranges.\n    \n\n\n\nTools\nPython · GeoPandas · Matplotlib\n\n\nContext\n#30DayMapChallenge 2025 · Day: Points\n\n\nData\nAEMET OpenData · Administrative boundaries CNIG-IGN"
+    "text": "← Back to maps\n\n  Weather Station Coverage across Spain\n\n  \n    \n  \n\n    \n      \n        ↓ download map\n      \n    \n\n  \n\n    Choropleth map showing the distance from each Spanish municipality to the nearest Spanish Met Service (AEMET) weather station. Areas in deep blue represent distances higher than 15 km from the closest station, revealing significant coverage gaps across the territory.\n\n    The information behind this map is the gaps in Spain’s weather-observation network, particularly in rural and mountainous areas, where investment in climate infrastructure has historically been low. Those gaps are not merely cartographic, they have real consequences.\n\n    \n      The lack of weather station coverage limits the ability to detect and anticipate extreme events such as heatwaves, heavy rainfall, and storms. Without observations, there is no data assimilation. Without data assimilation, forecast models are blind in precisely the areas that matter most during high-impact events.\n    \n\n    In the context of climate change, this is not a minor technical detail. Extreme precipitation events, prolonged droughts, and heat episodes are becoming more frequent and more intense across the Iberian Peninsula. Some of the ability to monitor those events depends on whether there is a ground station.\n\n    \n      \n        \n        Original LinkedIn post\n      \n    \n\n    \n\n\n\nTools\nPython · GeoPandas · Matplotlib\n\n\nContext\n#30DayMapChallenge 2025 · Day 7: Accessibility\n\n\nData\nAEMET OpenData · Administrative boundaries CNIG-IGN"
   },
   {
-    "objectID": "visuals/co2-seaice.html",
-    "href": "visuals/co2-seaice.html",
+    "objectID": "maps/co2-seaice.html",
+    "href": "maps/co2-seaice.html",
     "title": "",
     "section": "",
-    "text": "← Back to Visuals\n\n  CO₂ and Sea Ice Extent — Animated Time Series\n\n  \n    \n      \n    \n  \n\n  \n    Animated dual time series showing the parallel evolution of atmospheric CO₂ concentration (Mauna Loa) and Arctic sea ice extent from the 1970s to the present. The animation highlights the inverse relationship between rising greenhouse gas levels and the long-term decline of sea ice.\n    \n\n\n\nTools\nPython · Matplotlib · FuncAnimation\n\n\nContext\nClimate communication · Personal project\n\n\nData\nNOAA / NSIDC"
+    "text": "← Back to maps\n\n  CO₂ and Sea Ice Extent\n\n  \n    \n      \n    \n  \n\n  \n    \n      ↓ download animation\n    \n  \n\n  \n\n    Each frame in this animation is a pair of 3D bubbles growing aornd shrinking through time to make two opposing trends. The red bubble tracks atmospheric CO₂ concentration measured at Mauna Loa: it grows relentlessly, decade after decade. The blue bubble tracks Arctic sea ice extent from the Copernicus Marine Service: it shrinks over time.\n\n    The choice of bubbles was deliberate. A line chart can show the same data, but there is something about volume, about watching one thing expand while another collapses, that communicates the imbalance more viscerally. Climate change is not a subtle trend. The visual language should reflect that.\n\n    \n      CO₂ has risen from around 315 ppm in the late 1950s to over 420 ppm today. Over the same period, Arctic sea ice has lost roughly 13% of its extent per decade. These are not independent signals, they are two sides of the same story.\n    \n\n    \n      \n        \n        Original LinkedIn post\n      \n    \n\n    \n\n\n\nTools\nPython · Matplotlib · FuncAnimation\n\n\nContext\nClimate communication · Personal project\n\n\nData\nNOAA (Mauna Loa CO₂) · Copernicus Marine Service (sea ice extent)"
   },
   {
     "objectID": "Contact.html",
@@ -42,18 +42,18 @@
     "text": "Where climate science meets Adobe Illustrator visual storytelling.\n\n\n\n\n  \n    \n    \n      an inconvenient data\n      A visual homage to Al Gore's iconic film — real climate data reframed as a movie poster. Because sometimes science needs a cinematic push.\n    \n  \n\n  \n    \n    \n      climate data, cinematic cut\n      Temperature anomalies reimagined through the colour palettes of classic films. Data as set design.\n    \n  \n\n  \n    \n    \n      good quality air? as retro as cassettes\n      Air quality trends presented as a cassette tape — a reminder that clean air is becoming as rare as physical media.\n    \n  \n\n  \n    \n    \n      there is no planet b\n      A simple statement. No annotation needed. The data speaks, the design amplifies."
   },
   {
-    "objectID": "visuals/plot2.html",
-    "href": "visuals/plot2.html",
+    "objectID": "maps/plot2.html",
+    "href": "maps/plot2.html",
     "title": "",
     "section": "",
-    "text": "← Back to Visuals\n\n  Spanish River Basin Districts\n\n  \n    \n  \n\n  \n    Map of Spain's 16 river basin districts overlaid with the HydroRIVERS dataset. Each basin is coloured independently, with river networks drawn at varying widths according to stream order. Reservoir and gauge station locations are marked as dots.\n    \n\n\n\nTools\nPython · GeoPandas · Matplotlib\n\n\nContext\n#30DayMapChallenge 2025 · Day: Rivers\n\n\nData\nSpanish River Basin Districts (MITECO, 2023) · HydroRIVERS (Lehner & Grill, 2013)"
+    "text": "← Back to maps\n\n  Spanish River Basin Districts\n\n  \n    \n  \n\n  \n    \n      ↓ download map\n    \n  \n\n  \n    Map of Spain's 16 river basin districts overlaid with the HydroRIVERS dataset. Each basin is coloured independently, with river networks drawn at varying widths according to stream order. Reservoir and gauge station locations are marked as dots.\n\n    \n      \n        \n        Original LinkedIn post\n      \n    \n\n    \n\n\n\nTools\nPython · GeoPandas · Matplotlib\n\n\nContext\n#30DayMapChallenge 2025 · Day: Rivers\n\n\nData\nSpanish River Basin Districts (MITECO, 2023) · HydroRIVERS (Lehner & Grill, 2013)"
   },
   {
-    "objectID": "visuals/rivers-europe.html",
-    "href": "visuals/rivers-europe.html",
+    "objectID": "maps/rivers-europe.html",
+    "href": "maps/rivers-europe.html",
     "title": "",
     "section": "",
-    "text": "← Back to Visuals\n\n  European Rivers — Minimal Map\n\n  \n    \n  \n\n  \n    A minimal cartographic rendering of the entire European river network using the HydroRIVERS dataset. No political boundaries — only the river lines, drawn in a single blue tone against a white background, revealing the continent's drainage patterns.\n    \n\n\n\nTools\nPython · GeoPandas · Matplotlib\n\n\nContext\n#30DayMapChallenge 2025 · Day: Minimal\n\n\nData\nHydroRIVERS (Lehner & Grill, 2013)"
+    "text": "← Back to maps\n\n  European Rivers\n\n  \n    \n  \n\n  \n    \n      ↓ download map\n    \n  \n\n\n  \n    A minimal cartographic rendering of the entire European river network using the HydroRIVERS dataset. No political boundaries — only the river lines.\n    \n\n\n\nTools\nPython · GeoPandas · Matplotlib\n\n\nContext\n#30DayMapChallenge 2025 · Day: Minimal\n\n\nData\nHydroRIVERS (Lehner & Grill, 2013)"
   },
   {
     "objectID": "CV.html",

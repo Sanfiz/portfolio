@@ -103,5 +103,17 @@
   },
   "FemaleVoices.qmd": {
     "FemaleVoices.html": "3e861a22"
+  },
+  "maps/co2-seaice.qmd": {
+    "co2-seaice.html": "6b2bebe2"
+  },
+  "maps/plot2.qmd": {
+    "plot2.html": "50cb3c67"
+  },
+  "maps/plot1.qmd": {
+    "plot1.html": "42764e60"
+  },
+  "maps/rivers-europe.qmd": {
+    "rivers-europe.html": "fc174af1"
   }
 }

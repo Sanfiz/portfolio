@@ -568,6 +568,9 @@ Training in enterprise GIS environments and workflow management. *20 hours*
   margin-bottom: 0.6rem;
 }
 
+#toc-title {
+  display: none;
+}
 .logos-row {
   display: flex;
   flex-wrap: wrap;
@@ -637,6 +640,9 @@ Training in enterprise GIS environments and workflow management. *20 hours*
 
 .link-link:hover {
   text-decoration-color: #a3aabf;
+}
+#toc-title {
+  display: none;
 }
 
 @keyframes fadeSlide {

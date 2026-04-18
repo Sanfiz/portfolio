@@ -129,9 +129,9 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="visual-detail">
 
-  <a href="../3-visuals.html" class="back-link">← Back to Visuals</a>
+  <a href="../Maps.html" class="back-link">← Back to maps</a>
 
-  <h2 class="visual-title anchored">CO₂ and Sea Ice Extent — Animated Time Series</h2>
+  <h2 class="visual-title anchored">CO₂ and Sea Ice Extent</h2>
 
   <div class="visual-detail-media">
     <video autoplay="" loop="" muted="" playsinline="">
@@ -139,8 +139,29 @@ ul.task-list li input[type="checkbox"] {
     </video>
   </div>
 
+  <div class="visual-download">
+    <a href="../images/visuals/co2-seaice.mp4" download="co2-seaice.mp4" class="download-btn">
+      ↓ download animation
+    </a>
+  </div>
+
   <div class="visual-meta">
-    <p class="visual-desc">Animated dual time series showing the parallel evolution of atmospheric CO₂ concentration (Mauna Loa) and Arctic sea ice extent from the 1970s to the present. The animation highlights the inverse relationship between rising greenhouse gas levels and the long-term decline of sea ice.</p>
+
+    <p class="visual-desc">Each frame in this animation is a pair of 3D bubbles growing aornd shrinking through time to make two opposing trends. The red bubble tracks atmospheric CO₂ concentration measured at Mauna Loa: it grows relentlessly, decade after decade. The blue bubble tracks Arctic sea ice extent from the Copernicus Marine Service: it shrinks over time.</p>
+
+    <p class="visual-desc">The choice of bubbles was deliberate. A line chart can show the same data, but there is something about volume, about watching one thing expand while another collapses, that communicates the imbalance more viscerally. Climate change is not a subtle trend. The visual language should reflect that.</p>
+
+    <div class="callout">
+      <p>CO₂ has risen from around 315 ppm in the late 1950s to over 420 ppm today. Over the same period, Arctic sea ice has lost roughly 13% of its extent per decade. These are not independent signals, they are two sides of the same story.</p>
+    </div>
+
+    <p class="visual-link-row">
+      <a href="https://www.linkedin.com/feed/update/urn:li:activity:7392306809266483200/" target="_blank" class="visual-ext-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewbox="0 0 16 16" style="vertical-align:-2px; margin-right:5px;"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"></path></svg>
+        Original LinkedIn post
+      </a>
+    </p>
+
     
 <table class="visual-info caption-top table" data-quarto-postprocess="true">
 <tbody>
@@ -154,10 +175,11 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td class="meta-label">Data</td>
-<td>NOAA / NSIDC</td>
+<td>NOAA (Mauna Loa CO₂) · Copernicus Marine Service (sea ice extent)</td>
 </tr>
 </tbody>
 </table>
+
 
   </div>
 
@@ -165,58 +187,117 @@ ul.task-list li input[type="checkbox"] {
 
 <style>
 .visual-detail {
-  max-width: 900px;
+  max-width: 780px;
   margin: 0 auto;
-  padding: 1rem 1rem 3rem 1rem;
+  padding: 1.5rem 1rem 3rem 1rem;
 }
 .back-link {
   display: inline-block;
-  margin-bottom: 1.5rem;
-  color: #92a7f2 !important;
+  margin-bottom: 2rem;
+  font-size: 0.82rem;
   font-weight: 600;
+  letter-spacing: 0.04em;
   text-decoration: none;
-  font-size: 0.9rem;
+  color: var(--mustard) !important;
+  transition: opacity 0.2s;
 }
-.back-link:hover {
-  text-decoration: underline;
-}
+.back-link:hover { opacity: 0.7; }
 .visual-title {
-  font-size: 1.6rem;
-  color: #e8a020 !important;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a !important;
   margin-bottom: 1.5rem;
+  line-height: 1.3;
 }
 .visual-detail-media img,
 .visual-detail-media video {
   width: 100%;
   border-radius: 10px;
-  box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
   display: block;
+}
+.visual-download {
+  margin-top: 0.8rem;
+  text-align: right;
+}
+.download-btn {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--mustard) !important;
+  border: 1px solid var(--mustard);
+  padding: 0.35rem 0.9rem;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+.download-btn:hover {
+  background: var(--mustard);
+  color: #fff !important;
 }
 .visual-meta {
   margin-top: 1.8rem;
 }
 .visual-desc {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #444;
   margin-bottom: 1.2rem;
   text-align: justify;
 }
+.callout {
+  border-left: 3px solid var(--mustard);
+  background: color-mix(in srgb, var(--mustard) 6%, white);
+  border-radius: 0 6px 6px 0;
+  padding: 0.9rem 1.2rem;
+  margin: 1.4rem 0;
+}
+.callout p {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: #444;
+  margin: 0;
+  font-style: italic;
+}
+.visual-link-row {
+  margin: 1.4rem 0 1rem 0;
+}
+.visual-ext-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--mustard) !important;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.visual-ext-link:hover { opacity: 0.7; }
 .visual-info {
   border: none;
   width: 100%;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
+  border-top: 1px solid #eee;
+  margin-top: 0.5rem;
+}
+.visual-info tr {
+  border-bottom: 1px solid #f4f4f4;
 }
 .visual-info td {
-  padding: 0.4rem 0.8rem 0.4rem 0;
+  padding: 0.5rem 0.8rem 0.5rem 0;
   border: none;
   vertical-align: top;
+  color: #555;
 }
 .meta-label {
   font-weight: 600;
-  color: #94805c;
+  color: #aaa;
   white-space: nowrap;
   width: 80px;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 </style>
 

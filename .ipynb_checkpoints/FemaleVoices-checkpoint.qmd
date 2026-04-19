@@ -6,7 +6,7 @@ toc: false
 ```{=html}
 <div class="women-header">
   <p class="women-label">History of Science · Ongoing Research</p>
-  <h3 class="women-title">Pioneer Women in Climate</h3>
+  <h2 class="women-title">Pioneer Women in Climate</h2>
 
 
 

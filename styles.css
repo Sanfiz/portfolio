@@ -376,6 +376,12 @@ section.home-text {
   justify-content: center;
 }
 
+/* ────────────── ClimateArt ────────────── */
+.art-img-sm {
+  width: 10%;  
+}
+
+
 /* ────────────── Contact ────────────── */
 .contact-box {
   background: #f5f5f5;

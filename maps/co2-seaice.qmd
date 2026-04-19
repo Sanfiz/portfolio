@@ -47,6 +47,60 @@ toc: false
 
   </div>
 
+
+  <div class="code-section">
+    <p class="code-section-title">How it was made · PyVista code</p>
+
+    <p class="code-label">1 · Load data: CO2 from NOAA, sea ice from Copernicus</p>
+    <div class="code-block"><pre>url_co2 = "https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_annmean_mlo.csv"
+df_co2 = pd.read_csv(url_co2, comment="#", header=None,
+                     names=["year", "CO2_ppm", "unc"])
+df_co2["year"] = df_co2["year"].astype(int)
+
+seaice = pd.read_csv("ARCTIC_OMI_SI_extent_obs_annual.csv")
+seaice = seaice.rename(columns={"extent_million_km2": "SeaIce_million_km2"})
+
+# Merge by year
+data = pd.merge(df_co2, seaice, on="year", how="inner")
+data = data[(data["year"] >= 1979) & (data["year"] <= 2023)]</pre></div>
+
+    <p class="code-label">2 · Scale bubble sizes and set up the PyVista scene</p>
+    <div class="code-block"><pre>import pyvista as pv
+
+# Normalise to [0.3, 0.9] range for bubble radius
+scale_co2 = (data["CO2_ppm"] - data["CO2_ppm"].min()) / (data["CO2_ppm"].max() - data["CO2_ppm"].min()) * 0.6 + 0.3
+scale_ice = (data["sea_ice_mkm2"] - data["sea_ice_mkm2"].min()) / (data["sea_ice_mkm2"].max() - data["sea_ice_mkm2"].min()) * 0.6 + 0.3
+
+x = np.linspace(-5, 5, len(data))
+y_top    = np.full_like(x, -2.0)   # CO2 row
+y_bottom = np.full_like(x,  2.0)   # sea ice row
+
+plotter = pv.Plotter(window_size=[1100, 700])
+plotter.set_background("white")</pre></div>
+
+    <p class="code-label">3 · Add 3D spheres and render</p>
+    <div class="code-block"><pre>reds  = plt.cm.Reds(np.linspace(0.4, 1.0, len(data)))[:, :3]
+blues = plt.cm.Blues_r(np.linspace(0.3, 1.0, len(data)))[:, :3]
+
+# CO2 bubbles: grow over time
+for i in range(len(data)):
+    sphere = pv.Sphere(radius=scale_co2[i], center=(x[i], y_top[i], 0))
+    plotter.add_mesh(sphere, color=tuple(reds[i]),
+                     smooth_shading=True, opacity=0.35,
+                     specular=0.6, ambient=0.25)
+
+# Sea ice bubbles: diminish over time
+for i in range(len(data)):
+    sphere = pv.Sphere(radius=scale_ice[i], center=(x[i], y_bottom[i], 0))
+    plotter.add_mesh(sphere, color=tuple(blues[i]),
+                     smooth_shading=True, opacity=0.4,
+                     specular=0.6, ambient=0.25)
+
+plotter.camera_position = [(8, 8, 5), (0, 0, 0), (0, 0, 1)]
+plotter.show(screenshot="co2_seaice_3d_pyvista.png")</pre></div>
+
+  </div>
+
 </div>
 
 <style>
@@ -163,5 +217,44 @@ toc: false
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
+
+/* ── Code section ───────────────────────────────────── */
+.code-section {
+  margin-top: 2.5rem;
+  border-top: 1px solid #eee;
+  padding-top: 1.8rem;
+}
+.code-section-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #aaa;
+  margin: 0 0 1.2rem 0;
+}
+.code-block {
+  background: #555563;
+  border-radius: 8px;
+  padding: 1.2rem 1.4rem;
+  margin-bottom: 1.4rem;
+  overflow-x: auto;
+}
+.code-block pre {
+  margin: 0;
+  font-family: "Courier New", monospace;
+  font-size: 0.78rem;
+  line-height: 1.65;
+  color: #cdd6f4;
+  white-space: pre;
+}
+.code-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #888;
+  margin: 0 0 0.4rem 0;
+}
+
 </style>
 ```

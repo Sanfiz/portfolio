@@ -47,6 +47,49 @@ toc: false
 
   </div>
 
+  <div class="code-section">
+    <p class="code-section-title">How it was made · selected code</p>
+
+    <p class="code-label">1 · Fetch station data from AEMET OpenData API</p>
+    <div class="code-block"><pre>url = "https://opendata.aemet.es/opendata/api/observacion/convencional/todas"
+response = requests.get(url, headers={"api_key": API_KEY})
+data_url = response.json()["datos"]
+
+observaciones = requests.get(data_url).json()
+df = pd.DataFrame(observaciones)</pre></div>
+
+    <p class="code-label">2 · Compute distance from each municipality to nearest station</p>
+    <div class="code-block"><pre># Reproject to metric CRS for accurate distance calculation
+municipios_m = municipios.to_crs(3035)
+stations_m   = gdf_stations.to_crs(3035)
+
+# Spatial join: nearest station per municipality
+municipios_dist = municipios_m.sjoin_nearest(
+    stations_m[["geometry"]],
+    how="left",
+    distance_col="nearest_dist_m")
+municipios_dist["nearest_dist_km"] = municipios_dist["nearest_dist_m"] / 1000.0</pre></div>
+
+    <p class="code-label">3 · Plot choropleth map</p>
+    <div class="code-block"><pre>fig, ax = plt.subplots(figsize=(10, 10))
+
+municipios_dist.plot(
+    ax=ax,
+    column="nearest_dist_km",
+    cmap=cmap,
+    norm=norm,
+    linewidth=0.1,
+    edgecolor="white")
+
+gdf_stations.plot(ax=ax, color="orange", marker="^",
+                  markersize=8, alpha=0.6, label="AEMET stations")
+
+ax.set_title("Areas with Fewer Nearby Spanish Met Service Weather Stations",
+    fontsize=11, color="dimgray", pad=10)
+ax.set_axis_off()</pre></div>
+
+  </div>
+
 </div>
 
 <style>
@@ -156,5 +199,44 @@ toc: false
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
+
+/* ── Code section ───────────────────────────────────── */
+.code-section {
+  margin-top: 2.5rem;
+  border-top: 1px solid #eee;
+  padding-top: 1.8rem;
+}
+.code-section-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #aaa;
+  margin: 0 0 1.2rem 0;
+}
+.code-block {
+  background: #555563;
+  border-radius: 8px;
+  padding: 1.2rem 1.4rem;
+  margin-bottom: 1.4rem;
+  overflow-x: auto;
+}
+.code-block pre {
+  margin: 0;
+  font-family: "Courier New", monospace;
+  font-size: 0.78rem;
+  line-height: 1.65;
+  color: #cdd6f4;
+  white-space: pre;
+}
+.code-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #888;
+  margin: 0 0 0.4rem 0;
+}
+
 </style>
 ```

@@ -40,20 +40,9 @@ toc: false
     <img src="images/art/reminder.jpeg" alt="There is no Planet B" class="art-img art-img-sm" onclick="openLb(this)"/>
     <div class="art-text">
       <p class="art-title">there is no planet b</p>
-      <p class="art-desc">Your phone notifies it's time to act.</p>
+      <p class="art-desc">A simple statement. No annotation needed.</p>
     </div>
   </div>
-
-
-<div class="art-item">
-  <img src="images/art/oneday.jpg" alt="Año 2021 en la Tierra" class="art-img art-img-sm" onclick="openLb(this)"/>
-  <div class="art-text">
-    <p class="art-title">año 2021 en la tierra</p>
-    <p class="art-desc"><em>One Day on Earth</em> is a documentary project that captures a single day on the planet through thousands of simultaneous recordings. I took that idea and made it my own: a film reel, but instead of one day, the entire 2021, told through images of climate events.</p>
-    <p class="art-desc">The title is in Spanish <em>Año 2021 en la Tierra</em> meaning Year 2021 on Earth. What's in the frames does: a polar bear stranded on shrinking ice, wildfires tearing through landscapes across three continents, smoke where there used to be sky. Each frame a document. Each year that year.</p>
-  </div>
-</div>
-
 
 </div>
 
@@ -91,7 +80,7 @@ toc: false
   height: auto;
   display: block;
   border-radius: 8px;
-  box-shadow: none;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
   cursor: zoom-in;
   transition: opacity 0.2s;
 }

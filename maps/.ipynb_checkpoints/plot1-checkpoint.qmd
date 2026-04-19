@@ -6,7 +6,7 @@ toc: false
 ```{=html}
 <div class="visual-detail">
 
-  <a href="../Maps.html" class="back-link">← back to maps</a>
+  <a href="../Maps.html" class="back-link">← Back to maps</a>
 
   <h2 class="visual-title">Weather Station Coverage across Spain</h2>
 
@@ -14,17 +14,23 @@ toc: false
     <img src="../images/visuals/plot1.jpg" alt="Weather stations Spain"/>
   </div>
 
+    <div class="visual-download">
+      <a href="../images/visuals/plot1.jpg" download="weather-stations-spain.jpg" class="download-btn">
+        ↓ download map
+      </a>
+    </div>
+
   <div class="visual-meta">
 
-    <p class="visual-desc">Choropleth map showing the distance from each Spanish municipality to the nearest AEMET weather station. Areas in deep blue are more than 15 km away from the closest station, revealing coverage gaps across the interior plateau and mountain ranges — and the Balearic Islands.</p>
+    <p class="visual-desc">Choropleth map showing the distance from each Spanish municipality to the nearest Spanish Met Service (AEMET) weather station. Areas in deep blue represent distances higher than 15 km from the closest station, revealing significant coverage gaps across the territory.</p>
 
-    <p class="visual-desc">The map was made for the <strong>#30DayMapChallenge</strong> (7 Nov · Accessibility), but the question behind it is anything but academic. Spain's observational network has significant gaps, particularly in rural and mountainous areas where investment in climate infrastructure has historically been low. Those gaps are not merely cartographic — they have real consequences.</p>
+    <p class="visual-desc">The information behind this map is the gaps in Spain’s weather-observation network, particularly in rural and mountainous areas, where investment in climate infrastructure has historically been low. Those gaps are not merely cartographic, they have real consequences.</p>
 
     <div class="callout">
       <p>The lack of weather station coverage limits the ability to detect and anticipate extreme events such as heatwaves, heavy rainfall, and storms. Without observations, there is no data assimilation. Without data assimilation, forecast models are blind in precisely the areas that matter most during high-impact events.</p>
     </div>
 
-    <p class="visual-desc">In the context of climate change, this is not a minor technical detail. Extreme precipitation events, prolonged droughts, and heat episodes are becoming more frequent and more intense across the Iberian Peninsula. The ability to monitor, model, and communicate those events depends — at its most fundamental level — on whether there is a station in the ground.</p>
+    <p class="visual-desc">In the context of climate change, this is not a minor technical detail. Extreme precipitation events, prolonged droughts, and heat episodes are becoming more frequent and more intense across the Iberian Peninsula. Some of the ability to monitor those events depends on whether there is a ground station.</p>
 
     <p class="visual-link-row">
       <a href="https://www.linkedin.com/feed/update/urn:li:activity:7392484571314798592/" target="_blank" class="visual-ext-link">
@@ -38,6 +44,54 @@ toc: false
       <tr><td class="meta-label">Context</td><td>#30DayMapChallenge 2025 · Day 7: Accessibility</td></tr>
       <tr><td class="meta-label">Data</td><td>AEMET OpenData · Administrative boundaries CNIG-IGN</td></tr>
     </table>
+
+  </div>
+
+  <div class="code-section">
+    <p class="code-section-title">How it was made · selected code</p>
+
+    <p class="code-label">1 · Fetch station data from AEMET OpenData API</p>
+    <div class="code-block"><pre>url = "https://opendata.aemet.es/opendata/api/observacion/convencional/todas"
+response = requests.get(url, headers={"api_key": API_KEY})
+data_url = response.json()["datos"]
+
+observaciones = requests.get(data_url).json()
+df = pd.DataFrame(observaciones)</pre></div>
+
+    <p class="code-label">2 · Compute distance from each municipality to nearest station</p>
+    <div class="code-block"><pre># Reproject to metric CRS for accurate distance calculation
+municipios_m = municipios.to_crs(3035)
+stations_m   = gdf_stations.to_crs(3035)
+
+# Spatial join: nearest station per municipality
+municipios_dist = municipios_m.sjoin_nearest(
+    stations_m[["geometry"]],
+    how="left",
+    distance_col="nearest_dist_m"
+)
+municipios_dist["nearest_dist_km"] = municipios_dist["nearest_dist_m"] / 1000.0</pre></div>
+
+    <p class="code-label">3 · Plot choropleth map</p>
+    <div class="code-block"><pre>fig, ax = plt.subplots(figsize=(10, 10))
+
+municipios_dist.plot(
+    ax=ax,
+    column="nearest_dist_km",
+    cmap=cmap,
+    norm=norm,
+    linewidth=0.1,
+    edgecolor="white"
+)
+
+gdf_stations.plot(ax=ax, color="orange", marker="^",
+                  markersize=8, alpha=0.6, label="AEMET stations")
+
+ax.set_title(
+    "Areas with Fewer Nearby Spanish Met Service Weather Stations",
+    fontsize=11, color="dimgray", pad=10
+)
+ax.set_axis_off()
+plt.savefig("7nov2025-accessibility.png", dpi=300, bbox_inches="tight")</pre></div>
 
   </div>
 
@@ -84,6 +138,14 @@ toc: false
   margin-bottom: 1.2rem;
   text-align: justify;
 }
+
+.visual-download { margin-top: 0.8rem; text-align: right; }
+.download-btn {
+  font-size: 0.78rem; font-weight: 600; text-transform: uppercase;
+  color: var(--mustard); border: 1px solid var(--mustard);
+  padding: 0.35rem 0.9rem; border-radius: 4px;
+}
+.download-btn:hover { background: var(--mustard); color: #fff; }
 
 /* ── Callout ─────────────────────────────────────────── */
 .callout {
@@ -142,5 +204,44 @@ toc: false
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
+
+/* ── Code section ───────────────────────────────────── */
+.code-section {
+  margin-top: 2.5rem;
+  border-top: 1px solid #eee;
+  padding-top: 1.8rem;
+}
+.code-section-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #aaa;
+  margin: 0 0 1.2rem 0;
+}
+.code-block {
+  background: #1e1e2e;
+  border-radius: 8px;
+  padding: 1.2rem 1.4rem;
+  margin-bottom: 1.4rem;
+  overflow-x: auto;
+}
+.code-block pre {
+  margin: 0;
+  font-family: "Courier New", monospace;
+  font-size: 0.78rem;
+  line-height: 1.65;
+  color: #cdd6f4;
+  white-space: pre;
+}
+.code-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #888;
+  margin: 0 0 0.4rem 0;
+}
+
 </style>
 ```

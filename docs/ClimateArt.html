@@ -134,37 +134,56 @@ ul.task-list li input[type="checkbox"] {
 <div class="art-list">
 
   <div class="art-item">
-    <img src="images/art/inconvenientdata.jpeg" alt="An Inconvenient Data" class="art-img">
+    <img src="images/art/inconvenientdata.jpeg" alt="An Inconvenient Data" class="art-img art-img-sm" onclick="openLb(this)">
     <div class="art-text">
       <p class="art-title">an inconvenient data</p>
-      <p class="art-desc">A visual homage to Al Gore's iconic film — real climate data reframed as a movie poster. Because sometimes science needs a cinematic push.</p>
+      <p class="art-desc"><em>An Inconvenient Truth</em> was one of the first climate films I watched, and one of the most striking. Released in 2006, it turned Al Gore's slideshow into a cultural moment, bringing the science of global warming to a mainstream audience long before climate communication became a field of its own.</p>
+      <p class="art-desc">The poster stayed with me. So I made my own version: the factory chimneys from the original poster replaced by racks of an HPC cluster. The smoke rising from them is no longer industrial pollution, but the Ed Hawkins' Climate Stripes: blue fading into red, decade by decade. Same image, different source. Same story.</p>
     </div>
   </div>
 
   <div class="art-item">
-    <img src="images/art/movie-temps.jpeg" alt="Movie Temps" class="art-img">
+    <img src="images/art/movie-temps.jpeg" alt="Movie Temps" class="art-img" onclick="openLb(this)">
     <div class="art-text">
-      <p class="art-title">climate data, cinematic cut</p>
-      <p class="art-desc">Temperature anomalies reimagined through the colour palettes of classic films. Data as set design.</p>
+      <p class="art-title">fil roll X climate data</p>
+      <p class="art-desc"><em>I was born in the nineties, hence I am obsessed with the technology of that decade.</em> Back then, photos were stored on film rolls, and before developing them, each image lived as a shadow: uncertain and dark, waiting to be revealed.</p>
+      <p class="art-desc">I decided to combine that idea with current climate data. Each frame is a climate graphic from 2022, global temperature evolution and CO₂ global rise. Printed as if it were a film negative waiting to be developed. The data is there. We just had to take a look.</p>
     </div>
   </div>
 
   <div class="art-item">
-    <img src="images/art/cassette.jpeg" alt="Good Quality Air" class="art-img">
+    <img src="images/art/cassette.jpeg" alt="Good Quality Air" class="art-img art-img-sm" onclick="openLb(this)">
     <div class="art-text">
-      <p class="art-title">good quality air? as retro as cassettes</p>
-      <p class="art-desc">Air quality trends presented as a cassette tape — a reminder that clean air is becoming as rare as physical media.</p>
+      <p class="art-title">good quality air? as retro as cassette tape</p>
+      <p class="art-desc">(Again) Eighties and nineties tech combined with current air quality trends. A reminder that clean air is becoming as rare as physical media.</p>
     </div>
   </div>
 
   <div class="art-item">
-    <img src="images/art/reminder.jpeg" alt="There is no Planet B" class="art-img">
+    <img src="images/art/reminder.jpeg" alt="There is no Planet B" class="art-img art-img-sm" onclick="openLb(this)">
     <div class="art-text">
       <p class="art-title">there is no planet b</p>
-      <p class="art-desc">A simple statement. No annotation needed. The data speaks, the design amplifies.</p>
+      <p class="art-desc">Your phone notifies it's time to act.</p>
     </div>
   </div>
 
+
+<div class="art-item">
+  <img src="images/art/oneday.jpg" alt="Año 2021 en la Tierra" class="art-img art-img-sm" onclick="openLb(this)">
+  <div class="art-text">
+    <p class="art-title">año 2021 en la tierra</p>
+    <p class="art-desc"><em>One Day on Earth</em> is a documentary project that captures a single day on the planet through thousands of simultaneous recordings. I took that idea and made it my own: a film reel, but instead of one day, the entire 2021, told through images of climate events.</p>
+    <p class="art-desc">The title is in Spanish <em>Año 2021 en la Tierra</em> meaning Year 2021 on Earth. What's in the frames does: a polar bear stranded on shrinking ice, wildfires tearing through landscapes across three continents, smoke where there used to be sky. Each frame a document. Each year that year.</p>
+  </div>
+</div>
+
+
+</div>
+
+<!-- Lightbox -->
+<div class="art-lb" id="art-lb" onclick="closeLb()">
+  <button class="art-lb-close" onclick="closeLb()">✕</button>
+  <img id="art-lb-img" src="" alt="">
 </div>
 
 <style>
@@ -195,7 +214,16 @@ ul.task-list li input[type="checkbox"] {
   height: auto;
   display: block;
   border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+  box-shadow: none;
+  cursor: zoom-in;
+  transition: opacity 0.2s;
+}
+
+.art-img:hover { opacity: 0.88; }
+
+.art-img-sm {
+  max-height: 500px;
+  object-fit: contain;
 }
 
 .art-text {
@@ -217,9 +245,71 @@ ul.task-list li input[type="checkbox"] {
   color: #555;
   line-height: 1.65;
   font-style: italic;
-  margin: 0;
+  margin: 0 0 0.6rem 0;
+}
+
+/* ── Lightbox ─────────────────────────────────────────── */
+.art-lb {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.88);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  cursor: zoom-out;
+}
+
+.art-lb.active { display: flex; }
+
+.art-lb img {
+  max-width: 92vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 8px 48px rgba(0,0,0,0.6);
+  animation: lbIn 0.22s ease;
+}
+
+.art-lb-close {
+  position: fixed;
+  top: 1.2rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.6rem;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  z-index: 2;
+}
+
+.art-lb-close:hover { opacity: 1; }
+
+@keyframes lbIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to   { opacity: 1; transform: scale(1); }
 }
 </style>
+
+<script>
+function openLb(img) {
+  document.getElementById('art-lb-img').src = img.src;
+  document.getElementById('art-lb-img').alt = img.alt;
+  document.getElementById('art-lb').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLb() {
+  document.getElementById('art-lb').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeLb();
+});
+</script>
 
 
 

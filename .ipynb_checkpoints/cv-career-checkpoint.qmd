@@ -250,8 +250,82 @@ title: ""
 
   <h3>Skills & Tools</h3>
 
-  <div class="tools-img-wrap">
-    <img src="images/tools.JPEG" alt="Skills and Tools" class="tools-img"/>
+  <div class="hex-svg-wrap">
+    <svg id="hex-tools" viewBox="0 0 820 420" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+
+      <!-- === THREADS from hexagons to their circle === -->
+      <!-- DataViz → blue circle (cx=370 cy=195) -->
+      <line class="thread thread-anim" x1="108" y1="104" x2="336" y2="195" style="animation-delay:0s"/>
+      <line class="thread thread-anim" x1="210" y1="80"  x2="340" y2="180" style="animation-delay:0.5s"/>
+      <line class="thread thread-anim" x1="108" y1="290" x2="336" y2="210" style="animation-delay:1.0s"/>
+      <line class="thread thread-anim" x1="210" y1="314" x2="345" y2="220" style="animation-delay:1.5s"/>
+
+      <!-- Storytelling → purple circle (cx=450 cy=160) -->
+      <line class="thread thread-anim" x1="560" y1="80"  x2="478" y2="148" style="animation-delay:0.3s"/>
+      <line class="thread thread-anim" x1="470" y1="106" x2="452" y2="175" style="animation-delay:0.8s"/>
+
+      <!-- Design → teal circle (cx=450 cy=250) -->
+      <line class="thread thread-anim" x1="620" y1="114" x2="478" y2="242" style="animation-delay:0.6s"/>
+      <line class="thread thread-anim" x1="620" y1="254" x2="478" y2="258" style="animation-delay:1.1s"/>
+
+      <!-- === DATA VIZ hexagons (left) === -->
+      <!-- Python -->
+      <polygon class="hex-poly hex-dv" points="108,52 148,75 148,121 108,144 68,121 68,75" onclick="svgTip('python')"/>
+      <text class="hex-txt" x="108" y="98">Python</text>
+
+      <!-- Tableau -->
+      <polygon class="hex-poly hex-dv" points="210,38 250,61 250,107 210,130 170,107 170,61" onclick="svgTip('tableau')"/>
+      <text class="hex-txt" x="210" y="84">Tableau</text>
+
+      <!-- Datawrapper -->
+      <polygon class="hex-poly hex-dv" points="108,248 148,271 148,317 108,340 68,317 68,271" onclick="svgTip('dw')"/>
+      <text class="hex-txt" x="108" y="282">Data-</text>
+      <text class="hex-txt" x="108" y="296">wrapper</text>
+
+      <!-- D3.js -->
+      <polygon class="hex-poly hex-dv" points="210,272 250,295 250,341 210,364 170,341 170,295" onclick="svgTip('d3')"/>
+      <text class="hex-txt" x="210" y="318">D3.js</text>
+
+      <!-- === STORYTELLING hexagons (top right) === -->
+      <!-- Canva -->
+      <polygon class="hex-poly hex-st" points="560,38 600,61 600,107 560,130 520,107 520,61" onclick="svgTip('canva')"/>
+      <text class="hex-txt" x="560" y="84">Canva</text>
+
+      <!-- HTML & CSS -->
+      <polygon class="hex-poly hex-st" points="470,18 510,41 510,87 470,110 430,87 430,41" onclick="svgTip('html')"/>
+      <text class="hex-txt" x="470" y="58">HTML</text>
+      <text class="hex-txt" x="470" y="72">&amp; CSS</text>
+
+      <!-- === DESIGN hexagons (right) === -->
+      <!-- Illustrator -->
+      <polygon class="hex-poly hex-ds" points="660,68 700,91 700,137 660,160 620,137 620,91" onclick="svgTip('ai')"/>
+      <text class="hex-txt" x="660" y="114">Illustrator</text>
+
+      <!-- Bazaart -->
+      <polygon class="hex-poly hex-ds" points="660,208 700,231 700,277 660,300 620,277 620,231" onclick="svgTip('baz')"/>
+      <text class="hex-txt" x="660" y="254">Bazaart</text>
+
+      <!-- === THREE OVERLAPPING CIRCLES (Venn) in center === -->
+      <!-- Blue: DataViz -->
+      <circle cx="400" cy="195" r="50" fill="#c4d8f2" stroke="#94b8e8" stroke-width="1.5" opacity="0.5"/>
+
+      <!-- Purple: Storytelling -->
+      <circle cx="452" cy="195" r="50" fill="#d8c4f0" stroke="#b898d8" stroke-width="1.5" opacity="0.45"/>
+
+      <!-- Teal: Design -->
+      <circle cx="426" cy="235" r="50" fill="#b8e8d4" stroke="#74c8a8" stroke-width="1.5" opacity="0.45"/>
+
+
+      <!-- Labels on circles -->
+        <text class="hex-txt" x="385" y="178" style="font-size:8.5px;fill:#5577aa">Dataviz</text>
+        <text class="hex-txt" x="468" y="178" style="font-size:8.5px;fill:#8855bb">Storytelling</text>
+        <text class="hex-txt" x="426" y="272" style="font-size:8.5px;fill:#3a9977">Design</text>
+
+      <!-- === TOOLTIP === -->
+      <rect id="stip-bg" x="200" y="372" width="420" height="30" rx="6" fill="white" stroke="#e0e0e0" stroke-width="1" opacity="0"/>
+      <text id="stip-txt" x="410" y="392" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#666" font-style="italic" opacity="0"></text>
+
+    </svg>
   </div>
 
 </div>
@@ -449,20 +523,20 @@ title: ""
 .lang-row {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
-  margin-bottom: 0.45rem;
+  gap: 1rem;
+  margin-bottom: 0.7rem;
 }
 
 .lang-name {
-  width: 90px;
-  font-size: 0.78rem;
-  color: #555;
+  width: 110px;
+  font-size: 0.85rem;
+  color: #333;
   flex-shrink: 0;
 }
 
 .lang-bar-bg {
   flex: 1;
-  height: 5px;
+  height: 7px;
   background: #e0e0e0;
   border-radius: 99px;
   overflow: hidden;
@@ -475,22 +549,11 @@ title: ""
 }
 
 .lang-level {
-  font-size: 0.7rem;
-  color: #bbb;
-  width: 60px;
+  font-size: 0.75rem;
+  color: #999;
+  width: 70px;
   text-align: right;
   flex-shrink: 0;
-}
-
-.tools-img-wrap {
-  text-align: center;
-  margin-top: 0.5rem;
-}
-
-.tools-img {
-  max-width: 100%;
-  width: 480px;
-  border-radius: 8px;
 }
 
 .skills-divider {
@@ -597,6 +660,60 @@ title: ""
   .tl-item { grid-template-columns: 44px 20px 1fr; gap: 0 10px; }
   .tl-year { font-size: 0.65rem; }
 }
+
+/* ── Hexagons SVG ────────────────────────────────────── */
+.hex-svg-wrap {
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.thread {
+  stroke: #cacaca;
+  stroke-width: 1.2;
+  fill: none;
+}
+
+.thread-anim {
+  stroke-dasharray: 5 9;
+  animation: flowThread 2s linear infinite;
+}
+
+@keyframes flowThread {
+  from { stroke-dashoffset: 0; }
+  to   { stroke-dashoffset: -28; }
+}
+
+.hex-poly {
+  stroke-width: 1.5;
+  cursor: pointer;
+  transition: opacity 0.18s;
+}
+
+.hex-poly:hover { opacity: 0.78; }
+
+.hex-dv { fill: #dce8fb; stroke: #94b8e8; }
+.hex-st { fill: #e8d6f5; stroke: #b898d8; }
+.hex-ds { fill: #d4f0e8; stroke: #74c8a8; }
+
+.hex-txt {
+  font-family: system-ui, sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  fill: #444;
+  text-anchor: middle;
+  dominant-baseline: middle;
+  pointer-events: none;
+}
+
+.svg-group-label {
+  font-family: system-ui, sans-serif;
+  font-size: 8.5px;
+  font-weight: 700;
+  fill: #bbb;
+  text-anchor: middle;
+  letter-spacing: 1.2px;
+}
+
 </style>
 
 <script>
@@ -605,5 +722,33 @@ function toggleItem(item) {
   const hint = item.querySelector('.tl-hint');
   hint.textContent = item.classList.contains('open') ? '▲ close' : '▼ read more';
 }
+
+const svgTips = {
+  python:  "Climate maps, animations and data wrangling — #30DayMapChallenge & research",
+  tableau: "Personal data visualisation projects",
+  dw:      "Personal data visualisation projects",
+  d3:      "Interactive dashboards for seasonal forecast communication — Tragsatec/AEMET",
+  canva:   "CV design and presentation materials",
+  html:    "This website",
+  ai:      "Climate art posters — An Inconvenient Data, film roll series",
+  baz:     "Año 2021 en la Tierra — film reel collage"
+};
+let svgActive = null;
+function svgTip(id) {
+  const bg  = document.getElementById('stip-bg');
+  const txt = document.getElementById('stip-txt');
+  if (svgActive === id) {
+    bg.setAttribute('opacity','0');
+    txt.setAttribute('opacity','0');
+    svgActive = null;
+    return;
+  }
+  svgActive = id;
+  txt.textContent = svgTips[id];
+  bg.setAttribute('opacity','1');
+  txt.setAttribute('opacity','1');
+}
+function toggleHex(el) {}
+
 </script>
 ```

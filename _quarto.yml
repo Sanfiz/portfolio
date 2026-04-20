@@ -4,7 +4,8 @@ project:
   resources:
     - cv-latex.pdf
     - cv-canva.pdf
-    
+    - images/logos/
+  
 website:
   title: ""
   favicon: favicon.ico

@@ -1,13 +1,15 @@
 ---
 title: ""
 toc: false
+include-before-body: ../header.html
+include-after-body: ../footer.html
 ---
 
 ```{=html}
 <div class="visual-detail">
 
-  <a href="../Maps.html" class="back-link">← Back to maps</a>
-
+  <a href="../index.html#work" class="back-link">← Back to work</a>
+  <span class="visual-label">// climate change · animation</span>
   <h2 class="visual-title">CO₂ and Sea Ice Extent</h2>
 
   <div class="visual-detail-media">
@@ -17,19 +19,16 @@ toc: false
   </div>
 
   <div class="visual-download">
-    <a href="../images/visuals/co2-seaice.mp4" download="co2-seaice.mp4" class="download-btn">
-      ↓ download animation
-    </a>
+    <a href="../images/visuals/co2-seaice.mp4" download="co2-seaice.mp4" class="download-btn">↓ download animation</a>
   </div>
 
   <div class="visual-meta">
+    <p class="visual-desc">Each frame in this animation is a pair of 3D bubbles growing and shrinking through time to make two opposing trends visible. The red bubble tracks atmospheric CO₂ concentration measured at Mauna Loa: it grows relentlessly, decade after decade. The blue bubble tracks Arctic sea ice extent from the Copernicus Marine Service: it shrinks over time.</p>
 
-    <p class="visual-desc">Each frame in this animation is a pair of 3D bubbles growing aornd shrinking through time to make two opposing trends. The red bubble tracks atmospheric CO₂ concentration measured at Mauna Loa: it grows relentlessly, decade after decade. The blue bubble tracks Arctic sea ice extent from the Copernicus Marine Service: it shrinks over time.</p>
-
-    <p class="visual-desc">The choice of bubbles was deliberate. A line chart can show the same data, but there is something about volume, about watching one thing expand while another collapses, that communicates the imbalance more viscerally. Climate change is not a subtle trend. The visual language should reflect that.</p>
+    <p class="visual-desc">The choice of bubbles was deliberate. A line chart can show the same data, but there is something about volume — about watching one thing expand while another collapses — that communicates the imbalance more viscerally. Climate change is not a subtle trend. The visual language should reflect that.</p>
 
     <div class="callout">
-      <p>CO₂ has risen from around 315 ppm in the late 1950s to over 420 ppm today. Over the same period, Arctic sea ice has lost roughly 13% of its extent per decade. These are not independent signals, they are two sides of the same story.</p>
+      <p>CO₂ has risen from around 315 ppm in the late 1950s to over 420 ppm today. Over the same period, Arctic sea ice has lost roughly 13% of its extent per decade. These are not independent signals — they are two sides of the same story.</p>
     </div>
 
     <p class="visual-link-row">
@@ -40,18 +39,16 @@ toc: false
     </p>
 
     <table class="visual-info">
-      <tr><td class="meta-label">Tools</td><td>Python · Matplotlib · FuncAnimation</td></tr>
+      <tr><td class="meta-label">Tools</td><td>Python · Matplotlib · FuncAnimation · PyVista</td></tr>
       <tr><td class="meta-label">Context</td><td>Climate communication · Personal project</td></tr>
       <tr><td class="meta-label">Data</td><td>NOAA (Mauna Loa CO₂) · Copernicus Marine Service (sea ice extent)</td></tr>
     </table>
-
   </div>
-
 
   <div class="code-section">
     <p class="code-section-title">How it was made · PyVista code</p>
 
-    <p class="code-label">1 · Load data — CO₂ from NOAA, sea ice from Copernicus</p>
+    <span class="code-label">1 · Load data: CO₂ from NOAA, sea ice from Copernicus</span>
     <div class="code-block"><pre>url_co2 = "https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_annmean_mlo.csv"
 df_co2 = pd.read_csv(url_co2, comment="#", header=None,
                      names=["year", "CO2_ppm", "unc"])
@@ -60,36 +57,28 @@ df_co2["year"] = df_co2["year"].astype(int)
 seaice = pd.read_csv("ARCTIC_OMI_SI_extent_obs_annual.csv")
 seaice = seaice.rename(columns={"extent_million_km2": "SeaIce_million_km2"})
 
-# Merge by year
 data = pd.merge(df_co2, seaice, on="year", how="inner")
 data = data[(data["year"] >= 1979) & (data["year"] <= 2023)]</pre></div>
 
-    <p class="code-label">2 · Scale bubble sizes and set up the PyVista scene</p>
+    <span class="code-label">2 · Scale bubble sizes and set up the PyVista scene</span>
     <div class="code-block"><pre>import pyvista as pv
 
-# Normalise to [0.3, 0.9] range for bubble radius
-scale_co2 = (data["CO2_ppm"] - data["CO2_ppm"].min()) /             (data["CO2_ppm"].max() - data["CO2_ppm"].min()) * 0.6 + 0.3
-scale_ice = (data["sea_ice_mkm2"] - data["sea_ice_mkm2"].min()) /             (data["sea_ice_mkm2"].max() - data["sea_ice_mkm2"].min()) * 0.6 + 0.3
-
-x = np.linspace(-5, 5, len(data))
-y_top    = np.full_like(x, -2.0)   # CO2 row
-y_bottom = np.full_like(x,  2.0)   # sea ice row
+scale_co2 = (data["CO2_ppm"] - data["CO2_ppm"].min()) / (data["CO2_ppm"].max() - data["CO2_ppm"].min()) * 0.6 + 0.3
+scale_ice = (data["sea_ice_mkm2"] - data["sea_ice_mkm2"].min()) / (data["sea_ice_mkm2"].max() - data["sea_ice_mkm2"].min()) * 0.6 + 0.3
 
 plotter = pv.Plotter(window_size=[1100, 700])
 plotter.set_background("white")</pre></div>
 
-    <p class="code-label">3 · Add 3D spheres and render</p>
+    <span class="code-label">3 · Add 3D spheres and render</span>
     <div class="code-block"><pre>reds  = plt.cm.Reds(np.linspace(0.4, 1.0, len(data)))[:, :3]
 blues = plt.cm.Blues_r(np.linspace(0.3, 1.0, len(data)))[:, :3]
 
-# CO2 bubbles — grow over time
 for i in range(len(data)):
     sphere = pv.Sphere(radius=scale_co2[i], center=(x[i], y_top[i], 0))
     plotter.add_mesh(sphere, color=tuple(reds[i]),
                      smooth_shading=True, opacity=0.35,
                      specular=0.6, ambient=0.25)
 
-# Sea ice bubbles — shrink over time
 for i in range(len(data)):
     sphere = pv.Sphere(radius=scale_ice[i], center=(x[i], y_bottom[i], 0))
     plotter.add_mesh(sphere, color=tuple(blues[i]),
@@ -98,163 +87,39 @@ for i in range(len(data)):
 
 plotter.camera_position = [(8, 8, 5), (0, 0, 0), (0, 0, 1)]
 plotter.show(screenshot="co2_seaice_3d_pyvista.png")</pre></div>
-
   </div>
 
 </div>
 
 <style>
-.visual-detail {
-  max-width: 780px;
-  margin: 0 auto;
-  padding: 1.5rem 1rem 3rem 1rem;
-}
-.back-link {
-  display: inline-block;
-  margin-bottom: 2rem;
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-decoration: none;
-  color: var(--mustard) !important;
-  transition: opacity 0.2s;
-}
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap');
+body { background: #eefbfe !important; font-family: 'DM Sans', sans-serif !important; margin: 0; padding: 0; }
+h1, h2, h3 { font-family: 'Playfair Display', serif !important; color: #30384b !important; }
+.visual-detail { max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem 4rem 1.5rem; }
+.back-link { display: inline-block; margin-bottom: 1.2rem; font-family: 'DM Sans', sans-serif; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; color: #92a7f2 !important; transition: opacity 0.2s; }
 .back-link:hover { opacity: 0.7; }
-.visual-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #1a1a1a !important;
-  margin-bottom: 1.5rem;
-  line-height: 1.3;
-}
-.visual-detail-media img,
-.visual-detail-media video {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
-  display: block;
-}
-.visual-download {
-  margin-top: 0.8rem;
-  text-align: right;
-}
-.download-btn {
-  display: inline-block;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--mustard) !important;
-  border: 1px solid var(--mustard);
-  padding: 0.35rem 0.9rem;
-  border-radius: 4px;
-  transition: background 0.2s, color 0.2s;
-}
-.download-btn:hover {
-  background: var(--mustard);
-  color: #fff !important;
-}
-.visual-meta {
-  margin-top: 1.8rem;
-}
-.visual-desc {
-  font-size: 0.95rem;
-  line-height: 1.75;
-  color: #444;
-  margin-bottom: 1.2rem;
-  text-align: justify;
-}
-.callout {
-  border-left: 3px solid var(--mustard);
-  background: color-mix(in srgb, var(--mustard) 6%, white);
-  border-radius: 0 6px 6px 0;
-  padding: 0.9rem 1.2rem;
-  margin: 1.4rem 0;
-}
-.callout p {
-  font-size: 0.92rem;
-  line-height: 1.7;
-  color: #444;
-  margin: 0;
-  font-style: italic;
-}
-.visual-link-row {
-  margin: 1.4rem 0 1rem 0;
-}
-.visual-ext-link {
-  display: inline-flex;
-  align-items: center;
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: var(--mustard) !important;
-  text-decoration: none;
-  transition: opacity 0.2s;
-}
+.visual-label { font-family: monospace; font-size: 0.68rem; color: #92a7f2; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.4rem; display: block; }
+.visual-title { font-family: 'Playfair Display', serif !important; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; color: #30384b !important; margin: 0 0 1.8rem 0; line-height: 1.1; }
+.visual-detail-media { margin-bottom: 1rem; }
+.visual-detail-media img, .visual-detail-media video { width: 100%; border-radius: 4px; box-shadow: 0 4px 24px rgba(48,56,75,0.1); display: block; }
+.visual-download { margin-bottom: 2rem; }
+.download-btn { font-family: 'DM Sans', sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; color: #92a7f2 !important; border: 1px solid #92a7f2; padding: 0.4rem 1rem; border-radius: 4px; display: inline-block; transition: background 0.2s, color 0.2s; }
+.download-btn:hover { background: #92a7f2; color: white !important; }
+.visual-meta { margin-top: 1.5rem; }
+.visual-desc { font-family: 'DM Sans', sans-serif; font-size: 0.92rem; line-height: 1.85; color: #444; margin-bottom: 1.2rem; text-align: justify; }
+.callout { border-left: 3px solid #92a7f2; background: rgba(146,167,242,0.06); border-radius: 0 6px 6px 0; padding: 0.9rem 1.2rem; margin: 1.4rem 0; }
+.callout p { font-family: 'DM Sans', sans-serif; font-size: 0.9rem; line-height: 1.7; color: #555; margin: 0; font-style: italic; }
+.visual-link-row { margin: 1.4rem 0 1rem 0; }
+.visual-ext-link { display: inline-flex; align-items: center; font-family: 'DM Sans', sans-serif; font-size: 0.82rem; font-weight: 500; color: #92a7f2 !important; text-decoration: none; transition: opacity 0.2s; }
 .visual-ext-link:hover { opacity: 0.7; }
-.visual-info {
-  border: none;
-  width: 100%;
-  font-size: 0.88rem;
-  border-top: 1px solid #eee;
-  margin-top: 0.5rem;
-}
-.visual-info tr {
-  border-bottom: 1px solid #f4f4f4;
-}
-.visual-info td {
-  padding: 0.5rem 0.8rem 0.5rem 0;
-  border: none;
-  vertical-align: top;
-  color: #555;
-}
-.meta-label {
-  font-weight: 600;
-  color: #aaa;
-  white-space: nowrap;
-  width: 80px;
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-
-/* ── Code section ───────────────────────────────────── */
-.code-section {
-  margin-top: 2.5rem;
-  border-top: 1px solid #eee;
-  padding-top: 1.8rem;
-}
-.code-section-title {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #aaa;
-  margin: 0 0 1.2rem 0;
-}
-.code-block {
-  background: #1e1e2e;
-  border-radius: 8px;
-  padding: 1.2rem 1.4rem;
-  margin-bottom: 1.4rem;
-  overflow-x: auto;
-}
-.code-block pre {
-  margin: 0;
-  font-family: "Courier New", monospace;
-  font-size: 0.78rem;
-  line-height: 1.65;
-  color: #cdd6f4;
-  white-space: pre;
-}
-.code-label {
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #888;
-  margin: 0 0 0.4rem 0;
-}
-
+.visual-info { border: none; width: 100%; font-size: 0.86rem; border-top: 1px solid rgba(146,167,242,0.2); margin-top: 0.5rem; }
+.visual-info tr { border-bottom: 1px solid rgba(146,167,242,0.1); }
+.visual-info td { padding: 0.5rem 0.8rem 0.5rem 0; border: none; vertical-align: top; color: #555; font-family: 'DM Sans', sans-serif; }
+.meta-label { font-weight: 600; color: #92a7f2; white-space: nowrap; width: 80px; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; }
+.code-section { margin-top: 2.5rem; border-top: 1px solid rgba(146,167,242,0.2); padding-top: 1.8rem; }
+.code-section-title { font-family: monospace; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #92a7f2; margin: 0 0 1.2rem 0; display: block; }
+.code-block { background: #30384b; border-radius: 8px; padding: 1.2rem 1.4rem; margin-bottom: 1.4rem; overflow-x: auto; }
+.code-block pre { margin: 0; font-family: 'Courier New', monospace; font-size: 0.78rem; line-height: 1.65; color: #c8d9fd; white-space: pre; }
+.code-label { font-family: monospace; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #b2c5fc; margin: 0 0 0.4rem 0; display: block; }
 </style>
 ```

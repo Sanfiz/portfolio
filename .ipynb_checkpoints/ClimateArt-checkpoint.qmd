@@ -1,47 +1,39 @@
 ---
 title: ""
 toc: false
+include-before-body: header.html
+include-after-body: footer.html
 ---
 
 ```{=html}
-<div class="visuals-intro">
-  <p>Where climate science meets <del>Adobe Illustrator</del> visual storytelling.</p>
-</div>
+<div class="art-page">
 
-<div class="art-list">
-
-  <div class="art-item">
-    <img src="images/art/inconvenientdata.jpeg" alt="An Inconvenient Data" class="art-img art-img-sm" onclick="openLb(this)"/>
-    <div class="art-text">
-      <p class="art-title">an inconvenient data</p>
-      <p class="art-desc"><em>An Inconvenient Truth</em> was one of the first climate films I watched, and one of the most striking. Released in 2006, it turned Al Gore's slideshow into a cultural moment, bringing the science of global warming to a mainstream audience long before climate communication became a field of its own.</p>
-      <p class="art-desc">The poster stayed with me. So I made my own version: the factory chimneys from the original poster replaced by racks of an HPC cluster. The smoke rising from them is no longer industrial pollution, but the Ed Hawkins' Climate Stripes: blue fading into red, decade by decade. Same image, different source. Same story.</p>
-    </div>
+  <div class="art-hero">
+    <p class="art-eyebrow">// climate & art</p>
+    <h1 class="art-title">Climate & Art</h1>
+    <p class="art-sub">Where climate science meets <del>Adobe Illustrator</del> visual storytelling.</p>
   </div>
 
-  <div class="art-item">
-    <img src="images/art/movie-temps.jpeg" alt="Movie Temps" class="art-img" onclick="openLb(this)"/>
-    <div class="art-text">
-      <p class="art-title">fil roll X climate data</p>
-      <p class="art-desc"><em>I was born in the nineties, hence I am obsessed with the technology of that decade.</em> Back then, photos were stored on film rolls, and before developing them, each image lived as a shadow: uncertain and dark, waiting to be revealed.</p>
-      <p class="art-desc">I decided to combine that idea with current climate data. Each frame is a climate graphic from 2022, global temperature evolution and CO₂ global rise. Printed as if it were a film negative waiting to be developed. The data is there. We just had to take a look.</p>
-    </div>
-  </div>
+  <div class="art-list">
 
-  <div class="art-item">
-    <img src="images/art/cassette.jpeg" alt="Good Quality Air" class="art-img art-img-sm" onclick="openLb(this)"/>
-    <div class="art-text">
-      <p class="art-title">good quality air? as retro as cassette tape</p>
-      <p class="art-desc">(Again) Eighties and nineties tech combined with current air quality trends. A reminder that clean air is becoming as rare as physical media.</p>
+    <div class="art-item">
+      <img src="images/art/inconvenientdata.jpeg" alt="An Inconvenient Data" class="art-img" onclick="openLb(this)"/>
+      <div class="art-text">
+        <span class="art-label">an inconvenient data</span>
+        <p class="art-desc"><em>An Inconvenient Truth</em> was one of the first climate films I watched, and one of the most striking. Released in 2006, it turned Al Gore's slideshow into a cultural moment, bringing the science of global warming to a mainstream audience long before climate communication became a field of its own.</p>
+        <p class="art-desc">The poster stayed with me. So I made my own version: the factory chimneys from the original poster replaced by racks of an HPC cluster. The smoke rising from them is no longer industrial pollution, but Ed Hawkins' Climate Stripes: blue fading into red, decade by decade. Same image, different source. Same story.</p>
+      </div>
     </div>
-  </div>
 
-  <div class="art-item">
-    <img src="images/art/reminder.jpeg" alt="There is no Planet B" class="art-img art-img-sm" onclick="openLb(this)"/>
-    <div class="art-text">
-      <p class="art-title">there is no planet b</p>
-      <p class="art-desc">A simple statement. No annotation needed.</p>
+    <div class="art-item">
+      <img src="images/art/oneday.jpg" alt="Año 2021 en la Tierra" class="art-img" onclick="openLb(this)"/>
+      <div class="art-text">
+        <span class="art-label">año 2021 en la tierra</span>
+        <p class="art-desc"><em>One Day on Earth</em> is a documentary project that captures a single day on the planet through thousands of simultaneous recordings. I took that idea and made it my own: a film reel, but instead of one day, the entire 2021, told through images of climate events.</p>
+        <p class="art-desc">The title is in Spanish — <em>Año 2021 en la Tierra</em>, Year 2021 on Earth. A polar bear stranded on shrinking ice, wildfires tearing through landscapes across three continents, smoke where there used to be sky. Each frame a document. Each year that year.</p>
+      </div>
     </div>
+
   </div>
 
 </div>
@@ -53,110 +45,73 @@ toc: false
 </div>
 
 <style>
-.visuals-intro {
-  text-align: center;
-  margin: 2rem 0 2.5rem 0;
-  color: #555;
-  font-size: 1.05rem;
-}
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap');
 
-.art-list {
-  display: flex;
-  flex-direction: column;
-  gap: 3.5rem;
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 0 1rem 4rem 1rem;
-}
+body { background: #eefbfe !important; font-family: 'DM Sans', sans-serif !important; margin: 0; padding: 0; }
+h1, h2, h3 { font-family: 'Playfair Display', serif !important; color: #30384b !important; }
 
-.art-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+.art-page { max-width: 780px; margin: 0 auto; padding: 0 1.5rem 5rem 1.5rem; }
 
-.art-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
-  cursor: zoom-in;
-  transition: opacity 0.2s;
-}
+.art-hero { padding: 7rem 0 3rem 0; border-bottom: 1px solid rgba(146,167,242,0.2); margin-bottom: 3.5rem; }
 
-.art-img:hover { opacity: 0.88; }
-
-.art-img-sm {
-  max-height: 500px;
-  object-fit: contain;
-}
-
-.art-text {
-  width: 100%;
-  padding: 1rem 0.2rem 0 0.2rem;
+.art-eyebrow {
+  font-family: monospace; font-size: 0.68rem; color: #92a7f2;
+  letter-spacing: 0.14em; text-transform: uppercase; margin: 0 0 0.5rem 0;
 }
 
 .art-title {
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #aaa;
-  margin: 0 0 0.4rem 0;
+  font-family: 'Playfair Display', serif !important;
+  font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 700;
+  color: #30384b !important; margin: 0 0 0.8rem 0; line-height: 1;
+}
+
+.art-sub {
+  font-family: 'DM Sans', sans-serif; font-size: 0.92rem;
+  color: #888; margin: 0; line-height: 1.6;
+}
+
+.art-list { display: flex; flex-direction: column; gap: 5rem; }
+
+.art-item { display: flex; flex-direction: column; gap: 1.2rem; }
+
+.art-img {
+  width: 100%; height: auto; display: block;
+  cursor: zoom-in; transition: opacity 0.25s;
+}
+.art-img:hover { opacity: 0.9; }
+
+.art-text {}
+
+.art-label {
+  font-family: monospace; font-size: 0.68rem; font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase; color: #92a7f2;
+  display: block; margin-bottom: 0.8rem;
 }
 
 .art-desc {
-  font-size: 0.92rem;
-  color: #555;
-  line-height: 1.65;
-  font-style: italic;
-  margin: 0 0 0.6rem 0;
+  font-family: 'DM Sans', sans-serif; font-size: 0.92rem;
+  color: #555; line-height: 1.8; margin: 0 0 0.7rem 0; text-align: justify;
 }
 
-/* ── Lightbox ─────────────────────────────────────────── */
+/* Lightbox */
 .art-lb {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.88);
-  z-index: 9999;
-  justify-content: center;
-  align-items: center;
-  cursor: zoom-out;
+  display: none; position: fixed; inset: 0;
+  background: rgba(0,0,0,0.9); z-index: 9999;
+  justify-content: center; align-items: center; cursor: zoom-out;
 }
-
 .art-lb.active { display: flex; }
-
 .art-lb img {
-  max-width: 92vw;
-  max-height: 90vh;
-  object-fit: contain;
-  border-radius: 6px;
+  max-width: 92vw; max-height: 90vh; object-fit: contain;
   box-shadow: 0 8px 48px rgba(0,0,0,0.6);
   animation: lbIn 0.22s ease;
 }
-
 .art-lb-close {
-  position: fixed;
-  top: 1.2rem;
-  right: 1.5rem;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 1.6rem;
-  cursor: pointer;
-  opacity: 0.7;
-  transition: opacity 0.2s;
-  z-index: 2;
+  position: fixed; top: 1.2rem; right: 1.5rem;
+  background: none; border: none; color: #fff; font-size: 1.6rem;
+  cursor: pointer; opacity: 0.7; transition: opacity 0.2s; z-index: 2;
 }
-
 .art-lb-close:hover { opacity: 1; }
-
-@keyframes lbIn {
-  from { opacity: 0; transform: scale(0.96); }
-  to   { opacity: 1; transform: scale(1); }
-}
+@keyframes lbIn { from { opacity: 0; transform: scale(0.96); } to { opacity: 1; transform: scale(1); } }
 </style>
 
 <script>
@@ -166,14 +121,10 @@ function openLb(img) {
   document.getElementById('art-lb').classList.add('active');
   document.body.style.overflow = 'hidden';
 }
-
 function closeLb() {
   document.getElementById('art-lb').classList.remove('active');
   document.body.style.overflow = '';
 }
-
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') closeLb();
-});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
 </script>
 ```

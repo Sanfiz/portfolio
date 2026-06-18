@@ -7,7 +7,6 @@ include-after-body: footer.html
 ---
 
 ```{=html}
-<!-- particles.js -->
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
 <!-- ── HERO ── -->
@@ -29,13 +28,11 @@ include-after-body: footer.html
   <div class="sp-container">
     <p class="sp-label">// about</p>
     <h2 class="sp-section-title">Hi, I'm Sabela.</h2>
-
     <div class="sp-about-top">
       <div class="sp-about-text">
         <p>I am a <strong>Climate Scientist</strong> with over ten years of experience working with climate data, building visualisation products and communicating science in a meaningful way.</p>
         <p>My career has taken me from pure atmospheric research to interactive dashboards and science communication materials. That intersection, between rigorous science and engaging storytelling, is where I am happy to be.</p>
       </div>
-
       <div class="flip-poster" style="--r:-2deg;--tx:0px;--ty:4px" onclick="this.classList.toggle('is-flipped')">
         <div class="pin"></div>
         <div class="flip-poster-inner">
@@ -50,7 +47,6 @@ include-after-body: footer.html
         </div>
       </div>
     </div>
-
     <div class="sp-about-stats">
       <div class="sp-stat">
         <span class="sp-stat-n" data-target="12" data-suffix="+">0</span>
@@ -72,35 +68,205 @@ include-after-body: footer.html
   </div>
 </section>
 
-<!-- ── WORK ── -->
-<section id="work" class="sp-section sp-section-alt">
+<!-- ── CV ── -->
+<section id="cv" class="sp-section sp-section-alt">
   <div class="sp-container">
-    <p class="sp-label">// work</p>
-    <h2 class="sp-section-title">Work</h2>
-    <div class="sp-work-grid">
-      <a href="Maps.html" class="sp-work-card">
-        <span class="sp-work-icon">🗺</span>
-        <p class="sp-work-title">Maps & Visuals</p>
-        <p class="sp-work-desc">Climate maps, data visualisations and animations made with Python.</p>
-        <span class="sp-work-cta">Explore →</span>
-      </a>
-      <a href="CV.html" class="sp-work-card">
-        <span class="sp-work-icon">📄</span>
-        <p class="sp-work-title">Career</p>
-        <p class="sp-work-desc">Studies, positions & skills.</p>
-        <span class="sp-work-cta">Explore →</span>
-      </a>
+    <p class="sp-label">// cv</p>
+    <h2 class="sp-section-title">Career</h2>
+    <a href="cv-career.html" class="cv-desk-link">
+      <svg width="100%" viewBox="0 0 680 380" role="img" xmlns="http://www.w3.org/2000/svg">
+        <title>Go to my CV</title>
+        <desc>Desk illustration with Mac monitor and books. Click to explore CV.</desc>
+        <defs>
+          <linearGradient id="b1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#7b9ef5"/><stop offset="100%" stop-color="#92a7f2"/></linearGradient>
+          <linearGradient id="b2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#e8869a"/><stop offset="100%" stop-color="#f2a7b8"/></linearGradient>
+          <linearGradient id="b3" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#9ab8f8"/><stop offset="100%" stop-color="#b2c5fc"/></linearGradient>
+          <linearGradient id="b4" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#5a7de0"/><stop offset="100%" stop-color="#7b9ef5"/></linearGradient>
+          <linearGradient id="b5" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#c4b8f0"/><stop offset="100%" stop-color="#d8c4f8"/></linearGradient>
+          <linearGradient id="b6" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#74c8a8"/><stop offset="100%" stop-color="#9adec0"/></linearGradient>
+          <linearGradient id="b7" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#f5a862"/><stop offset="100%" stop-color="#f8c08a"/></linearGradient>
+          <linearGradient id="b8" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#6bb8d4"/><stop offset="100%" stop-color="#92cce0"/></linearGradient>
+          <linearGradient id="b9" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#d45a7a"/><stop offset="100%" stop-color="#e87a96"/></linearGradient>
+          <linearGradient id="spine" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="rgba(0,0,0,0.18)"/><stop offset="100%" stop-color="rgba(0,0,0,0)"/></linearGradient>
+          <linearGradient id="top" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="rgba(255,255,255,0.25)"/><stop offset="100%" stop-color="rgba(255,255,255,0)"/></linearGradient>
+          <linearGradient id="desk-grad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#4a5268"/><stop offset="100%" stop-color="#2a3048"/></linearGradient>
+        </defs>
+        <style>
+          .mon-screen { transition: fill 0.3s; }
+          .cta-rect { transition: fill 0.3s; }
+          .cv-desk-link:hover .mon-screen { fill: #c8d9fd; }
+          .cv-desk-link:hover .cta-rect { fill: #6b8ef0; }
+          .pulse-ring { animation: cvpulse 2s ease-in-out infinite; }
+          @keyframes cvpulse { 0%,100%{opacity:0.35} 50%{opacity:0.85} }
+          .floatlbl { animation: cvfloat 3s ease-in-out infinite; }
+          @keyframes cvfloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-5px)} }
+        </style>
+        <!-- Background -->
+        <rect x="0" y="0" width="680" height="380" fill="#eefbfe"/>
+        <!-- Shelf -->
+        <rect x="30" y="268" width="340" height="9" rx="3" fill="#c8a87a"/>
+        <rect x="30" y="275" width="340" height="4" fill="#b8956a"/>
+        <rect x="30" y="279" width="340" height="6" fill="rgba(0,0,0,0.07)"/>
+        <!-- Book 1 -->
+        <rect x="52" y="182" width="28" height="86" rx="2" fill="url(#b1)"/>
+        <rect x="52" y="182" width="5" height="86" fill="url(#spine)"/>
+        <rect x="52" y="182" width="28" height="5" fill="url(#top)"/>
+        <rect x="60" y="200" width="14" height="2" rx="1" fill="rgba(255,255,255,0.6)"/>
+        <rect x="60" y="205" width="10" height="2" rx="1" fill="rgba(255,255,255,0.4)"/>
+        <rect x="60" y="210" width="12" height="2" rx="1" fill="rgba(255,255,255,0.3)"/>
+        <!-- Book 2 -->
+        <rect x="81" y="198" width="22" height="70" rx="2" fill="url(#b2)"/>
+        <rect x="81" y="198" width="4" height="70" fill="url(#spine)"/>
+        <rect x="81" y="198" width="22" height="4" fill="url(#top)"/>
+        <rect x="87" y="213" width="10" height="2" rx="1" fill="rgba(255,255,255,0.6)"/>
+        <rect x="87" y="218" width="8" height="2" rx="1" fill="rgba(255,255,255,0.4)"/>
+        <circle cx="92" cy="235" r="6" fill="rgba(255,255,255,0.2)"/>
+        <!-- Book 3 -->
+        <rect x="104" y="176" width="30" height="92" rx="2" fill="url(#b3)"/>
+        <rect x="104" y="176" width="5" height="92" fill="url(#spine)"/>
+        <rect x="104" y="176" width="30" height="5" fill="url(#top)"/>
+        <rect x="113" y="195" width="14" height="2" rx="1" fill="rgba(255,255,255,0.6)"/>
+        <rect x="113" y="200" width="10" height="2" rx="1" fill="rgba(255,255,255,0.4)"/>
+        <rect x="113" y="205" width="12" height="2" rx="1" fill="rgba(255,255,255,0.35)"/>
+        <rect x="104" y="240" width="30" height="12" fill="rgba(255,255,255,0.12)"/>
+        <!-- Book 4 -->
+        <rect x="135" y="192" width="24" height="76" rx="2" fill="url(#b4)"/>
+        <rect x="135" y="192" width="4" height="76" fill="url(#spine)"/>
+        <rect x="135" y="192" width="24" height="4" fill="url(#top)"/>
+        <rect x="142" y="208" width="11" height="2" rx="1" fill="rgba(255,255,255,0.55)"/>
+        <rect x="142" y="213" width="8" height="2" rx="1" fill="rgba(255,255,255,0.35)"/>
+        <!-- Book 5 -->
+        <rect x="160" y="170" width="34" height="98" rx="2" fill="url(#b5)"/>
+        <rect x="160" y="170" width="6" height="98" fill="url(#spine)"/>
+        <rect x="160" y="170" width="34" height="5" fill="url(#top)"/>
+        <rect x="170" y="190" width="17" height="2" rx="1" fill="rgba(255,255,255,0.6)"/>
+        <rect x="170" y="196" width="12" height="2" rx="1" fill="rgba(255,255,255,0.4)"/>
+        <rect x="170" y="201" width="15" height="2" rx="1" fill="rgba(255,255,255,0.3)"/>
+        <rect x="168" y="215" width="20" height="28" rx="2" fill="rgba(255,255,255,0.15)"/>
+        <!-- Book 6 -->
+        <rect x="195" y="195" width="22" height="73" rx="2" fill="url(#b6)"/>
+        <rect x="195" y="195" width="4" height="73" fill="url(#spine)"/>
+        <rect x="195" y="195" width="22" height="4" fill="url(#top)"/>
+        <rect x="202" y="210" width="10" height="2" rx="1" fill="rgba(255,255,255,0.55)"/>
+        <rect x="202" y="215" width="8" height="2" rx="1" fill="rgba(255,255,255,0.35)"/>
+        <!-- Book 7 -->
+        <rect x="218" y="185" width="28" height="83" rx="2" fill="url(#b7)"/>
+        <rect x="218" y="185" width="5" height="83" fill="url(#spine)"/>
+        <rect x="218" y="185" width="28" height="5" fill="url(#top)"/>
+        <rect x="227" y="203" width="13" height="2" rx="1" fill="rgba(255,255,255,0.6)"/>
+        <rect x="227" y="208" width="10" height="2" rx="1" fill="rgba(255,255,255,0.4)"/>
+        <circle cx="232" cy="240" r="8" fill="rgba(255,255,255,0.18)"/>
+        <!-- Book 8 -->
+        <rect x="247" y="208" width="18" height="60" rx="2" fill="url(#b8)"/>
+        <rect x="247" y="208" width="3" height="60" fill="url(#spine)"/>
+        <rect x="247" y="208" width="18" height="3" fill="url(#top)"/>
+        <rect x="252" y="221" width="8" height="2" rx="1" fill="rgba(255,255,255,0.5)"/>
+        <rect x="252" y="226" width="6" height="2" rx="1" fill="rgba(255,255,255,0.35)"/>
+        <!-- Book 9 -->
+        <rect x="266" y="178" width="26" height="90" rx="2" fill="url(#b9)"/>
+        <rect x="266" y="178" width="5" height="90" fill="url(#spine)"/>
+        <rect x="266" y="178" width="26" height="5" fill="url(#top)"/>
+        <rect x="275" y="196" width="12" height="2" rx="1" fill="rgba(255,255,255,0.6)"/>
+        <rect x="275" y="201" width="9" height="2" rx="1" fill="rgba(255,255,255,0.4)"/>
+        <rect x="273" y="220" width="16" height="22" rx="1" fill="rgba(255,255,255,0.12)"/>
+        <!-- Book 10 leaning -->
+        <g transform="rotate(-4 310 268)">
+          <rect x="298" y="195" width="24" height="74" rx="2" fill="url(#b1)" opacity="0.75"/>
+          <rect x="298" y="195" width="4" height="74" fill="url(#spine)"/>
+          <rect x="298" y="195" width="24" height="4" fill="url(#top)"/>
+        </g>
+        <!-- Desk -->
+        <rect x="30" y="334" width="620" height="14" rx="5" fill="url(#desk-grad)"/>
+        <rect x="30" y="334" width="620" height="4" rx="3" fill="rgba(255,255,255,0.08)"/>
+        <!-- Stand -->
+        <rect x="368" y="300" width="18" height="36" rx="4" fill="#30384b"/>
+        <rect x="342" y="332" width="70" height="10" rx="4" fill="#30384b"/>
+        <!-- Monitor -->
+        <rect x="240" y="95" width="280" height="212" rx="14" fill="#30384b"/>
+        <rect x="249" y="104" width="262" height="188" rx="9" class="mon-screen" fill="#eefbfe"/>
+        <circle cx="267" cy="118" r="4.5" fill="#ff5f57"/>
+        <circle cx="283" cy="118" r="4.5" fill="#febc2e"/>
+        <circle cx="299" cy="118" r="4.5" fill="#28c840"/>
+        <rect x="259" y="132" width="80" height="5" rx="2.5" fill="#92a7f2" opacity="0.4"/>
+        <rect x="259" y="141" width="120" height="4" rx="2" fill="#b2c5fc" opacity="0.35"/>
+        <rect x="259" y="149" width="100" height="4" rx="2" fill="#b2c5fc" opacity="0.28"/>
+        <rect x="259" y="157" width="60" height="4" rx="2" fill="#92a7f2" opacity="0.22"/>
+        <rect x="259" y="165" width="85" height="4" rx="2" fill="#b2c5fc" opacity="0.18"/>
+        <!-- CTA button -->
+        <rect x="289" y="192" width="185" height="60" rx="10" class="cta-rect" fill="#92a7f2"/>
+        <text x="381" y="218" text-anchor="middle" font-family="'Playfair Display',Georgia,serif" font-size="15" font-weight="700" fill="white">Go to my CV</text>
+        <text x="381" y="239" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="rgba(255,255,255,0.82)">click to explore →</text>
+        <rect x="285" y="188" width="193" height="68" rx="13" fill="none" stroke="#92a7f2" stroke-width="2" class="pulse-ring"/>
+        <!-- Floating hint -->
+        <g class="floatlbl">
+          <rect x="48" y="285" width="160" height="26" rx="6" fill="#92a7f2" opacity="0.09"/>
+          <text x="128" y="302" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#30384b" opacity="0.55">click the screen ↗</text>
+        </g>
+      </svg>
+    </a>
+  </div>
+</section>
+
+<!-- ── WORK ── -->
+<section id="work" class="sp-section">
+  <div class="sp-container-full">
+    <div class="sp-section-header">
+      <p class="sp-label">// work</p>
+      <h2 class="sp-section-title">Maps & Visuals</h2>
+      <p class="sp-section-sub">Climate maps, data visualisations and animations made with Python. Click any image to explore.</p>
+    </div>
+
+    <div class="work-carousel-wrap">
+      <div class="work-carousel" id="work-track">
+
+        <a href="maps/plot1.html" target="_blank" class="work-item">
+          <div class="work-img-wrap">
+            <img src="images/visuals/plot1.jpg" alt="Weather stations Spain"/>
+          </div>
+          <p class="work-caption">Weather station coverage across Spain</p>
+          <span class="work-type">Meteorology · Static map</span>
+        </a>
+
+        <a href="maps/plot2.html" target="_blank" class="work-item">
+          <div class="work-img-wrap">
+            <img src="images/visuals/plot2.png" alt="Spanish river basins"/>
+          </div>
+          <p class="work-caption">Spanish river basin districts with HydroRIVERS</p>
+          <span class="work-type">Water · Static map</span>
+        </a>
+
+        <a href="maps/rivers-europe.html" target="_blank" class="work-item">
+          <div class="work-img-wrap">
+            <img src="images/visuals/rivers_europe_minimal.png" alt="European Rivers"/>
+          </div>
+          <p class="work-caption">European rivers</p>
+          <span class="work-type">Water · Static map</span>
+        </a>
+
+        <a href="maps/co2-seaice.html" target="_blank" class="work-item">
+          <div class="work-img-wrap">
+            <video autoplay loop muted playsinline>
+              <source src="images/visuals/co2-seaice.mp4" type="video/mp4"/>
+            </video>
+          </div>
+          <p class="work-caption">CO₂ and sea ice extent</p>
+          <span class="work-type">Climate Change · Animation</span>
+        </a>
+
+      </div>
+      <button class="work-btn work-prev" onclick="scroll_work(-1)">&#8592;</button>
+      <button class="work-btn work-next" onclick="scroll_work(1)">&#8594;</button>
     </div>
   </div>
 </section>
 
 <!-- ── CLIMATE ── -->
-<section id="climate" class="sp-section">
+<section id="climate" class="sp-section sp-section-alt">
   <div class="sp-container">
     <p class="sp-label">// climate</p>
     <h2 class="sp-section-title">Climate & People</h2>
     <div class="sp-work-grid">
-      <a href="climateart.html" class="sp-work-card">
+      <a href="ClimateArt.html" class="sp-work-card">
         <span class="sp-work-icon">🎨</span>
         <p class="sp-work-title">Climate & Art</p>
         <p class="sp-work-desc">Where climate science meets visual storytelling and design.</p>
@@ -116,20 +282,19 @@ include-after-body: footer.html
   </div>
 </section>
 
-<!-- ── CONTACT + LOCATION ── -->
-<section id="contact" class="sp-section sp-section-alt">
+<!-- ── CONTACT ── -->
+<section id="contact" class="sp-section">
   <div class="sp-container">
     <div class="sp-contact-grid">
       <div class="sp-contact-left">
         <p class="sp-label">// contact</p>
         <h2 class="sp-section-title">Let's talk.</h2>
-        <p>Collaborations · Climate & Art · Science Communication · Or just hello :)</p>
         <div class="sp-contact-btns">
-          <a href="mailto:sabelasanfiz@gmail.com" class="sp-btn-solid">Send an email</a>
+          <a href="mailto:sabelasanfiz@gmail.com" class="sp-btn-solid">Pop me an email</a>
         </div>
+        <p>or give me a shout on social media :)</p>
         <div class="sp-social">
           <a href="https://www.linkedin.com/in/sabelasanfiz" target="_blank"><i class="bi bi-linkedin"></i></a>
-          <a href="https://github.com/Sanfiz" target="_blank"><i class="bi bi-github"></i></a>
           <a href="https://bsky.app/profile/sabelasanfiz.bsky.social" target="_blank"><i class="bi bi-cloud-fill"></i></a>
         </div>
       </div>
@@ -149,361 +314,173 @@ include-after-body: footer.html
 
 #quarto-header, .navbar { display: none !important; }
 body { margin: 0; padding: 0; background: #eefbfe; }
-#quarto-content, main.content, #quarto-document-content {
-  margin: 0 !important; padding: 0 !important; max-width: 100% !important;
-}
+#quarto-content, main.content, #quarto-document-content { margin: 0 !important; padding: 0 !important; max-width: 100% !important; }
 
-/* ── Hero ── */
-.sp-hero {
-  position: relative;
-  height: 100vh;
-  min-height: 580px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  background: #eefbfe;
-}
-
-#particles-js {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.sp-hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  padding: 2rem;
-  max-width: 700px;
-  pointer-events: none;
-}
-
+.sp-hero { position: relative; height: 100vh; min-height: 580px; display: flex; align-items: center; justify-content: center; overflow: hidden; background: #eefbfe; }
+#particles-js { position: absolute; inset: 0; width: 100%; height: 100%; }
+.sp-hero-content { position: relative; z-index: 2; text-align: center; padding: 2rem; max-width: 700px; pointer-events: none; }
 .sp-hero-content a { pointer-events: auto; }
+.sp-hero-eyebrow { font-family: 'DM Sans', sans-serif; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: #92a7f2; margin-bottom: 1rem; }
+.sp-hero-name { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4.5vw, 3.5rem); font-weight: 700; line-height: 1.05; color: #30384b; margin: 0 0 1.4rem 0; letter-spacing: -0.01em; }
+.sp-hero-sub { font-family: 'DM Sans', sans-serif; font-size: 0.95rem; color: #556; line-height: 1.75; margin-bottom: 2.2rem; }
+.sp-hero-links { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
-.sp-hero-eyebrow {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.75rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #92a7f2;
-  margin-bottom: 1rem;
-}
-
-.sp-hero-name {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(2rem, 4.5vw, 3.5rem);
-  font-weight: 700;
-  line-height: 1.05;
-  color: #30384b;
-  margin: 0 0 1.4rem 0;
-  letter-spacing: -0.01em;
-}
-
-.sp-hero-sub {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.95rem;
-  color: #556;
-  line-height: 1.75;
-  margin-bottom: 2.2rem;
-}
-
-.sp-hero-links {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-/* ── Botones ── */
-.sp-btn-solid {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  text-decoration: none;
-  background: #92a7f2;
-  color: white !important;
-  padding: 0.7rem 1.6rem;
-  border-radius: 4px;
-  transition: opacity 0.2s;
-  display: inline-block;
-}
+.sp-btn-solid { font-family: 'DM Sans', sans-serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; background: #92a7f2; color: white !important; padding: 0.7rem 1.6rem; border-radius: 4px; transition: opacity 0.2s; display: inline-block; }
 .sp-btn-solid:hover { opacity: 0.85; }
-
-.sp-btn-ghost {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  text-decoration: none;
-  border: 1px solid #92a7f2;
-  color: #92a7f2 !important;
-  padding: 0.7rem 1.6rem;
-  border-radius: 4px;
-  transition: background 0.2s, color 0.2s;
-  display: inline-block;
-}
+.sp-btn-ghost { font-family: 'DM Sans', sans-serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border: 1px solid #92a7f2; color: #92a7f2 !important; padding: 0.7rem 1.6rem; border-radius: 4px; transition: background 0.2s, color 0.2s; display: inline-block; }
 .sp-btn-ghost:hover { background: #92a7f2; color: white !important; }
 
-/* ── Secciones ── */
 .sp-section { padding: 6rem 2rem; }
 .sp-section-alt { background: rgba(178,197,252,0.08); }
 .sp-container { max-width: 1000px; margin: 0 auto; }
+.sp-label { font-family: monospace; font-size: 0.7rem; color: #92a7f2; letter-spacing: 0.12em; margin-bottom: 0.5rem; display: block; }
+.sp-section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.8rem); color: #30384b !important; margin: 0 0 1.8rem 0; font-weight: 700; }
 
-.sp-label {
-  font-family: monospace;
-  font-size: 0.7rem;
-  color: #92a7f2;
-  letter-spacing: 0.12em;
-  margin-bottom: 0.5rem;
-  display: block;
-}
-
-.sp-section-title {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  color: #30384b !important;
-  margin: 0 0 1.8rem 0;
-  font-weight: 700;
-}
-
-/* ── About ── */
-.sp-about-top {
-  display: flex;
-  gap: 3rem;
-  align-items: flex-start;
-  margin-bottom: 3rem;
-}
-
-.sp-about-text {
-  flex: 1;
-}
-
-.sp-about-text p {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.92rem;
-  line-height: 1.8;
-  color: #444;
-  margin-bottom: 1rem;
-}
-
-.sp-about-stats {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  border-top: 1px solid rgba(146,167,242,0.2);
-  padding-top: 2rem;
-}
-
+.sp-about-top { display: flex; gap: 3rem; align-items: flex-start; margin-bottom: 3rem; }
+.sp-about-text { flex: 1; }
+.sp-about-text p { font-family: 'DM Sans', sans-serif; font-size: 0.92rem; line-height: 1.8; color: #444; margin-bottom: 1rem; }
+.sp-about-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; border-top: 1px solid rgba(146,167,242,0.2); padding-top: 2rem; }
 .sp-stat { display: flex; flex-direction: column; gap: 0.25rem; }
+.sp-stat-n { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 700; color: #92a7f2; line-height: 1; }
+.sp-stat-l { font-family: 'DM Sans', sans-serif; font-size: 0.7rem; color: #888; line-height: 1.3; }
 
-.sp-stat-n {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #92a7f2;
-  line-height: 1;
-}
-
-.sp-stat-l {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.7rem;
-  color: #888;
-  line-height: 1.3;
-}
-
-/* ── Flip poster ── */
-.flip-poster {
-  width: 200px;
-  flex-shrink: 0;
-  height: 260px;
-  perspective: 1000px;
-  cursor: pointer;
-  transform: rotate(var(--r)) translate(var(--tx), var(--ty));
-  transition: transform 0.3s ease;
-  position: relative;
-}
-
+.flip-poster { width: 200px; flex-shrink: 0; height: 260px; perspective: 1000px; cursor: pointer; transform: rotate(var(--r)) translate(var(--tx), var(--ty)); transition: transform 0.3s ease; position: relative; }
 .flip-poster:hover { transform: rotate(0deg) translateY(-4px); }
+.flip-poster-inner { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform 0.7s ease; }
+.flip-poster.is-flipped .flip-poster-inner { transform: rotateY(180deg); }
+.flip-poster-front, .flip-poster-back { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: 6px; overflow: hidden; box-shadow: 2px 4px 16px rgba(0,0,0,0.15); }
+.flip-poster-front img { width: 100%; height: 100%; object-fit: cover; }
+.flip-poster-back { transform: rotateY(180deg); background: #f0f4ff; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 1.2rem; text-align: center; gap: 0.5rem; }
+.poster-back-title { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: #30384b; }
+.poster-back-text { font-size: 0.78rem; color: #666; line-height: 1.5; }
+.poster-back-hint { font-size: 0.65rem; color: #92a7f2; margin-top: 0.5rem; }
+.pin { position: absolute; top: -10px; left: 50%; transform: translateX(-50%); width: 13px; height: 13px; background: radial-gradient(circle at 40% 35%, #f5c842, #c8960a); border-radius: 50%; z-index: 3; box-shadow: 0 2px 4px rgba(0,0,0,0.3); }
 
-.flip-poster-inner {
+/* ── Work carousel ── */
+.sp-container-full {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.sp-section-header { margin-bottom: 2rem; }
+
+.sp-section-sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.88rem;
+  color: #888;
+  margin: 0.4rem 0 0 0;
+}
+
+.work-carousel-wrap {
   position: relative;
+}
+
+.work-carousel {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 0 2rem 1.5rem 2rem; 
+}
+.work-carousel::-webkit-scrollbar { display: none; }
+
+.work-item {
+  flex: 0 0 auto;
+  width: clamp(260px, 28vw, 380px);  
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.work-img-wrap {
   width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: transform 0.7s ease;
-}
-
-.flip-poster.is-flipped .flip-poster-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-poster-front,
-.flip-poster-back {
-  position: absolute;
-  inset: 0;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  border-radius: 6px;
+  aspect-ratio: 4/3;
   overflow: hidden;
-  box-shadow: 2px 4px 16px rgba(0,0,0,0.15);
+  background: #dce8fd;
 }
 
-.flip-poster-front img {
+.work-img-wrap img,
+.work-img-wrap video {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
 }
 
-.flip-poster-back {
-  transform: rotateY(180deg);
-  background: #f0f4ff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1.2rem;
-  text-align: center;
-  gap: 0.5rem;
+.work-item:hover .work-img-wrap img,
+.work-item:hover .work-img-wrap video {
+  transform: scale(1.04);
 }
 
-.poster-back-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 1rem;
-  font-weight: 700;
+.work-caption {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.88rem;
   color: #30384b;
-}
-
-.poster-back-text {
-  font-size: 0.78rem;
-  color: #666;
-  line-height: 1.5;
-}
-
-.poster-back-hint {
-  font-size: 0.65rem;
-  color: #92a7f2;
-  margin-top: 0.5rem;
-}
-
-.pin {
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 13px;
-  height: 13px;
-  background: radial-gradient(circle at 40% 35%, #f5c842, #c8960a);
-  border-radius: 50%;
-  z-index: 3;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-}
-
-/* ── Work cards ── */
-.sp-work-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 1.2rem;
-}
-
-.sp-work-card {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding: 1.6rem 1.4rem;
-  background: white;
-  border: 1px solid rgba(146,167,242,0.2);
-  border-radius: 8px;
-  text-decoration: none;
-  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-}
-
-.sp-work-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 28px rgba(146,167,242,0.15);
-  border-color: #92a7f2;
-}
-
-.sp-work-icon { font-size: 1.5rem; }
-
-.sp-work-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 1rem;
-  color: #30384b !important;
   margin: 0;
-  font-weight: 700;
+  font-weight: 500;
 }
 
-.sp-work-desc {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.8rem;
-  color: #666;
-  line-height: 1.5;
-  margin: 0;
-  flex: 1;
-}
-
-.sp-work-cta {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.72rem;
+.work-type {
+  font-family: monospace;
+  font-size: 0.66rem;
   color: #92a7f2;
-  margin-top: 0.4rem;
-}
-
-/* ── Contact ── */
-.sp-contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  gap: 4rem;
-  align-items: start;
-}
-
-.sp-contact-left p {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.92rem;
-  color: #666;
-  line-height: 1.7;
-  margin-bottom: 1.8rem;
-}
-
-.sp-contact-btns {
-  display: flex;
-  gap: 0.8rem;
-  flex-wrap: wrap;
-  margin-bottom: 1.8rem;
-}
-
-.sp-social { display: flex; gap: 1.2rem; }
-
-.sp-social a {
-  color: #888 !important;
-  font-size: 1.1rem;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-.sp-social a:hover { color: #92a7f2 !important; }
-
-.sp-map-label {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.75rem;
-  color: #999;
-  letter-spacing: 0.06em;
-  margin-bottom: 0.8rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-#sp-map {
-  height: 340px;
-  border-radius: 10px;
-  border: 1px solid rgba(146,167,242,0.25);
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(146,167,242,0.1);
+.work-btn {
+  position: absolute;
+  top: 38%;
+  transform: translateY(-50%);
+  background: white;
+  border: 1px solid rgba(146,167,242,0.3);
+  color: #30384b;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.work-btn:hover { background: #92a7f2; color: white; border-color: #92a7f2; }
+.work-prev { left: -22px; }
+.work-next { right: -22px; }
+
+@media (max-width: 700px) {
+  .work-prev { left: -10px; }
+  .work-next { right: -10px; }
+  .work-item { width: 78vw; }
+  .sp-container-full { padding: 0 1.5rem; }
 }
 
-/* ── Responsive ── */
+.sp-work-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1.2rem; }
+.sp-work-card { display: flex; flex-direction: column; gap: 0.5rem; padding: 1.6rem 1.4rem; background: white; border: 1px solid rgba(146,167,242,0.2); border-radius: 8px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; }
+.sp-work-card:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(146,167,242,0.15); border-color: #92a7f2; }
+.sp-work-icon { font-size: 1.5rem; }
+.sp-work-title { font-family: 'Playfair Display', serif; font-size: 1rem; color: #30384b !important; margin: 0; font-weight: 700; }
+.sp-work-desc { font-family: 'DM Sans', sans-serif; font-size: 0.8rem; color: #666; line-height: 1.5; margin: 0; flex: 1; }
+.sp-work-cta { font-family: 'DM Sans', sans-serif; font-size: 0.72rem; color: #92a7f2; margin-top: 0.4rem; }
+
+.sp-contact-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 4rem; align-items: start; }
+.sp-contact-left p { font-family: 'DM Sans', sans-serif; font-size: 0.92rem; color: #666; line-height: 1.7; margin-bottom: 1.8rem; }
+.sp-contact-btns { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-bottom: 1.8rem; }
+.sp-social { display: flex; gap: 1.2rem; }
+.sp-social a { color: #888 !important; font-size: 1.1rem; text-decoration: none; transition: color 0.2s; }
+.sp-social a:hover { color: #92a7f2 !important; }
+.sp-map-label { font-family: 'DM Sans', sans-serif; font-size: 0.75rem; color: #999; letter-spacing: 0.06em; margin-bottom: 0.8rem; text-transform: uppercase; }
+#sp-map { height: 340px; border-radius: 10px; border: 1px solid rgba(146,167,242,0.25); overflow: hidden; box-shadow: 0 4px 20px rgba(146,167,242,0.1); }
+
 @media (max-width: 750px) {
   .sp-about-top { flex-direction: column; gap: 2rem; }
   .sp-about-stats { grid-template-columns: repeat(2, 1fr); }
@@ -514,84 +491,36 @@ body { margin: 0; padding: 0; background: #eefbfe; }
 
 <script>
 window.addEventListener('load', function() {
-
-  // ── Particles.js ──
   particlesJS('particles-js', {
     particles: {
       number: { value: 80, density: { enable: true, value_area: 800 } },
       color: { value: '#92a7f2' },
       shape: { type: 'circle' },
-      opacity: { value: 0.4, random: true },
-      size: { value: 3, random: true },
-      line_linked: {
-        enable: true,
-        distance: 150,
-        color: '#92a7f2',
-        opacity: 0.2,
-        width: 1
-      },
-      move: {
-        enable: true,
-        speed: 2,
-        direction: 'none',
-        random: true,
-        straight: false,
-        out_mode: 'out',
-        bounce: false
-      }
+      opacity: { value: 0.6, random: true },
+      size: { value: 5, random: true },
+      line_linked: { enable: true, distance: 150, color: '#92a7f2', opacity: 0.4, width: 1.5 },
+      move: { enable: true, speed: 2, direction: 'none', random: true, straight: false, out_mode: 'out', bounce: false }
     },
     interactivity: {
       detect_on: 'canvas',
-      events: {
-        onhover: { enable: true, mode: 'repulse' },
-        onclick: { enable: true, mode: 'push' },
-        resize: true
-      },
-      modes: {
-        repulse: { distance: 120, duration: 0.4 },
-        push: { particles_nb: 4 }
-      }
+      events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
+      modes: { repulse: { distance: 120, duration: 0.4 }, push: { particles_nb: 4 } }
     },
     retina_detect: true
   });
 
-  // ── Smooth scroll ──
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
       const target = document.querySelector(a.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
     });
   });
 
-  // ── Mapa Leaflet ──
-  const map = L.map('sp-map', {
-    center: [50, 5],
-    zoom: 4,
-    zoomControl: true,
-    scrollWheelZoom: false
-  });
+  const map = L.map('sp-map', { center: [50, 5], zoom: 4, zoomControl: true, scrollWheelZoom: false });
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', { attribution: '© OpenStreetMap © CARTO', subdomains: 'abcd', maxZoom: 19 }).addTo(map);
+  const icon = L.divIcon({ html: '<div style="width:12px;height:12px;background:#92a7f2;border:3px solid white;border-radius:50%;box-shadow:0 2px 8px rgba(146,167,242,0.6)"></div>', className: '', iconAnchor: [6, 6] });
+  L.marker([43.3623, -8.4115], { icon }).addTo(map).bindPopup('<b>A Coruña</b><br>Galicia, Spain').openPopup();
 
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-    attribution: '© OpenStreetMap © CARTO',
-    subdomains: 'abcd',
-    maxZoom: 19
-  }).addTo(map);
-
-  const icon = L.divIcon({
-    html: '<div style="width:12px;height:12px;background:#92a7f2;border:3px solid white;border-radius:50%;box-shadow:0 2px 8px rgba(146,167,242,0.6)"></div>',
-    className: '',
-    iconAnchor: [6, 6]
-  });
-
-  L.marker([43.3623, -8.4115], { icon })
-    .addTo(map)
-    .bindPopup('<b>A Coruña</b><br>Galicia, Spain')
-    .openPopup();
-
-  // ── Contador animado ──
   const counters = document.querySelectorAll('.sp-stat-n[data-target]');
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -612,7 +541,14 @@ window.addEventListener('load', function() {
     });
   }, { threshold: 0.5 });
   counters.forEach(c => observer.observe(c));
-
 });
+
+function scroll_work(dir) {
+  const track = document.getElementById('work-track');
+  const item = track.querySelector('.work-item');
+  const itemW = item.offsetWidth + 32;
+  track.scrollBy({ left: dir * itemW, behavior: 'smooth' });
+}
+
 </script>
 ```

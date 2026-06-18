@@ -2,56 +2,617 @@
 title: ""
 page-layout: custom
 toc: false
+include-before-body: header.html
+include-after-body: footer.html
 ---
 
 ```{=html}
-<div class="video-hero">
-  <video class="video-bg" autoplay loop muted playsinline>
-    <source src="images/blue.mp4" type="video/mp4"/>
-  </video>
-</div>
+<!-- particles.js -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+<!-- ── HERO ── -->
+<section id="hero" class="sp-hero">
+  <div id="particles-js"></div>
+  <div class="sp-hero-content">
+    <p class="sp-hero-eyebrow">Climate Scientist · Dataviz Creator</p>
+    <h1 class="sp-hero-name">Sabela Sanfiz</h1>
+    <p class="sp-hero-sub">Where climate data meets storytelling.</p>
+    <div class="sp-hero-links">
+      <a href="#about" class="sp-btn-ghost">About me ↓</a>
+      <a href="#work" class="sp-btn-solid">Explore work</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section id="about" class="sp-section">
+  <div class="sp-container">
+    <p class="sp-label">// about</p>
+    <h2 class="sp-section-title">Hi, I'm Sabela.</h2>
+
+    <div class="sp-about-top">
+      <div class="sp-about-text">
+        <p>I am a <strong>Climate Scientist</strong> with over ten years of experience working with climate data, building visualisation products and communicating science in a meaningful way.</p>
+        <p>My career has taken me from pure atmospheric research to interactive dashboards and science communication materials. That intersection, between rigorous science and engaging storytelling, is where I am happy to be.</p>
+      </div>
+
+      <div class="flip-poster" style="--r:-2deg;--tx:0px;--ty:4px" onclick="this.classList.toggle('is-flipped')">
+        <div class="pin"></div>
+        <div class="flip-poster-inner">
+          <div class="flip-poster-front">
+            <img src="images/index/pic-profile.jpeg" alt="Self-Portrait"/>
+          </div>
+          <div class="flip-poster-back">
+            <p class="poster-back-title">Self-Portrait</p>
+            <p class="poster-back-text">Created in Adobe Illustrator using an iPad.</p>
+            <p class="poster-back-hint">← flip back</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sp-about-stats">
+      <div class="sp-stat">
+        <span class="sp-stat-n" data-target="12" data-suffix="+">0</span>
+        <span class="sp-stat-l">years in climate science</span>
+      </div>
+      <div class="sp-stat">
+        <span class="sp-stat-n" data-target="3" data-suffix="">0</span>
+        <span class="sp-stat-l">countries worked in</span>
+      </div>
+      <div class="sp-stat">
+        <span class="sp-stat-n" data-target="1" data-suffix="">0</span>
+        <span class="sp-stat-l">PhD in Atmospheric Physics</span>
+      </div>
+      <div class="sp-stat">
+        <span class="sp-stat-n" data-target="∞" data-suffix="">∞</span>
+        <span class="sp-stat-l">coffees consumed</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WORK ── -->
+<section id="work" class="sp-section sp-section-alt">
+  <div class="sp-container">
+    <p class="sp-label">// work</p>
+    <h2 class="sp-section-title">Work</h2>
+    <div class="sp-work-grid">
+      <a href="Maps.html" class="sp-work-card">
+        <span class="sp-work-icon">🗺</span>
+        <p class="sp-work-title">Maps & Visuals</p>
+        <p class="sp-work-desc">Climate maps, data visualisations and animations made with Python.</p>
+        <span class="sp-work-cta">Explore →</span>
+      </a>
+      <a href="CV.html" class="sp-work-card">
+        <span class="sp-work-icon">📄</span>
+        <p class="sp-work-title">Career</p>
+        <p class="sp-work-desc">Studies, positions & skills.</p>
+        <span class="sp-work-cta">Explore →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── CLIMATE ── -->
+<section id="climate" class="sp-section">
+  <div class="sp-container">
+    <p class="sp-label">// climate</p>
+    <h2 class="sp-section-title">Climate & People</h2>
+    <div class="sp-work-grid">
+      <a href="climateart.html" class="sp-work-card">
+        <span class="sp-work-icon">🎨</span>
+        <p class="sp-work-title">Climate & Art</p>
+        <p class="sp-work-desc">Where climate science meets visual storytelling and design.</p>
+        <span class="sp-work-cta">Explore →</span>
+      </a>
+      <a href="FemaleVoices.html" class="sp-work-card">
+        <span class="sp-work-icon">🔬</span>
+        <p class="sp-work-title">Female Voices</p>
+        <p class="sp-work-desc">Pioneer women in climate science — stories history forgot.</p>
+        <span class="sp-work-cta">Explore →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT + LOCATION ── -->
+<section id="contact" class="sp-section sp-section-alt">
+  <div class="sp-container">
+    <div class="sp-contact-grid">
+      <div class="sp-contact-left">
+        <p class="sp-label">// contact</p>
+        <h2 class="sp-section-title">Let's talk.</h2>
+        <p>Collaborations · Climate & Art · Science Communication · Or just hello :)</p>
+        <div class="sp-contact-btns">
+          <a href="mailto:sabelasanfiz@gmail.com" class="sp-btn-solid">Send an email</a>
+        </div>
+        <div class="sp-social">
+          <a href="https://www.linkedin.com/in/sabelasanfiz" target="_blank"><i class="bi bi-linkedin"></i></a>
+          <a href="https://github.com/Sanfiz" target="_blank"><i class="bi bi-github"></i></a>
+          <a href="https://bsky.app/profile/sabelasanfiz.bsky.social" target="_blank"><i class="bi bi-cloud-fill"></i></a>
+        </div>
+      </div>
+      <div class="sp-contact-right">
+        <p class="sp-map-label">Based in A Coruña, Galicia · Northwest Spain</p>
+        <div id="sp-map"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <style>
-html, body {
-  background: transparent !important;
-  margin: 0 !important;
-  padding: 0 !important;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap');
+
+#quarto-header, .navbar { display: none !important; }
+body { margin: 0; padding: 0; background: #eefbfe; }
+#quarto-content, main.content, #quarto-document-content {
+  margin: 0 !important; padding: 0 !important; max-width: 100% !important;
 }
 
-#quarto-content,
-#quarto-document-content,
-main.content {
-  margin: 0 !important;
-  padding: 0 !important;
-  background: transparent !important;
-  min-height: 0 !important;
-}
-
-.video-hero {
-  position: fixed;
-  inset: 0;
-  width: 100vw;
+/* ── Hero ── */
+.sp-hero {
+  position: relative;
   height: 100vh;
-  z-index: -1;
+  min-height: 580px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #eefbfe;
 }
 
-.video-bg {
+#particles-js {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.sp-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 2rem;
+  max-width: 700px;
+  pointer-events: none;
+}
+
+.sp-hero-content a { pointer-events: auto; }
+
+.sp-hero-eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #92a7f2;
+  margin-bottom: 1rem;
+}
+
+.sp-hero-name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  color: #30384b;
+  margin: 0 0 1.4rem 0;
+  letter-spacing: -0.01em;
+}
+
+.sp-hero-sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  color: #556;
+  line-height: 1.75;
+  margin-bottom: 2.2rem;
+}
+
+.sp-hero-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ── Botones ── */
+.sp-btn-solid {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #92a7f2;
+  color: white !important;
+  padding: 0.7rem 1.6rem;
+  border-radius: 4px;
+  transition: opacity 0.2s;
+  display: inline-block;
+}
+.sp-btn-solid:hover { opacity: 0.85; }
+
+.sp-btn-ghost {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid #92a7f2;
+  color: #92a7f2 !important;
+  padding: 0.7rem 1.6rem;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+  display: inline-block;
+}
+.sp-btn-ghost:hover { background: #92a7f2; color: white !important; }
+
+/* ── Secciones ── */
+.sp-section { padding: 6rem 2rem; }
+.sp-section-alt { background: rgba(178,197,252,0.08); }
+.sp-container { max-width: 1000px; margin: 0 auto; }
+
+.sp-label {
+  font-family: monospace;
+  font-size: 0.7rem;
+  color: #92a7f2;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.sp-section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  color: #30384b !important;
+  margin: 0 0 1.8rem 0;
+  font-weight: 700;
+}
+
+/* ── About ── */
+.sp-about-top {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+}
+
+.sp-about-text {
+  flex: 1;
+}
+
+.sp-about-text p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.sp-about-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  border-top: 1px solid rgba(146,167,242,0.2);
+  padding-top: 2rem;
+}
+
+.sp-stat { display: flex; flex-direction: column; gap: 0.25rem; }
+
+.sp-stat-n {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #92a7f2;
+  line-height: 1;
+}
+
+.sp-stat-l {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  color: #888;
+  line-height: 1.3;
+}
+
+/* ── Flip poster ── */
+.flip-poster {
+  width: 200px;
+  flex-shrink: 0;
+  height: 260px;
+  perspective: 1000px;
+  cursor: pointer;
+  transform: rotate(var(--r)) translate(var(--tx), var(--ty));
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.flip-poster:hover { transform: rotate(0deg) translateY(-4px); }
+
+.flip-poster-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.7s ease;
+}
+
+.flip-poster.is-flipped .flip-poster-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-poster-front,
+.flip-poster-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 2px 4px 16px rgba(0,0,0,0.15);
+}
+
+.flip-poster-front img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.page-footer,
-.nav-footer {
-  background: transparent !important;
-  border-top: none !important;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
+.flip-poster-back {
+  transform: rotateY(180deg);
+  background: #f0f4ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem;
+  text-align: center;
+  gap: 0.5rem;
 }
 
+.poster-back-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #30384b;
+}
 
+.poster-back-text {
+  font-size: 0.78rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.poster-back-hint {
+  font-size: 0.65rem;
+  color: #92a7f2;
+  margin-top: 0.5rem;
+}
+
+.pin {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 13px;
+  height: 13px;
+  background: radial-gradient(circle at 40% 35%, #f5c842, #c8960a);
+  border-radius: 50%;
+  z-index: 3;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* ── Work cards ── */
+.sp-work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1.2rem;
+}
+
+.sp-work-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.6rem 1.4rem;
+  background: white;
+  border: 1px solid rgba(146,167,242,0.2);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.sp-work-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(146,167,242,0.15);
+  border-color: #92a7f2;
+}
+
+.sp-work-icon { font-size: 1.5rem; }
+
+.sp-work-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  color: #30384b !important;
+  margin: 0;
+  font-weight: 700;
+}
+
+.sp-work-desc {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.8rem;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+  flex: 1;
+}
+
+.sp-work-cta {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  color: #92a7f2;
+  margin-top: 0.4rem;
+}
+
+/* ── Contact ── */
+.sp-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.sp-contact-left p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.92rem;
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 1.8rem;
+}
+
+.sp-contact-btns {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.8rem;
+}
+
+.sp-social { display: flex; gap: 1.2rem; }
+
+.sp-social a {
+  color: #888 !important;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.sp-social a:hover { color: #92a7f2 !important; }
+
+.sp-map-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  color: #999;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+}
+
+#sp-map {
+  height: 340px;
+  border-radius: 10px;
+  border: 1px solid rgba(146,167,242,0.25);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(146,167,242,0.1);
+}
+
+/* ── Responsive ── */
+@media (max-width: 750px) {
+  .sp-about-top { flex-direction: column; gap: 2rem; }
+  .sp-about-stats { grid-template-columns: repeat(2, 1fr); }
+  .sp-contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .sp-section { padding: 4rem 1.5rem; }
+}
 </style>
+
+<script>
+window.addEventListener('load', function() {
+
+  // ── Particles.js ──
+  particlesJS('particles-js', {
+    particles: {
+      number: { value: 80, density: { enable: true, value_area: 800 } },
+      color: { value: '#92a7f2' },
+      shape: { type: 'circle' },
+      opacity: { value: 0.4, random: true },
+      size: { value: 3, random: true },
+      line_linked: {
+        enable: true,
+        distance: 150,
+        color: '#92a7f2',
+        opacity: 0.2,
+        width: 1
+      },
+      move: {
+        enable: true,
+        speed: 2,
+        direction: 'none',
+        random: true,
+        straight: false,
+        out_mode: 'out',
+        bounce: false
+      }
+    },
+    interactivity: {
+      detect_on: 'canvas',
+      events: {
+        onhover: { enable: true, mode: 'repulse' },
+        onclick: { enable: true, mode: 'push' },
+        resize: true
+      },
+      modes: {
+        repulse: { distance: 120, duration: 0.4 },
+        push: { particles_nb: 4 }
+      }
+    },
+    retina_detect: true
+  });
+
+  // ── Smooth scroll ──
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // ── Mapa Leaflet ──
+  const map = L.map('sp-map', {
+    center: [50, 5],
+    zoom: 4,
+    zoomControl: true,
+    scrollWheelZoom: false
+  });
+
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '© OpenStreetMap © CARTO',
+    subdomains: 'abcd',
+    maxZoom: 19
+  }).addTo(map);
+
+  const icon = L.divIcon({
+    html: '<div style="width:12px;height:12px;background:#92a7f2;border:3px solid white;border-radius:50%;box-shadow:0 2px 8px rgba(146,167,242,0.6)"></div>',
+    className: '',
+    iconAnchor: [6, 6]
+  });
+
+  L.marker([43.3623, -8.4115], { icon })
+    .addTo(map)
+    .bindPopup('<b>A Coruña</b><br>Galicia, Spain')
+    .openPopup();
+
+  // ── Contador animado ──
+  const counters = document.querySelectorAll('.sp-stat-n[data-target]');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = el.dataset.target;
+        const suffix = el.dataset.suffix || '';
+        if (isNaN(target)) return;
+        let current = 0;
+        const step = Math.ceil(target / 40);
+        const timer = setInterval(() => {
+          current = Math.min(current + step, parseInt(target));
+          el.textContent = current + suffix;
+          if (current >= parseInt(target)) clearInterval(timer);
+        }, 40);
+        observer.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+  counters.forEach(c => observer.observe(c));
+
+});
+</script>
 ```

@@ -7,22 +7,6 @@ title: ""
 ```{=html}
 <div class="timeline">
 
-  <div class="tl-item" onclick="toggleItem(this)">
-    <div class="tl-year">2027</div>
-    <div class="tl-dot"></div>
-    <div class="tl-card">
-      <div class="tl-card-top">
-        <div class="tl-summary">
-          <p class="tl-name">Postgraduate in Science Communication</p>
-          <p class="tl-org">International University of Valencia</p>
-          <p class="tl-hint">▼ read more</p>
-        </div>
-      </div>
-      <div class="tl-body">
-        <p><em>In progress · Part-time online while working full time</em></p>
-      </div>
-    </div>
-  </div>
 
   <div class="tl-item" onclick="toggleItem(this)">
     <div class="tl-year">2020</div>
@@ -55,7 +39,7 @@ title: ""
         </div>
       </div>
       <div class="tl-body">
-        <p>Relevant subjects: Dynamic Meteorology · Physics of the Atmosphere · Climate and Climate Change · Atmospheric Pollution · Hydrometeorology · Meteorological Modelling · Forecasting</p>
+        <p>Subjects: Dynamic Meteorology. Physics of the Atmosphere. Climate and Climate Change. Atmospheric Pollution. Hydrometeorology. Meteorological Modelling.</p>
         <p>Master's thesis: <em>Effect of lateral boundary conditions in the WRF limited-area model</em></p>
       </div>
     </div>

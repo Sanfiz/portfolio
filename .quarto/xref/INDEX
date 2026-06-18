@@ -115,5 +115,11 @@
   },
   "maps/rivers-europe.qmd": {
     "rivers-europe.html": "fc174af1"
+  },
+  "old/index.qmd": {
+    "index.html": "e1f7f782"
+  },
+  "old/index_old.qmd": {
+    "index_old.html": "ca05db89"
   }
 }

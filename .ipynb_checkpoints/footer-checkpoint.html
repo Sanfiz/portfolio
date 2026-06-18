@@ -1,0 +1,60 @@
+<!-- footer.html -->
+<footer class="sp-footer">
+  <div class="sp-footer-inner">
+    <p class="sp-footer-left">©2026 Sabela Sanfiz · Built with <a href="https://quarto.org" target="_blank">Quarto</a></p>
+    <div class="sp-footer-icons">
+      <a href="https://www.linkedin.com/in/sabelasanfiz" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      <a href="https://github.com/Sanfiz" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
+      <a href="https://bsky.app/profile/sabelasanfiz.bsky.social" target="_blank" aria-label="Bluesky"><i class="bi bi-cloud-fill"></i></a>
+      <a href="mailto:sabelasanfiz@gmail.com" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+    </div>
+  </div>
+</footer>
+
+<style>
+.sp-footer {
+  border-top: 1px solid rgba(146,167,242,0.2);
+  padding: 2rem 2.5rem;
+  margin-top: 4rem;
+}
+
+.sp-footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.sp-footer-left {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem;
+  color: #888;
+  margin: 0;
+}
+
+.sp-footer-left a {
+  color: #92a7f2 !important;
+  text-decoration: none;
+}
+
+.sp-footer-icons {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.sp-footer-icons a {
+  color: #888 !important;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.sp-footer-icons a:hover {
+  color: #92a7f2 !important;
+}
+
+@media (max-width: 500px) {
+  .sp-footer-inner { flex-direction: column; gap: 1rem; text-align: center; }
+}
+</style>

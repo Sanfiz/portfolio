@@ -1,0 +1,149 @@
+<!-- header.html -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<nav class="sp-nav" id="sp-nav">
+  <div class="sp-nav-inner">
+    <a class="sp-brand" href="index.html">Home</a>
+    <div class="sp-links">
+      <a href="index.html#about">About</a>
+      <a href="index.html#work">Work</a>
+      <a href="index.html#climate">Art&History</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="CV.html">CV</a>
+    </div>
+    <button class="sp-hamburger" id="sp-hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="sp-mobile-menu" id="sp-mobile-menu">
+    <a href="index.html#about">About</a>
+    <a href="index.html#work">Work</a>
+    <a href="index.html#climate">Climate</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="CV.html">CV</a>
+  </div>
+</nav>
+
+<style>
+.sp-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 0 2.5rem;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sp-nav.scrolled {
+  background: rgba(238, 251, 254, 0.92);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 rgba(146,167,242,0.15);
+}
+
+.sp-nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.sp-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #30384b !important;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.sp-links {
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+}
+
+.sp-links a {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: #30384b !important;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.sp-links a:hover { opacity: 1; }
+
+.sp-cv-btn {
+  opacity: 1 !important;
+  border: 1px solid #92a7f2 !important;
+  color: #92a7f2 !important;
+  padding: 0.35rem 1rem;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s !important;
+}
+
+.sp-cv-btn:hover {
+  background: #92a7f2 !important;
+  color: white !important;
+}
+
+.sp-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.sp-hamburger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: #30384b;
+}
+
+.sp-mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: rgba(238,251,254,0.97);
+  padding: 1rem 2.5rem 1.5rem;
+  gap: 1.2rem;
+}
+
+.sp-mobile-menu a {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  color: #30384b !important;
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.sp-mobile-menu.open { display: flex; }
+
+@media (max-width: 640px) {
+  .sp-links { display: none; }
+  .sp-hamburger { display: flex; }
+}
+</style>
+
+<script>
+window.addEventListener('scroll', () => {
+  document.getElementById('sp-nav').classList.toggle('scrolled', window.scrollY > 40);
+});
+
+document.getElementById('sp-hamburger').addEventListener('click', () => {
+  document.getElementById('sp-mobile-menu').classList.toggle('open');
+});
+</script>

@@ -1,0 +1,26 @@
+project:
+  type: website
+  output-dir: docs
+  resources:
+    - files/
+    - favicon.png
+    - favicon.ico
+
+website:
+  title: "Sanfiz"
+  favicon: favicon.png
+  navbar: false
+  page-footer: false
+
+format:
+  html:
+    theme: flatly
+    css: styles.css
+    toc: false
+    smooth-scroll: true
+    embed-resources: false
+    include-before-body: header.html
+    include-after-body: footer.html
+
+execute:
+  echo: false

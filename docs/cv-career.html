@@ -91,23 +91,22 @@ ul.task-list li input[type="checkbox"] {
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=DM+Sans:wght@300;400;500&amp;display=swap" rel="stylesheet">
 
 <nav class="sp-nav" id="sp-nav">
-  <div class="sp-nav-inner">
-    <a class="sp-brand" href="index.html">Home</a>
-    <div class="sp-links">
-      <a href="index.html#about">About</a>
-      <a href="index.html#cv">CV</a>
-      <a href="index.html#work">Work</a>
-      <a href="index.html#climate">Art&amp;History</a>
-      <a href="index.html#contact">Contact</a>
-    </div>
-    <button class="sp-hamburger" id="sp-hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+  <a class="sp-brand" href="index.html">Home</a>
+  <div class="sp-links">
+    <a href="index.html#about">About</a>
+    <a href="index.html#cv">CV</a>
+    <a href="index.html#milestones">Milestones</a>
+    <a href="index.html#work">Visuals</a>
+    <a href="index.html#climate">Art&amp;History</a>
+    <a href="index.html#contact">Contact</a>
   </div>
+  <button class="sp-hamburger" id="sp-hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
   <div class="sp-mobile-menu" id="sp-mobile-menu">
     <a href="index.html#about">About</a>
     <a href="index.html#cv">CV</a>
-    <a href="index.html#work">Work</a>
+    <a href="index.html#work">Visuals</a>
     <a href="index.html#climate">Art&amp;History</a>
     <a href="index.html#contact">Contact</a>
   </div>
@@ -118,25 +117,30 @@ ul.task-list li input[type="checkbox"] {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  z-index: 1000;
-  padding: 0 2.5rem;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  bottom: 0;
+  width: 160px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 2rem;
+  gap: 0;
+  transition: background 0.3s ease;
+background: transparent;
+}
+
+.sp-nav, .sp-nav * {
+  pointer-events: auto !important;
+  cursor: pointer;
+}
+
+.sp-links a {
+  cursor: pointer;
+  pointer-events: auto !important;
 }
 
 .sp-nav.scrolled {
-  background: rgba(238, 251, 254, 0.92);
+  background: rgba(250, 250, 250, 0.75); 
   backdrop-filter: blur(12px);
-  box-shadow: 0 1px 0 rgba(146,167,242,0.15);
-}
-
-.sp-nav-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 64px;
-  max-width: 1100px;
-  margin: 0 auto;
 }
 
 .sp-brand {
@@ -146,12 +150,13 @@ ul.task-list li input[type="checkbox"] {
   color: #30384b !important;
   text-decoration: none;
   letter-spacing: 0.02em;
+  margin-bottom: 2.5rem;
 }
 
 .sp-links {
   display: flex;
-  align-items: center;
-  gap: 2.2rem;
+  flex-direction: column;
+  gap: 0.2rem;
 }
 
 .sp-links a {
@@ -164,23 +169,10 @@ ul.task-list li input[type="checkbox"] {
   text-transform: uppercase;
   opacity: 0.7;
   transition: opacity 0.2s;
+  padding: 0.3rem 0;
 }
 
 .sp-links a:hover { opacity: 1; }
-
-.sp-cv-btn {
-  opacity: 1 !important;
-  border: 1px solid #92a7f2 !important;
-  color: #92a7f2 !important;
-  padding: 0.35rem 1rem;
-  border-radius: 4px;
-  transition: background 0.2s, color 0.2s !important;
-}
-
-.sp-cv-btn:hover {
-  background: #92a7f2 !important;
-  color: white !important;
-}
 
 .sp-hamburger {
   display: none;
@@ -190,6 +182,10 @@ ul.task-list li input[type="checkbox"] {
   border: none;
   cursor: pointer;
   padding: 4px;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1100;
 }
 
 .sp-hamburger span {
@@ -202,9 +198,12 @@ ul.task-list li input[type="checkbox"] {
 .sp-mobile-menu {
   display: none;
   flex-direction: column;
-  background: rgba(238,251,254,0.97);
-  padding: 1rem 2.5rem 1.5rem;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: rgba(250, 250, 250, 0.92);
+  padding: 4rem 2.5rem 1.5rem;
   gap: 1.2rem;
+  z-index: 1050;
 }
 
 .sp-mobile-menu a {
@@ -218,8 +217,8 @@ ul.task-list li input[type="checkbox"] {
 
 .sp-mobile-menu.open { display: flex; }
 
-@media (max-width: 640px) {
-  .sp-links { display: none; }
+@media (max-width: 768px) {
+  .sp-nav { display: none; }
   .sp-hamburger { display: flex; }
 }
 </style>
@@ -243,8 +242,8 @@ document.getElementById('sp-hamburger').addEventListener('click', () => {
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap');
 
-body { background: #eefbfe !important; font-family: 'DM Sans', sans-serif !important; }
-h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif !important; color: #30384b !important; }
+body { background: #fafafa !important; font-family: 'DM Sans', sans-serif !important; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif !important; color: #0A102B !important; }
 
 #particles-bg {
   position: fixed; inset: 0; z-index: -1; pointer-events: none;
@@ -264,29 +263,29 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif !important; colo
 .timeline::before {
   content: ''; position: absolute; left: 85px; top: 0; bottom: 0;
   width: 2px;
-  background: linear-gradient(to bottom, transparent, #92a7f2 6%, #92a7f2 94%, transparent);
+  background: linear-gradient(to bottom, transparent, #182547 6%, #182547 94%, transparent);
 }
 .tl-item {
   display: grid; grid-template-columns: 60px 24px 1fr;
   gap: 0 16px; align-items: start; margin-bottom: 1.2rem; cursor: pointer;
 }
 .tl-year {
-  font-size: 0.75rem; font-weight: 500; color: #92a7f2;
+  font-size: 0.75rem; font-weight: 500; color: #182547;
   text-align: right; padding-top: 16px; letter-spacing: 0.04em;
 }
 .tl-dot {
   width: 13px; height: 13px; background: #fff;
-  border: 2.5px solid #92a7f2; border-radius: 50%;
+  border: 2.5px solid #182547; border-radius: 50%;
   margin-top: 15px; justify-self: center;
   transition: background 0.2s, transform 0.2s; flex-shrink: 0;
 }
 .tl-item:hover .tl-dot, .tl-item.open .tl-dot {
-  background: #92a7f2; transform: scale(1.2);
+  background: #182547; transform: scale(1.2);
 }
 .tl-card {
   background: #fff; border-radius: 10px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-  border: 1px solid rgba(146,167,242,0.2); overflow: hidden;
+  border: 1px solid rgba(24,37,71,0.1); overflow: hidden;
   transition: box-shadow 0.2s ease;
 }
 .tl-item:hover .tl-card { box-shadow: 0 4px 20px rgba(0,0,0,0.11); }
@@ -296,7 +295,7 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif !important; colo
 .tl-hint { font-size: 0.7rem; color: #999; margin: 0; }
 .tl-body {
   display: none; padding: 0 1.1rem 1rem 1.1rem;
-  border-top: 1px solid rgba(146,167,242,0.15);
+  border-top: 1px solid rgba(24,37,71,0.08);
   animation: fadeSlide 0.3s ease;
 }
 .tl-item.open .tl-body { display: block; }
@@ -310,17 +309,17 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif !important; colo
   border-radius: 12px; padding: 1.5rem 2rem;
   margin: 0 auto 1.5rem auto; max-width: 780px;
 }
-.skills-box h3 { color: #92a7f2 !important; font-size: 1rem; margin-bottom: 1rem; margin-top: 0; }
+.skills-box h3 { color: #182547 !important; font-size: 1rem; margin-bottom: 1rem; margin-top: 0; }
 .lang-row { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.7rem; }
 .lang-name { width: 110px; font-size: 0.85rem; color: #333; flex-shrink: 0; }
 .lang-bar-bg { flex: 1; height: 7px; background: #e0e0e0; border-radius: 99px; overflow: hidden; }
-.lang-bar { height: 100%; border-radius: 99px; background: #92a7f2; }
+.lang-bar { height: 100%; border-radius: 99px; background: #182547; }
 .lang-level { font-size: 0.75rem; color: #999; width: 70px; text-align: right; flex-shrink: 0; }
 .skills-divider { border: none; border-top: 1px solid #e0e0e0; margin: 1.2rem 0; }
 
 /* ── SVG Hexagons ── */
 .hex-svg-wrap { margin-top: 0.5rem; width: 100%; }
-.thread { stroke: #b2c5fc; stroke-width: 1.2; fill: none; }
+.thread { stroke: #B1B1B3; stroke-width: 1.2; fill: none; }
 .thread-anim { stroke-dasharray: 5 9; animation: flowThread 2s linear infinite; }
 @keyframes flowThread { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -28; } }
 .hex-poly { stroke-width: 1.5; cursor: pointer; transition: opacity 0.18s; }
@@ -340,10 +339,10 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif !important; colo
   max-width: 780px; margin: 0 auto 1.5rem auto;
   box-shadow: 0 4px 16px rgba(0,0,0,0.06);
 }
-.women-box h6 { color: #30384b !important; font-family: 'Playfair Display', serif !important; }
+.women-box h6 { color: #0A102B !important; font-family: 'Playfair Display', serif !important; }
 .textopeque { font-size: 0.82rem; color: #777; display: block; line-height: 1.4; margin-bottom: 0.1rem; }
 .link-link {
-  color: #92a7f2 !important; font-weight: 600; text-decoration: underline;
+  color: #182547 !important; font-weight: 600; text-decoration: underline;
   text-underline-offset: 3px; transition: opacity 0.2s;
 }
 .link-link:hover { opacity: 0.75; }
@@ -724,11 +723,11 @@ window.addEventListener('load', function() {
   particlesJS('particles-bg', {
     particles: {
       number: { value: 60, density: { enable: true, value_area: 900 } },
-      color: { value: '#92a7f2' },
+      color: { value: '#182547' },
       shape: { type: 'circle' },
-      opacity: { value: 0.35, random: true },
+      opacity: { value: 0.18, random: true },
       size: { value: 3, random: true },
-      line_linked: { enable: true, distance: 150, color: '#92a7f2', opacity: 0.2, width: 1 },
+      line_linked: { enable: true, distance: 150, color: '#182547', opacity: 0.2, width: 1 },
       move: { enable: true, speed: 1.2, direction: 'none', random: true, out_mode: 'out' }
     },
     interactivity: {
@@ -748,7 +747,7 @@ window.addEventListener('load', function() {
 <!-- footer.html -->
 <footer class="sp-footer">
   <div class="sp-footer-inner">
-    <p class="sp-footer-left">©2026 Sabela Sanfiz · Built with care, coffee <i class="bi bi-cup-hot-fill"></i> and <a href="https://quarto.org" target="_blank">Quarto</a></p>
+    <p class="sp-footer-left">©2026 Sabela Sanfiz</p>
     <div class="sp-footer-icons">
       <a href="https://www.linkedin.com/in/sabelasanfiz" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
       <a href="https://github.com/Sanfiz" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>

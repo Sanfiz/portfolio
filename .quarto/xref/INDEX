@@ -121,5 +121,20 @@
   },
   "old/index_old.qmd": {
     "index_old.html": "ca05db89"
+  },
+  "images/index.qmd": {
+    "index.html": "247ade63"
+  },
+  "seasonal-forecasting.qmd": {
+    "seasonal-forecasting.html": "04cad911"
+  },
+  "ucl.qmd": {
+    "ucl.html": "fa6254d6"
+  },
+  "phd-thesis.qmd": {
+    "phd-thesis.html": "1e2b9d0d"
+  },
+  "marrisk.qmd": {
+    "marrisk.html": "c1738b92"
   }
 }

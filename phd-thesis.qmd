@@ -1,0 +1,145 @@
+---
+title: ""
+toc: false
+include-before-body: header.html
+include-after-body: footer.html
+---
+
+```{=html}
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<div id="particles-bg"></div>
+
+<div class="ms-page">
+
+  <a href="../index.html#milestones" class="back-link">← Back to milestones</a>
+
+  <div class="ms-hero">
+    <span class="ms-tag">PhD · Atmospheric Physics</span>
+    <h1 class="ms-title">Precipitation Recycling and Land–Atmosphere Interactions over Europe</h1>
+    <div class="ms-meta-row">
+      <span>🎓 Universidade de Santiago de Compostela</span>
+      <span>📍 Santiago de Compostela + Lisboa</span>
+      <span>📅 Oct 2014 – Dec 2017</span>
+      <span>🏅 Merit · European Doctorate Mention</span>
+    </div>
+  </div>
+
+  <div class="ms-body">
+
+    <div class="ms-main">
+
+      <p class="ms-desc">This thesis set out to improve understanding of the role of land–atmosphere interactions in the climate system, with particular focus on evapotranspiration fluxes and precipitation processes over selected regions of the European continent. The primary tool was the WRF-ARW regional meteorological model, coupled with the hydrological model LeafHydro.</p>
+
+      <p class="ms-desc">The results demonstrated the importance of precipitation recycling processes — how moisture evaporated from the land surface feeds back into rainfall — and quantified the impact of using a fully coupled hydrology–atmosphere modelling system on the simulated climate of Europe. These findings have implications for how we model water availability under future climate scenarios.</p>
+
+      <div class="ms-callout">
+        <p>The thesis received the <strong>European Doctorate Mention</strong>, which required a six-month visiting stay at a foreign institution and the defence of part of the work in a language other than Spanish. I completed that stay at the University of Lisbon (Feb–Jul 2017), where I ran WRF–LeafHydro simulations and contributed to joint analyses.</p>
+      </div>
+
+      <h2 class="ms-subtitle">What I did</h2>
+      <ul class="ms-list">
+        <li>Ran and postprocessed regional climate simulations with WRF-ARW coupled to the LeafHydro hydrological model</li>
+        <li>Analysed evapotranspiration and precipitation recycling rates across Europe using model output and observational datasets</li>
+        <li>Completed a five-month visiting research stay at the University of Lisbon</li>
+        <li>Wrote the PhD dissertation, scientific reports and conference posters</li>
+        <li>Supervised undergraduate students in their end-of-degree projects</li>
+      </ul>
+
+      <h2 class="ms-subtitle">Tools & methods</h2>
+      <div class="ms-chips">
+        <span>WRF-ARW</span><span>LeafHydro</span><span>Python</span><span>Bash</span>
+        <span>NCO / CDO</span><span>Regional climate modelling</span><span>Evapotranspiration analysis</span>
+      </div>
+
+      <div class="ms-links">
+        <a href="https://minerva.usc.gal/entities/publication/441392fb-d28f-43a9-a9fd-25770506685d" target="_blank" class="ms-btn">Read the dissertation →</a>
+        <a href="files/presentation.pdf" download class="ms-btn ms-btn-outline">↓ Download presentation</a>
+      </div>
+
+    </div>
+
+    <div class="ms-side">
+      <div class="ms-info-box">
+        <p class="ms-info-label">Institution</p>
+        <p class="ms-info-val">Universidade de Santiago de Compostela</p>
+        <p class="ms-info-label">Visiting stay</p>
+        <p class="ms-info-val">University of Lisbon, Feb–Jul 2017</p>
+        <p class="ms-info-label">Duration</p>
+        <p class="ms-info-val">3 years 3 months</p>
+        <p class="ms-info-label">Grade</p>
+        <p class="ms-info-val">Merit · European Doctorate Mention</p>
+        <p class="ms-info-label">Keywords</p>
+        <div class="ms-chips-sm">
+          <span>Meteorology</span><span>Climate Change</span><span>Hydrological Cycle</span><span>Atmospheric Modelling</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap');
+body { background: #fafafa !important; font-family: 'DM Sans', sans-serif !important; margin: 0; padding: 0; }
+h1,h2,h3 { font-family: 'Playfair Display', serif !important; color: #0A102B !important; }
+
+#particles-bg { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+#particles-bg canvas { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; pointer-events: none !important; }
+
+.ms-page { max-width: 1000px; margin: 0 auto; padding: 2rem 1.5rem 5rem; position: relative; z-index: 1; }
+
+.back-link { display: inline-block; margin-bottom: 2rem; font-family: 'DM Sans', sans-serif; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; color: #182547 !important; transition: opacity 0.2s; }
+.back-link:hover { opacity: 0.7; }
+
+.ms-hero { border-bottom: 1px solid rgba(24,37,71,0.1); padding-bottom: 2rem; margin-bottom: 2.5rem; }
+.ms-tag { font-family: monospace; font-size: 0.68rem; color: #182547; letter-spacing: 0.14em; text-transform: uppercase; display: block; margin-bottom: 0.8rem; }
+.ms-title { font-family: 'Playfair Display', serif !important; font-size: clamp(1.6rem, 3.5vw, 2.6rem); font-weight: 700; color: #0A102B !important; margin: 0 0 1.2rem 0; line-height: 1.15; }
+.ms-meta-row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.8rem; font-family: 'DM Sans', sans-serif; font-size: 0.82rem; color: #666; }
+
+.ms-body { display: grid; grid-template-columns: 1fr 280px; gap: 3rem; align-items: start; }
+.ms-main { display: flex; flex-direction: column; gap: 0; }
+
+.ms-desc { font-family: 'DM Sans', sans-serif; font-size: 0.92rem; line-height: 1.85; color: #444; margin-bottom: 1.2rem; text-align: justify; }
+
+.ms-callout { border-left: 3px solid #182547; background: rgba(24,37,71,0.04); border-radius: 0 6px 6px 0; padding: 1rem 1.2rem; margin: 0.8rem 0 1.8rem 0; }
+.ms-callout p { font-family: 'DM Sans', sans-serif; font-size: 0.88rem; line-height: 1.75; color: #555; margin: 0; font-style: italic; }
+
+.ms-subtitle { font-family: 'Playfair Display', serif !important; font-size: 1.1rem; color: #0A102B !important; margin: 1.8rem 0 0.8rem 0; }
+
+.ms-list { font-family: 'DM Sans', sans-serif; font-size: 0.88rem; line-height: 1.8; color: #444; padding-left: 1.2rem; margin: 0 0 1.5rem 0; }
+.ms-list li { margin-bottom: 0.4rem; }
+
+.ms-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; }
+.ms-chips span { font-family: monospace; font-size: 0.7rem; background: rgba(24,37,71,0.07); color: #182547; padding: 0.3rem 0.7rem; border-radius: 3px; letter-spacing: 0.04em; }
+
+.ms-links { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 0.5rem; }
+.ms-btn { font-family: 'DM Sans', sans-serif; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; text-decoration: none; background: #182547; color: white !important; padding: 0.6rem 1.3rem; border-radius: 4px; display: inline-block; transition: opacity 0.2s; }
+.ms-btn:hover { opacity: 0.85; }
+.ms-btn-outline { background: transparent; color: #182547 !important; border: 1px solid #182547; }
+.ms-btn-outline:hover { background: #182547; color: white !important; opacity: 1; }
+
+.ms-side {}
+.ms-info-box { background: white; border: 1px solid rgba(24,37,71,0.1); border-radius: 8px; padding: 1.5rem; position: sticky; top: 2rem; }
+.ms-info-label { font-family: monospace; font-size: 0.65rem; color: #182547; letter-spacing: 0.1em; text-transform: uppercase; margin: 1rem 0 0.2rem 0; }
+.ms-info-label:first-child { margin-top: 0; }
+.ms-info-val { font-family: 'DM Sans', sans-serif; font-size: 0.85rem; color: #444; margin: 0 0 0.2rem 0; }
+.ms-chips-sm { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.4rem; }
+.ms-chips-sm span { font-family: monospace; font-size: 0.65rem; background: rgba(24,37,71,0.06); color: #182547; padding: 0.2rem 0.5rem; border-radius: 3px; }
+
+@media (max-width: 700px) {
+  .ms-body { grid-template-columns: 1fr; }
+  .ms-info-box { position: static; }
+}
+</style>
+
+<script>
+const pDiv = document.getElementById('particles-bg');
+if (pDiv) { pDiv.style.pointerEvents = 'none'; document.body.appendChild(pDiv); }
+window.addEventListener('load', function() {
+  particlesJS('particles-bg', {
+    particles: { number: { value: 40 }, color: { value: '#182547' }, opacity: { value: 0.18, random: true }, size: { value: 3, random: true }, line_linked: { enable: true, distance: 130, color: '#182547', opacity: 0.1, width: 1 }, move: { enable: true, speed: 1 } },
+    interactivity: { events: { onhover: { enable: false } } }, retina_detect: true
+  });
+});
+</script>
+```

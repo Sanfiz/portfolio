@@ -19,7 +19,7 @@ include-after-body: footer.html
     <p class="sp-hero-sub">Hi! This is my portfolio, check it out.</p>
     <div class="sp-hero-links">
       <a href="#about" class="sp-btn-ghost">About me ↓</a>
-      <a href="#work" class="sp-btn-solid">Explore work</a>
+      <a href="#projects" class="sp-btn-solid">Explore work</a>
     </div>
   </div>
 </section>
@@ -31,8 +31,8 @@ include-after-body: footer.html
     <h2 class="sp-section-title">Hi, I'm Sabela.</h2>
     <div class="sp-about-top">
       <div class="sp-about-text">
-        <p>I am a <strong>Climate Scientist</strong> with over ten years of experience working with climate data, building visualisation products and communicating science in a meaningful way.</p>
-        <p>My career has taken me from pure atmospheric research to interactive dashboards and science communication materials. That intersection, between rigorous science and engaging storytelling, is where I am happy to be.</p>
+        <p>I am a <strong>Climate Scientist</strong> with experience in climate data, atmospheric modelling, and data visualisation. My career has taken me from the Galician coast to Barcelona, Lisbon, London, and back - through universities, conferences, European projects, and a few companies along the way. In numbers: twelve years of a life.</p>
+        <p>The common thread through all that coming and going is climate. Understanding it, modelling it, and communicating it.</p>
       </div>
       <div class="flip-poster" style="--r:-2deg;--tx:0px;--ty:4px" onclick="this.classList.toggle('is-flipped')">
         <div class="pin"></div>
@@ -48,6 +48,47 @@ include-after-body: footer.html
         </div>
       </div>
     </div>
+
+<div class="sp-timeline">
+  <div class="tls">
+    <div class="tlg">
+      <span class="tly acad" style="grid-column:1">2014</span>
+      <span class="tld acad" style="grid-column:1"></span>
+      <div class="tll acad" style="grid-column:2"></div>
+      <span class="tlr acad" style="grid-column:2">PhD Student</span>
+
+      <span class="tly acad" style="grid-column:3">2017</span>
+      <span class="tld acad" style="grid-column:3"></span>
+      <div class="tll acad" style="grid-column:4"></div>
+      <span class="tlr acad" style="grid-column:4">Research Assistant</span>
+
+      <span class="tly pro" style="grid-column:5">2018</span>
+      <span class="tld pro" style="grid-column:5"></span>
+      <div class="tll pro" style="grid-column:6"></div>
+      <span class="tlr pro" style="grid-column:6">Climate Scientist</span>
+
+      <span class="tly pro" style="grid-column:7">2021</span>
+      <span class="tld pro" style="grid-column:7"></span>
+      <div class="tll pro" style="grid-column:8"></div>
+      <span class="tlr pro" style="grid-column:8">WRF Specialist</span>
+
+      <span class="tly pro" style="grid-column:9">2023</span>
+      <span class="tld pro" style="grid-column:9"></span>
+      <div class="tll pro" style="grid-column:10"></div>
+      <span class="tlr pro" style="grid-column:10">Climate Scientist</span>
+
+      <span class="tly pro" style="grid-column:11">2026</span>
+      <span class="tld now" style="grid-column:11"></span>
+    </div>
+  </div>
+  <div class="tleg">
+    <span class="tli"><i class="tlsw acad"></i>Academia</span>
+    <span class="tli"><i class="tlsw pro"></i>Industry</span>
+    <span class="tli"><i class="tlsw nowsw"></i>Present</span>
+  </div>
+</div>
+
+
   </div>
 </section>
 
@@ -151,12 +192,12 @@ include-after-body: footer.html
 </section>
 
 
-<!-- ── MILESTONES ── -->
-<section id="milestones" class="sp-section">
+<!-- ── PROJECTS ── -->
+<section id="projects" class="sp-section">
   <div class="sp-container">
-    <p class="sp-label">// milestones</p>
-    <h2 class="sp-section-title">Milestones</h2>
-    <p class="ms-intro">These are the projects I am most proud of. The ones that took the most time and most headaches. Pushed me furthest. Left the clearest mark on how I think about climate.</p>
+    <p class="sp-label">// projects</p>
+    <h2 class="sp-section-title">Projects</h2>
+    <p class="ms-intro">These are the projects from my career that I’m most proud of. They took the most time, caused the most headaches, and pushed me the furthest. They also shaped how I think about climate.</p>
     <div class="ms-grid">
 
       <a href="phd-thesis.html" class="ms-card">
@@ -166,21 +207,27 @@ include-after-body: footer.html
       </a>
 
       <a href="ucl.html" class="ms-card">
-        <p class="ms-card-title">University College London</p>
-        <p class="ms-card-desc">Palaeoclimate research at one of the world's top universities — simulating stalagmite growth to reconstruct past climates from cave proxy records.</p>
+        <p class="ms-card-title">SISAl Project</p>
+        <p class="ms-card-desc">Palaeoclimate research at one of the world's top universities UNiversity College London.</p>
         <span class="ms-card-cta">Read more →</span>
       </a>
 
       <a href="marrisk.html" class="ms-card">
         <p class="ms-card-title">MarRISK Project</p>
-        <p class="ms-card-desc">€3.5M European project assessing coastal climate risks for Galicia and Northern Portugal — flooding, erosion, extreme events and marine renewables.</p>
+        <p class="ms-card-desc">European project assessing coastal climate risks for Galicia and Northern Portugal.</p>
         <span class="ms-card-cta">Read more →</span>
       </a>
 
       <a href="seasonal-forecasting.html" class="ms-card">
         <p class="ms-card-title">Seasonal Forecasting</p>
-        <p class="ms-card-desc">Climate services for Spain's national wetaher agency. Seasonal forecasts, interactive dashboards, geospatial analysis, congresses across Europe, a visiting stay in Germany.</p>
+        <p class="ms-card-desc">Climate services for Spain's national wetaher agency.</p>
         <span class="ms-card-cta">Read more →</span>
+      </a>
+
+      <a href="FemaleVoices.html" class="sp-work-card">
+        <p class="sp-work-title">Female Voices</p>
+        <p class="sp-work-desc">Pioneer women in climate science </p>
+        <span class="sp-work-cta">Explore →</span>
       </a>
 
     </div>
@@ -188,7 +235,7 @@ include-after-body: footer.html
 </section>
 
 <!-- ── VISUALS ── -->
-<section id="work" class="sp-section">
+<section id="visuals" class="sp-section">
   <div class="sp-container">
     <p class="sp-label">// visuals</p>
     <h2 class="sp-section-title">Visuals</h2>
@@ -248,27 +295,6 @@ include-after-body: footer.html
   <button class="vl-nav vl-nav-next" onclick="stepVisual(1)">&#8594;</button>
 </div>
 
-<!-- ── CLIMATE ── -->
-<section id="climate" class="sp-section sp-section-alt">
-  <div class="sp-container">
-    <p class="sp-label">// climate</p>
-    <h2 class="sp-section-title">Climate & People</h2>
-    <div class="sp-work-grid">
-      <a href="ClimateArt.html" class="sp-work-card">
-        <span class="sp-work-icon">🎨</span>
-        <p class="sp-work-title">Climate & Art</p>
-        <p class="sp-work-desc">Where climate science meets visual storytelling and design.</p>
-        <span class="sp-work-cta">Explore →</span>
-      </a>
-      <a href="FemaleVoices.html" class="sp-work-card">
-        <span class="sp-work-icon">🔬</span>
-        <p class="sp-work-title">Female Voices</p>
-        <p class="sp-work-desc">Pioneer women in climate science — stories history forgot.</p>
-        <span class="sp-work-cta">Explore →</span>
-      </a>
-    </div>
-  </div>
-</section>
 
 <!-- ── CONTACT ── -->
 <section id="contact" class="sp-section">
@@ -324,6 +350,7 @@ body { margin: 0; padding: 0; background: #fafafa; }
 .sp-section-alt { background: rgba(250,250,250,0.82); }
 .sp-container { max-width: 1000px; margin: 0 auto; }
 .sp-label { font-family: monospace; font-size: 0.7rem; color: #182547; letter-spacing: 0.12em; margin-bottom: 0.5rem; display: block; }
+.sp-section-header { margin-bottom: 0; }
 .sp-section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.8rem); color: #0A102B !important; margin: 0 0 1.2rem 0; font-weight: 700; }
 .sp-section-sub { font-family: 'DM Sans', sans-serif; font-size: 0.88rem; color: #888; margin: 0 0 2rem 0; }
 
@@ -392,8 +419,27 @@ body { margin: 0; padding: 0; background: #fafafa; }
 .vl-download { display: inline-block; margin-top: 1.4rem; font-family: 'DM Sans', sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; color: #182547 !important; border: 1px solid #182547; padding: 0.5rem 1.2rem; border-radius: 3px; transition: background 0.2s, color 0.2s; align-self: flex-start; }
 .vl-download:hover { background: #182547; color: white !important; }
 
+/* ── About timeline ── */
+.sp-timeline { --acad:#7d8bad; --pro:#182547; margin-top: 3rem; }
+.tls { overflow-x: auto; padding-bottom: 0.4rem; }
+.tlg { display: grid; grid-template-columns: 18px minmax(max-content,1fr) 18px minmax(max-content,1fr) 18px minmax(max-content,1fr) 18px minmax(max-content,1fr) 18px minmax(max-content,1fr) 18px; grid-template-rows: auto 16px auto; align-items: center; padding: 0 1.4rem; }
+.tly { grid-row: 1; justify-self: center; font-family: 'DM Sans', sans-serif; font-size: 0.82rem; font-weight: 600; white-space: nowrap; padding-bottom: 0.55rem; overflow: visible; }
+.tly.acad { color: var(--acad); } .tly.pro { color: var(--pro); }
+.tld { grid-row: 2; justify-self: center; width: 11px; height: 11px; border-radius: 50%; z-index: 2; }
+.tld.acad { background: var(--acad); } .tld.pro { background: var(--pro); }
+.tld.now { background: #fafafa; border: 2.5px solid var(--pro); box-shadow: 0 0 0 4px rgba(24,37,71,0.12); }
+.tll { grid-row: 2; height: 2px; width: 100%; }
+.tll.acad { background: var(--acad); } .tll.pro { background: var(--pro); }
+.tlr { grid-row: 3; justify-self: center; font-family: 'DM Sans', sans-serif; font-size: 0.74rem; color: #0A102B; white-space: nowrap; padding: 0.7rem 0.7rem 0; position: relative; }
+.tlr::before { content: ''; position: absolute; top: 0.2rem; left: 50%; transform: translateX(-50%); width: 18px; height: 2px; border-radius: 1px; }
+.tlr.acad::before { background: var(--acad); } .tlr.pro::before { background: var(--pro); }
+.tleg { display: flex; gap: 1.5rem; justify-content: center; margin-top: 1.7rem; }
+.tli { display: inline-flex; align-items: center; gap: 0.45rem; font-family: 'DM Sans', sans-serif; font-size: 0.72rem; color: #888; }
+.tlsw { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.tlsw.acad { background: var(--acad); } .tlsw.pro { background: var(--pro); }
+.tlsw.nowsw { width: 9px; height: 9px; background: #fafafa; border: 2px solid #182547; }
 
-/* ── Milestones ── */
+/* ── Projects ── */
 .ms-intro { font-family: 'DM Sans', sans-serif; font-size: 0.92rem; color: #666; line-height: 1.75; margin: 0 0 2.5rem 0; max-width: 680px; }
 .ms-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
 .ms-card { display: flex; flex-direction: column; gap: 0.4rem; padding: 1.6rem 1.5rem; background: white; border: 1px solid rgba(24,37,71,0.12); border-radius: 8px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; }
@@ -416,7 +462,7 @@ body { margin: 0; padding: 0; background: #fafafa; }
 .sp-contact-left p { font-family: 'DM Sans', sans-serif; font-size: 0.92rem; color: #666; line-height: 1.7; margin-bottom: 1.8rem; }
 .sp-contact-btns { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-bottom: 1.8rem; }
 .sp-social { display: flex; gap: 1.2rem; }
-.sp-social a { color: #888 !important; font-size: 1.1rem; text-decoration: none; transition: color 0.2s; }
+.sp-social a { color: #888 !important; font-size: 1.9rem; text-decoration: none; transition: color 0.2s; }
 .sp-social a:hover { color: #182547 !important; }
 .sp-map-label { font-family: 'DM Sans', sans-serif; font-size: 0.75rem; color: #999; letter-spacing: 0.06em; margin-bottom: 0.8rem; text-transform: uppercase; }
 #sp-map { height: 340px; border-radius: 10px; border: 1px solid rgba(24,37,71,0.15); overflow: hidden; box-shadow: 0 4px 20px rgba(24,37,71,0.08); }
@@ -587,7 +633,7 @@ window.addEventListener('load', function() {
       number: { value: 80, density: { enable: true, value_area: 800 } },
       color: { value: '#182547' },
       shape: { type: 'circle' },
-      opacity: { value: 0.6, random: true },
+      opacity: { value: 0.5, random: true },
       size: { value: 5, random: true },
       line_linked: { enable: true, distance: 150, color: '#182547', opacity: 0.4, width: 1.5 },
       move: { enable: true, speed: 2, direction: 'none', random: true, straight: false, out_mode: 'out', bounce: false }
@@ -607,7 +653,8 @@ window.addEventListener('load', function() {
     });
   });
 
-  const map = L.map('sp-map', { center: [50, 5], zoom: 4, zoomControl: true, scrollWheelZoom: false });
+
+  const map = L.map('sp-map', { center: [45, 10], zoom: 3, zoomControl: true, scrollWheelZoom: false });
   L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', { attribution: '© OpenStreetMap © CARTO', subdomains: 'abcd', maxZoom: 19 }).addTo(map);
   const icon = L.divIcon({ html: '<div style="width:12px;height:12px;background:#182547;border:3px solid white;border-radius:50%;box-shadow:0 2px 8px rgba(24,37,71,0.5)"></div>', className: '', iconAnchor: [6, 6] });
   L.marker([43.3623, -8.4115], { icon }).addTo(map).bindPopup('<b>A Coruña</b><br>Galicia, Spain').openPopup();

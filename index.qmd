@@ -338,7 +338,7 @@ body { margin: 0; padding: 0; background: #fafafa; }
 .sp-hero-content a { pointer-events: auto; }
 .sp-hero-eyebrow { font-family: 'DM Sans', sans-serif; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: #182547; margin-bottom: 1rem; }
 .sp-hero-name { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4.5vw, 3.5rem); font-weight: 700; line-height: 1.05; color: #0A102B; margin: 0 0 1.4rem 0; letter-spacing: -0.01em; }
-.sp-hero-sub { font-family: 'DM Sans', sans-serif; font-size: 0.95rem; color: #556; line-height: 1.75; margin-bottom: 2.2rem; }
+.sp-hero-sub { font-family: 'DM Sans', sans-serif; font-size: 0.95rem; color: #0A102B; line-height: 1.75; margin-bottom: 2.2rem; }
 .sp-hero-links { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
 .sp-btn-solid { font-family: 'DM Sans', sans-serif; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; background: #182547; color: white !important; padding: 0.7rem 1.6rem; border-radius: 4px; transition: opacity 0.2s; display: inline-block; }
@@ -352,14 +352,14 @@ body { margin: 0; padding: 0; background: #fafafa; }
 .sp-label { font-family: monospace; font-size: 0.7rem; color: #182547; letter-spacing: 0.12em; margin-bottom: 0.5rem; display: block; }
 .sp-section-header { margin-bottom: 0; }
 .sp-section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.8rem); color: #0A102B !important; margin: 0 0 1.2rem 0; font-weight: 700; }
-.sp-section-sub { font-family: 'DM Sans', sans-serif; font-size: 0.88rem; color: #888; margin: 0 0 2rem 0; }
+.sp-section-sub { font-family: 'DM Sans', sans-serif; font-size: 0.88rem; color: #0A102B; margin: 0 0 2rem 0; }
 
 #quarto-document-content h1, #quarto-document-content h2, #quarto-document-content h3,
 .sp-section-title, h1, h2, h3 { color: #0A102B !important; }
 
 .sp-about-top { display: flex; gap: 1.5rem; align-items: flex-start; margin-bottom: 3rem; }
 .sp-about-text { flex: 1; }
-.sp-about-text p { font-family: 'DM Sans', sans-serif; font-size: 0.92rem; line-height: 1.8; color: #444; margin-bottom: 1rem; }
+.sp-about-text p { font-family: 'DM Sans', sans-serif; font-size: 0.92rem; line-height: 1.8; color: #0A102B; margin-bottom: 1rem; }
 
 .flip-poster { width: 200px; flex-shrink: 0; height: 260px; perspective: 1000px; cursor: pointer; transform: rotate(var(--r)) translate(var(--tx), var(--ty)); transition: transform 0.3s ease; position: relative; }
 .flip-poster:hover { transform: rotate(0deg) translateY(-4px); }
@@ -440,7 +440,7 @@ body { margin: 0; padding: 0; background: #fafafa; }
 .tlsw.nowsw { width: 9px; height: 9px; background: #fafafa; border: 2px solid #182547; }
 
 /* ── Projects ── */
-.ms-intro { font-family: 'DM Sans', sans-serif; font-size: 0.92rem; color: #666; line-height: 1.75; margin: 0 0 2.5rem 0; max-width: 680px; }
+.ms-intro { font-family: 'DM Sans', sans-serif; font-size: 0.92rem; color: #0A102B; line-height: 1.75; margin: 0 0 2.5rem 0; max-width: 680px; }
 .ms-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; }
 .ms-card { display: flex; flex-direction: column; gap: 0.4rem; padding: 1.6rem 1.5rem; background: white; border: 1px solid rgba(24,37,71,0.12); border-radius: 8px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; }
 .ms-card:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(24,37,71,0.1); border-color: #182547; }
@@ -459,7 +459,7 @@ body { margin: 0; padding: 0; background: #fafafa; }
 .sp-work-cta { font-family: 'DM Sans', sans-serif; font-size: 0.72rem; color: #182547; margin-top: 0.4rem; }
 
 .sp-contact-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 4rem; align-items: start; }
-.sp-contact-left p { font-family: 'DM Sans', sans-serif; font-size: 0.92rem; color: #666; line-height: 1.7; margin-bottom: 1.8rem; }
+.sp-contact-left p { font-family: 'DM Sans', sans-serif; font-size: 0.92rem; color: #0A102B; line-height: 1.7; margin-bottom: 1.8rem; }
 .sp-contact-btns { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-bottom: 1.8rem; }
 .sp-social { display: flex; gap: 1.2rem; }
 .sp-social a { color: #888 !important; font-size: 1.9rem; text-decoration: none; transition: color 0.2s; }
@@ -631,11 +631,11 @@ window.addEventListener('load', function() {
   particlesJS('particles-js', {
     particles: {
       number: { value: 80, density: { enable: true, value_area: 800 } },
-      color: { value: '#182547' },
+      color: { value: '#deddd9' },
       shape: { type: 'circle' },
-      opacity: { value: 0.5, random: true },
+      opacity: { value: 0.7, random: true },
       size: { value: 5, random: true },
-      line_linked: { enable: true, distance: 150, color: '#182547', opacity: 0.4, width: 1.5 },
+      line_linked: { enable: true, distance: 150, color: '#deddd9', opacity: 0.7, width: 1.5 },
       move: { enable: true, speed: 2, direction: 'none', random: true, straight: false, out_mode: 'out', bounce: false }
     },
     interactivity: {

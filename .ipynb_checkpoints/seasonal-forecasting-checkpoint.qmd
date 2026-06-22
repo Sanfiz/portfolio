@@ -11,15 +11,15 @@ include-after-body: footer.html
 
 <div class="ms-page">
 
-  <a href="../index.html#projects" class="back-link">← Back to Main Page</a>
+  <a href="../index.html#milestones" class="back-link">← Back to milestones</a>
 
   <div class="ms-hero">
-    <span class="ms-tag">Paleoclimate · Research</span>
-    <h1 class="ms-title">Palaeoclimate Research at University College London</h1>
+    <span class="ms-tag">Climate Services · AEMET</span>
+    <h1 class="ms-title">Seasonal Forecasting & Climate Services at AEMET</h1>
     <div class="ms-meta-row">
-      <span>🏛️ University College London</span>
-      <span>📍 London, United Kingdom</span>
-      <span>📅 2018</span>
+      <span>🌦️ Tragsatec – AEMET</span>
+      <span>📍 Spain · Hybrid</span>
+      <span>📅 Sep 2024 – Present</span>
     </div>
   </div>
 
@@ -27,45 +27,53 @@ include-after-body: footer.html
 
     <div class="ms-main">
 
-      <p class="ms-desc">After completing my PhD, I joined one of the world's leading research universities to work at the intersection of palaeoclimate science and computational modelling. UCL's Department of Geography is home to some of the most respected palaeoclimate researchers in Europe, and joining that environment — even for a year — was a formative experience.</p>
+      <p class="ms-desc">Since September 2024 I have been working as a Climate Scientist for Tragsatec, providing climate services to Spain's national meteorological agency (AEMET). The work sits at the intersection of statistical climatology, geospatial analysis, and data communication — translating complex seasonal forecast products into accessible, interactive tools for decision-makers and the public.</p>
 
-      <p class="ms-desc">The project focused on stalagmites as climate proxies. Stalagmites grow inside caves over thousands of years, and their chemical composition records past changes in temperature, rainfall, and atmospheric circulation. By simulating how stalagmites grow, we can reconstruct what the climate looked like long before instrumental records began.</p>
+      <p class="ms-desc">Seasonal forecasting operates on timescales of one to six months ahead, using statistical post-processing techniques to calibrate the output of global climate models against observed data. The challenge is not only scientific — it is also communicative. A seasonal forecast is only useful if the people who need it can understand and act on it.</p>
 
       <div class="ms-callout">
-        <p>Working at UCL meant attending interdisciplinary project meetings in London and Reading, collaborating with geologists, isotope chemists and climate modellers, and learning to communicate across very different scientific cultures. It also pushed my Python skills in a new direction — building physical simulations from scratch rather than postprocessing model output.</p>
+        <p>This project is the one where I have pushed furthest into data communication and interactive visualisation. Building dashboards in Plotly, Dash and Shiny, writing D3.js components, and working with Datawrapper for public-facing outputs has changed how I think about the relationship between climate data and the people who need it.</p>
       </div>
 
-      <h2 class="ms-subtitle">What I did</h2>
+      <h2 class="ms-subtitle">What I do</h2>
       <ul class="ms-list">
-        <li>Developed a Python model to simulate stalagmite growth behaviour from first principles</li>
-        <li>Built a comprehensive database of speleothem proxy climate records</li>
-        <li>Wrote scientific reports and contributed to project documentation</li>
-        <li>Attended research meetings in London and Reading with interdisciplinary teams</li>
+        <li>Seasonal forecasting and statistical post-processing of global climate model output</li>
+        <li>Geospatial analysis of climate variables across the Spanish territory</li>
+        <li>Interactive dashboard development with Plotly, Dash and Shiny</li>
+        <li>Data visualisation for public and institutional audiences using D3.js and Datawrapper</li>
+        <li>Workflow automation and batch processing in HPC environments using Bash</li>
       </ul>
 
       <h2 class="ms-subtitle">Tools & methods</h2>
       <div class="ms-chips">
-        <span>Python</span><span>Proxy climate data</span><span>Stalagmite modelling</span>
-        <span>Palaeoclimate reconstruction</span><span>Speleothem analysis</span>
+        <span>Python</span><span>Plotly / Dash</span><span>Shiny</span><span>D3.js</span>
+        <span>Datawrapper</span><span>Bash / HPC</span><span>Statistical post-processing</span>
+        <span>Geospatial analysis</span>
+      </div>
+
+      <h2 class="ms-subtitle">Selected outputs</h2>
+      <div class="ms-links">
+        <a href="https://sanfiz.github.io/aemet-tragsatec-2026/" target="_blank" class="ms-btn">Climate report 2026 →</a>
+        <a href="https://dashboard-tragsatec.onrender.com/" target="_blank" class="ms-btn ms-btn-outline">Interactive dashboard →</a>
       </div>
 
     </div>
 
     <div class="ms-side">
       <div class="ms-info-box">
-        <p class="ms-info-label">Institution</p>
-        <p class="ms-info-val">University College London (UCL)</p>
+        <p class="ms-info-label">Employer</p>
+        <p class="ms-info-val">Tragsatec</p>
+        <p class="ms-info-label">Client</p>
+        <p class="ms-info-val">AEMET — Spanish Meteorological Agency</p>
         <p class="ms-info-label">Department</p>
-        <p class="ms-info-val">Geography — Palaeoclimate Group</p>
+        <p class="ms-info-val">Tragsatec IT · Climate Services</p>
         <p class="ms-info-label">Location</p>
-        <p class="ms-info-val">London, United Kingdom</p>
-        <p class="ms-info-label">Year</p>
-        <p class="ms-info-val">2018</p>
-        <p class="ms-info-label">Role</p>
-        <p class="ms-info-val">Palaeoclimate Researcher (Assistant)</p>
+        <p class="ms-info-val">Spain · Hybrid</p>
+        <p class="ms-info-label">Since</p>
+        <p class="ms-info-val">September 2024 · Ongoing</p>
         <p class="ms-info-label">Focus</p>
         <div class="ms-chips-sm">
-          <span>Palaeoclimate</span><span>Proxy data</span><span>Stalagmites</span><span>Modelling</span>
+          <span>Seasonal forecasting</span><span>Climate services</span><span>Dashboards</span><span>Data viz</span>
         </div>
       </div>
     </div>
@@ -96,6 +104,11 @@ h1,h2,h3 { font-family: 'Playfair Display', serif !important; color: #0A102B !im
 .ms-list li { margin-bottom: 0.4rem; }
 .ms-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; }
 .ms-chips span { font-family: monospace; font-size: 0.7rem; background: rgba(24,37,71,0.07); color: #182547; padding: 0.3rem 0.7rem; border-radius: 3px; letter-spacing: 0.04em; }
+.ms-links { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 0.5rem; }
+.ms-btn { font-family: 'DM Sans', sans-serif; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; text-decoration: none; background: #182547; color: white !important; padding: 0.6rem 1.3rem; border-radius: 4px; display: inline-block; transition: opacity 0.2s; }
+.ms-btn:hover { opacity: 0.85; }
+.ms-btn-outline { background: transparent; color: #182547 !important; border: 1px solid #182547; }
+.ms-btn-outline:hover { background: #182547; color: white !important; opacity: 1; }
 .ms-info-box { background: white; border: 1px solid rgba(24,37,71,0.1); border-radius: 8px; padding: 1.5rem; position: sticky; top: 2rem; }
 .ms-info-label { font-family: monospace; font-size: 0.65rem; color: #182547; letter-spacing: 0.1em; text-transform: uppercase; margin: 1rem 0 0.2rem 0; }
 .ms-info-label:first-child { margin-top: 0; }

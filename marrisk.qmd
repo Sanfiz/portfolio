@@ -11,7 +11,7 @@ include-after-body: footer.html
 
 <div class="ms-page">
 
-  <a href="../index.html#milestones" class="back-link">← Back to milestones</a>
+  <a href="../index.html#projects" class="back-link">← Back to Main Page</a>
 
   <div class="ms-hero">
     <span class="ms-tag">EU Project · Coastal Climate Adaptation</span>

@@ -5,6 +5,7 @@ project:
     - files/
     - favicon.png
     - favicon.ico
+    - images/
 
 website:
   title: "Sanfiz"

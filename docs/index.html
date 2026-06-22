@@ -434,7 +434,7 @@ document.getElementById('sp-hamburger').addEventListener('click', () => {
 
       <a href="ucl.html" class="ms-card">
         <p class="ms-card-title">SISAl Project</p>
-        <p class="ms-card-desc">Palaeoclimate research at one of the world's top universities UNiversity College London.</p>
+        <p class="ms-card-desc">Palaeoclimate research at one of the world's top universities, University College London.</p>
         <span class="ms-card-cta">Read more →</span>
       </a>
 
@@ -446,7 +446,7 @@ document.getElementById('sp-hamburger').addEventListener('click', () => {
 
       <a href="seasonal-forecasting.html" class="ms-card">
         <p class="ms-card-title">Seasonal Forecasting</p>
-        <p class="ms-card-desc">Climate services for Spain's national wetaher agency.</p>
+        <p class="ms-card-desc">Climate services for Spain's national weather agency.</p>
         <span class="ms-card-cta">Read more →</span>
       </a>
 
@@ -465,48 +465,18 @@ document.getElementById('sp-hamburger').addEventListener('click', () => {
   <div class="sp-container">
     <p class="sp-label">// visuals</p>
     <h2 class="sp-section-title">Visuals</h2>
-    <p class="sp-section-sub">Climate maps, data visualisations and animations made with Python. Click any image to explore.</p>
-    <div class="work-carousel-wrap">
-      <div class="work-carousel" id="work-track">
+    <p class="sp-section-sub">Climate maps, data visualisations and animations. Click any figure to read the story behind it. [Currently, working on this section]</p>
 
-        <div class="work-item" onclick="openVisual(0)">
-          <div class="work-img-wrap"><img src="images/visuals/plot1.jpg" alt="Weather stations Spain"></div>
-          <p class="work-caption">Weather station coverage across Spain</p>
-          <span class="work-type">Meteorology · Static map</span>
-        </div>
-
-        <div class="work-item" onclick="openVisual(1)">
-          <div class="work-img-wrap"><img src="images/visuals/plot2.png" alt="Spanish river basins"></div>
-          <p class="work-caption">Spanish river basin districts with HydroRIVERS</p>
-          <span class="work-type">Water · Static map</span>
-        </div>
-
-        <div class="work-item" onclick="openVisual(2)">
-          <div class="work-img-wrap"><img src="images/visuals/rivers_europe_minimal.png" alt="European Rivers"></div>
-          <p class="work-caption">European rivers</p>
-          <span class="work-type">Water · Static map</span>
-        </div>
-
-        <div class="work-item" onclick="openVisual(3)">
-          <div class="work-img-wrap">
-            <video autoplay="" loop="" muted="" playsinline="">
-              <source src="images/visuals/co2-seaice.mp4" type="video/mp4">
-            </video>
-          </div>
-          <p class="work-caption">CO₂ and sea ice extent</p>
-          <span class="work-type">Climate Change · Animation</span>
-        </div>
-
-        <div class="work-item" onclick="openVisual(4)">
-          <div class="work-img-wrap"><img src="images/visuals/01_warming_stripes_galicia.png" alt="Warming Stripes Galicia"></div>
-          <p class="work-caption">Warming Stripes · Galicia (Spain)</p>
-          <span class="work-type">Climate Change · Static chart</span>
-        </div>
-
-      </div>
-      <button class="work-btn work-prev" onclick="scroll_work(-1)">←</button>
-      <button class="work-btn work-next" onclick="scroll_work(1)">→</button>
+    <div class="vis-tabs">
+      <button class="vis-tab active" data-set="py" onclick="switchSet('py')">Python figures</button>
+      <button class="vis-tab" data-set="dw" onclick="switchSet('dw')">Datawrapper</button>
     </div>
+
+    <!-- Python figures: masonry gallery (auto-generated from pyVisuals) -->
+    <div class="vis-masonry" id="vis-py"></div>
+
+    <!-- Datawrapper: masonry of chart previews (auto-generated from dwVisuals) -->
+    <div class="vis-masonry" id="vis-dw" style="display:none"></div>
   </div>
 </section>
 
@@ -606,19 +576,21 @@ body { margin: 0; padding: 0; background: #fafafa; }
 .cv-paper-link:hover { transform: translateY(-4px); }
 .cv-monitor-link:hover { transform: translateY(-4px); }
 
-.work-carousel-wrap { position: relative; margin-top: 1rem; }
-.work-carousel { display: flex; gap: 2rem; overflow-x: auto; scroll-behavior: smooth; scrollbar-width: none; -ms-overflow-style: none; padding: 0 0 1.5rem 0; }
-.work-carousel::-webkit-scrollbar { display: none; }
-.work-item { flex: 0 0 auto; width: clamp(240px, 26vw, 360px); cursor: pointer; display: flex; flex-direction: column; gap: 0.5rem; }
-.work-img-wrap { width: 100%; aspect-ratio: 4/3; overflow: hidden; background: #e8e8e8; }
-.work-img-wrap img, .work-img-wrap video { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
-.work-item:hover .work-img-wrap img, .work-item:hover .work-img-wrap video { transform: scale(1.04); }
-.work-caption { font-family: 'DM Sans', sans-serif; font-size: 0.88rem; color: #0A102B; margin: 0; font-weight: 500; }
-.work-type { font-family: monospace; font-size: 0.66rem; color: #182547; letter-spacing: 0.08em; text-transform: uppercase; }
-.work-btn { position: absolute; top: 38%; transform: translateY(-50%); background: white; border: 1px solid rgba(24,37,71,0.2); color: #0A102B; width: 42px; height: 42px; border-radius: 50%; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s, border-color 0.2s, color 0.2s; z-index: 10; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
-.work-btn:hover { background: #182547; color: white; border-color: #182547; }
-.work-prev { left: -22px; }
-.work-next { right: -22px; }
+/* ── Visuals: tabs ── */
+.vis-tabs { display: flex; gap: 0.6rem; margin: 0 0 2.2rem 0; flex-wrap: wrap; }
+.vis-tab { font-family: 'DM Sans', sans-serif; font-size: 0.78rem; letter-spacing: 0.03em; color: #182547; background: transparent; border: 1px solid rgba(24,37,71,0.2); padding: 0.5rem 1.2rem; border-radius: 100px; cursor: pointer; transition: background 0.2s, color 0.2s, border-color 0.2s; }
+.vis-tab:hover { border-color: #182547; }
+.vis-tab.active { background: #182547; color: #fff; border-color: #182547; }
+
+/* ── Visuals: masonry gallery (shared by Python + Datawrapper) ── */
+.vis-masonry { columns: 280px; column-gap: 1.1rem; }
+.vis-item { break-inside: avoid; -webkit-column-break-inside: avoid; margin: 0 0 1.1rem 0; position: relative; display: block; width: 100%; cursor: pointer; overflow: hidden; border-radius: 6px; background: #e8e8e8; box-shadow: 0 1px 6px rgba(24,37,71,0.07); }
+.vis-item img, .vis-item video { width: 100%; display: block; transition: transform 0.5s ease; }
+.vis-item:hover img, .vis-item:hover video { transform: scale(1.04); }
+.vis-ov { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; gap: 0.15rem; padding: 0.9rem; background: linear-gradient(to top, rgba(10,16,43,0.78) 0%, rgba(10,16,43,0) 55%); opacity: 0; transition: opacity 0.25s ease; }
+.vis-item:hover .vis-ov { opacity: 1; }
+.vis-ov-title { font-family: 'DM Sans', sans-serif; font-size: 0.82rem; font-weight: 500; color: #fff; line-height: 1.3; }
+.vis-ov-tag { font-family: monospace; font-size: 0.62rem; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.72); }
 
 /* ── Lightbox ── */
 .vl-overlay { display: none; position: fixed; inset: 0; background: rgba(10,16,43,0.75); z-index: 9000; align-items: center; justify-content: center; padding: 2rem; backdrop-filter: blur(4px); }
@@ -631,6 +603,8 @@ body { margin: 0; padding: 0; background: #fafafa; }
 .vl-close:hover { color: #0A102B; }
 .vl-left { background: #f0f0f0; display: flex; align-items: center; justify-content: center; overflow: hidden; max-height: 88vh; }
 .vl-left img, .vl-left video { width: 100%; height: 100%; object-fit: contain; display: block; }
+.vl-left.is-embed { background: #fff; align-items: flex-start; justify-content: stretch; overflow-y: auto; padding: 1.2rem; }
+.vl-left.is-embed iframe { width: 100% !important; border: none; }
 .vl-right { padding: 3rem 2.8rem; overflow-y: auto; display: flex; flex-direction: column; border-left: 1px solid rgba(24,37,71,0.08); }
 .vl-label { font-family: monospace; font-size: 0.65rem; color: #182547; letter-spacing: 0.14em; text-transform: uppercase; margin: 0 0 0.6rem 0; }
 .vl-title { font-family: 'Playfair Display', serif; font-size: clamp(1.3rem, 2.5vw, 1.9rem); font-weight: 700; color: #0A102B; margin: 0 0 1.8rem 0; line-height: 1.15; }
@@ -699,19 +673,37 @@ body { margin: 0; padding: 0; background: #fafafa; }
   .sp-about-top { flex-direction: column; gap: 2rem; }
   .sp-contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .sp-section { padding: 4rem 1.5rem; }
-  .work-prev { left: -10px; }
-  .work-next { right: -10px; }
-  .work-item { width: 78vw; }
   .vl-panel { grid-template-columns: 1fr; max-height: 95vh; }
   .vl-left { max-height: 45vh; }
+  .vl-left.is-embed { max-height: 55vh; }
   .vl-right { padding: 1.5rem; }
 }
 </style>
 
 <script>
-const visuals = [
+/* ===========================================================
+   VISUALS DATA
+   To add a new figure in the future, just append an object
+   to the matching array below — the galleries build themselves.
+
+   Python figure fields:
+     type: 'img' | 'video'   (required)
+     img: path to file        (required)
+     tag: short label shown on hover (e.g. 'Water · Static map')
+     label, title, descs[], callout, linkedin, meta[], download, downloadName
+
+   Datawrapper fields:
+     type: 'datawrapper'      (required)
+     id: chart id, e.g. '5EOoe'   (required)
+     height: initial px before auto-resize (optional, default 459)
+     thumb: preview image (optional, defaults to .../<id>/full.png)
+     tag, label, title, alt, descs[], callout, linkedin, meta[]
+   =========================================================== */
+
+const pyVisuals = [
   {
-    img: 'images/visuals/plot1.jpg', type: 'img',
+    type: 'img', img: 'images/visuals/plot1.jpg',
+    tag: 'Meteorology · Static map',
     label: '// meteorology · static map',
     title: 'Weather Station Coverage across Spain',
     descs: [
@@ -728,7 +720,8 @@ const visuals = [
     download: 'images/visuals/plot1.jpg', downloadName: 'weather-stations-spain.jpg'
   },
   {
-    img: 'images/visuals/plot2.png', type: 'img',
+    type: 'img', img: 'images/visuals/plot2.png',
+    tag: 'Water · Static map',
     label: '// water · static map',
     title: 'Spanish River Basin Districts',
     descs: [
@@ -744,7 +737,8 @@ const visuals = [
     download: 'images/visuals/plot2.png', downloadName: 'spanish-river-basins.png'
   },
   {
-    img: 'images/visuals/rivers_europe_minimal.png', type: 'img',
+    type: 'img', img: 'images/visuals/rivers_europe_minimal.png',
+    tag: 'Water · Static map',
     label: '// water · static map',
     title: 'European Rivers',
     descs: [
@@ -759,7 +753,8 @@ const visuals = [
     download: 'images/visuals/rivers_europe_minimal.png', downloadName: 'rivers-europe.png'
   },
   {
-    img: 'images/visuals/co2-seaice.mp4', type: 'video',
+    type: 'video', img: 'images/visuals/co2-seaice.mp4',
+    tag: 'Climate Change · Animation',
     label: '// climate change · animation',
     title: 'CO₂ and Sea Ice Extent',
     descs: [
@@ -776,7 +771,8 @@ const visuals = [
     download: 'images/visuals/co2-seaice.mp4', downloadName: 'co2-seaice.mp4'
   },
   {
-    img: 'images/visuals/01_warming_stripes_galicia.png', type: 'img',
+    type: 'img', img: 'images/visuals/01_warming_stripes_galicia.png',
+    tag: 'Climate Change · Static chart',
     label: '// climate change · static chart',
     title: 'Warming Stripes · Galicia (Spain)',
     descs: [
@@ -791,39 +787,176 @@ const visuals = [
       { label: 'Data', value: 'Copernicus C3S — ERA5-Land' }
     ],
     download: 'images/visuals/01_warming_stripes_galicia.png', downloadName: 'warming-stripes-galicia.png'
+  },
+  {
+    type: 'img', img: 'images/visuals/04_spaghetti_current_year.png',
+    tag: 'Climate Change · Static chart',
+    label: '// climate change · static chart',
+    title: 'Maximum Temperature in Galicia over the Years',
+    descs: [
+      'A spaghetti plot of daily maximum temperature in Galicia. Each faint grey thread is one full year of daily values; the black line is the 1991–2020 daily average, and the red line traces 2026 so far.',
+      'Drawing every year as a thread turns a single variable — daily maximum temperature — into the whole climate envelope at once, and shows at a glance where the current year sits within it.'
+    ],
+    callout: null,
+    linkedin: null,
+    meta: [
+      { label: 'Tools', value: 'Python · Matplotlib' },
+      { label: 'Context', value: 'Climate monitoring · Personal project' },
+      { label: 'Data', value: 'Copernicus C3S — ERA5-Land' }
+    ],
+    download: 'images/visuals/04_spaghetti_current_year.png', downloadName: 'galicia-max-temp-spaghetti.png'
+  },
+  {
+    type: 'img', img: 'images/visuals/2nov2025-lines.png',
+    tag: 'Meteorology · Static map',
+    label: '// meteorology · static map',
+    title: 'Atlantic Winds Sweeping Towards Iberia',
+    descs: [
+      'Wind streamlines over the North Atlantic on Halloween night, with the colour scale showing wind speed in m s⁻¹. The flow lines trace how Atlantic winds curl around low-pressure systems and funnel towards the Iberian Peninsula.',
+      'Streamlines turn a vector field — wind speed and direction at every grid point — into something you can read at a glance: where the air is coming from, where it converges, and where it accelerates.'
+    ],
+    callout: null,
+    linkedin: null,
+    meta: [
+      { label: 'Tools', value: 'Python · Matplotlib · Cartopy' },
+      { label: 'Context', value: '#30DayMapChallenge 2025 · Day 2: Lines' },
+      { label: 'Data', value: 'WRF 36 km · MeteoGalicia THREDDS' }
+    ],
+    download: 'images/visuals/2nov2025-lines.png', downloadName: 'atlantic-winds-iberia.png'
+  },
+  {
+    type: 'img', img: 'images/visuals/EEA_extreme_losses_static.png',
+    tag: 'Climate Change · Static map',
+    label: '// climate change · static map',
+    title: 'Economic Losses from Weather Extremes in Europe',
+    descs: [
+      'Choropleth map of total economic losses from weather- and climate-related extremes across European countries, with each country labelled and shaded by its cumulative loss in million euros. Germany, France, Italy and Spain stand out as the largest absolute losses.',
+      'The map makes the scale visible: weather extremes are not only a human and ecological cost but a major economic one, concentrated in the largest economies but felt everywhere.'
+    ],
+    callout: null,
+    linkedin: null,
+    meta: [
+      { label: 'Tools', value: 'Python · GeoPandas · Matplotlib' },
+      { label: 'Context', value: 'Climate risk · Personal project' },
+      { label: 'Data', value: 'European Environment Agency (EEA)' }
+    ],
+    download: 'images/visuals/EEA_extreme_losses_static.png', downloadName: 'eea-extreme-losses-europe.png'
+  },
+  {
+    type: 'img', img: 'images/visuals/CO2_vs_SeaIce_timeline.png',
+    tag: 'Climate Change · Static chart',
+    label: '// climate change · static chart',
+    title: 'CO₂ vs Arctic Sea Ice · 1980–2020',
+    descs: [
+      'Two rows of bubbles tracking opposing trends by decade. The top row is atmospheric CO₂ concentration at Mauna Loa, rising from 339 ppm in 1980 to 414 ppm in 2020. The bottom row is Arctic sea ice extent, shrinking from 12.6 to 10.4 million km² over the same period.',
+      'Reading the two rows together makes the relationship hard to miss: as the red circles darken and the blue circles fade, one signal climbs while the other retreats.'
+    ],
+    callout: 'These are not independent signals — they are two sides of the same story.',
+    linkedin: null,
+    meta: [
+      { label: 'Tools', value: 'Python · Matplotlib' },
+      { label: 'Context', value: '#30DayMapChallenge 2025' },
+      { label: 'Data', value: 'NOAA GML (CO₂) · Copernicus Marine (sea ice)' }
+    ],
+    download: 'images/visuals/CO2_vs_SeaIce_timeline.png', downloadName: 'co2-vs-seaice-timeline.png'
   }
 ];
 
-let currentVisualIndex = 0;
+const dwVisuals = [
+  {
+    type: 'datawrapper', id: '5EOoe', height: 459,
+    tag: 'Climate Change · Interactive',
+    label: '// climate change · interactive',
+    title: 'Galicia just lived through its warmest decade on record',
+    alt: "Column chart of Galicia's annual mean temperature anomalies from 1950 to 2025, relative to the 1961–1990 average. Bars are mostly below zero before 1990 and increasingly above it afterward, peaking at a record +1.9°C in 2022.",
+    descs: [
+      "Interactive column chart of Galicia's annual mean temperature anomalies from 1950 to 2025, relative to the 1961–1990 average. Bars sit mostly below zero before 1990 and increasingly above it afterwards, peaking at a record +1.9°C in 2022. Hover over any bar to read the exact value for that year."
+    ],
+    callout: null,
+    linkedin: null,
+    meta: [
+      { label: 'Tool', value: 'Datawrapper' },
+      { label: 'Data', value: 'Edit me in dwVisuals' }
+    ]
+  }
+];
 
-function stepVisual(dir) {
-  currentVisualIndex = (currentVisualIndex + dir + visuals.length) % visuals.length;
-  openVisual(currentVisualIndex);
+/* ===========================================================
+   GALLERY + LIGHTBOX LOGIC  (no need to edit below)
+   =========================================================== */
+
+let currentSet = 'py';
+let currentVisualIndex = 0;
+function activeArr() { return currentSet === 'py' ? pyVisuals : dwVisuals; }
+
+function switchSet(set) {
+  currentSet = set;
+  document.querySelectorAll('.vis-tab').forEach(t => t.classList.toggle('active', t.dataset.set === set));
+  document.getElementById('vis-py').style.display = (set === 'py') ? '' : 'none';
+  document.getElementById('vis-dw').style.display = (set === 'dw') ? '' : 'none';
 }
 
-function openVisual(i) {
+function renderGalleries() {
+  const py = document.getElementById('vis-py');
+  py.innerHTML = pyVisuals.map((v, i) => {
+    const media = v.type === 'video'
+      ? `<video autoplay loop muted playsinline><source src="${v.img}" type="video/mp4"/></video>`
+      : `<img src="${v.img}" alt="${v.title}" loading="lazy"/>`;
+    return `<div class="vis-item" onclick="openVisual('py',${i})">${media}<div class="vis-ov"><span class="vis-ov-title">${v.title}</span><span class="vis-ov-tag">${v.tag || ''}</span></div></div>`;
+  }).join('');
+
+  const dw = document.getElementById('vis-dw');
+  dw.innerHTML = dwVisuals.map((v, i) => {
+    const thumb = v.thumb || `https://datawrapper.dwcdn.net/${v.id}/full.png`;
+    return `<div class="vis-item" onclick="openVisual('dw',${i})"><img src="${thumb}" alt="${v.alt || v.title}" loading="lazy"/><div class="vis-ov"><span class="vis-ov-title">${v.title}</span><span class="vis-ov-tag">${v.tag || ''}</span></div></div>`;
+  }).join('');
+}
+
+function stepVisual(dir) {
+  const arr = activeArr();
+  currentVisualIndex = (currentVisualIndex + dir + arr.length) % arr.length;
+  openVisual(currentSet, currentVisualIndex);
+}
+
+function openVisual(set, i) {
+  currentSet = set;
   currentVisualIndex = i;
-  const v = visuals[i];
+  const v = activeArr()[i];
   const left = document.getElementById('vl-left');
   const right = document.getElementById('vl-right');
 
-  left.innerHTML = v.type === 'video'
-    ? `<video autoplay loop muted playsinline style="width:100%;height:100%;object-fit:contain;display:block;"><source src="${v.img}" type="video/mp4"/></video>`
-    : `<img src="${v.img}" alt="${v.title}" style="width:100%;height:100%;object-fit:contain;display:block;"/>`;
+  left.classList.toggle('is-embed', v.type === 'datawrapper');
+  if (v.type === 'video') {
+    left.innerHTML = `<video autoplay loop muted playsinline style="width:100%;height:100%;object-fit:contain;display:block;"><source src="${v.img}" type="video/mp4"/></video>`;
+  } else if (v.type === 'datawrapper') {
+    const cid = 'datawrapper-vis-' + v.id;
+    left.innerHTML = `<div id="${cid}" style="min-height:${v.height || 459}px;width:100%"></div>`;
+    const s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.defer = true;
+    s.charset = 'utf-8';
+    s.src = `https://datawrapper.dwcdn.net/${v.id}/embed.js`;
+    s.setAttribute('data-target', '#' + cid);
+    left.appendChild(s);
+  } else {
+    left.innerHTML = `<img src="${v.img}" alt="${v.title}" style="width:100%;height:100%;object-fit:contain;display:block;"/>`;
+  }
 
   const calloutHTML = v.callout ? `<div class="vl-callout"><p>${v.callout}</p></div>` : '';
   const linkedinHTML = v.linkedin ? `<a href="${v.linkedin}" target="_blank" class="vl-link"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/></svg> Original LinkedIn post</a>` : '';
-  const metaHTML = v.meta.map(m => `<div class="vl-meta-row"><strong>${m.label}</strong><span>${m.value}</span></div>`).join('');
+  const metaHTML = (v.meta || []).map(m => `<div class="vl-meta-row"><strong>${m.label}</strong><span>${m.value}</span></div>`).join('');
+  const downloadHTML = v.download ? `<a href="${v.download}" download="${v.downloadName || ''}" class="vl-download">↓ Download</a>` : '';
 
   right.innerHTML = `
     <p class="vl-label">${v.label}</p>
     <h2 class="vl-title">${v.title}</h2>
-    ${v.descs.map(d => `<p class="vl-desc">${d}</p>`).join('')}
+    ${(v.descs || []).map(d => `<p class="vl-desc">${d}</p>`).join('')}
     ${calloutHTML}
     ${linkedinHTML}
     <div class="vl-meta">${metaHTML}</div>
-    <a href="${v.download}" download="${v.downloadName}" class="vl-download">↓ Download</a>
+    ${downloadHTML}
   `;
+  right.scrollTop = 0;
 
   document.getElementById('vl-overlay').classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -832,22 +965,21 @@ function openVisual(i) {
 function closeVisual(e) {
   if (e && e.target !== document.getElementById('vl-overlay')) return;
   document.getElementById('vl-overlay').classList.remove('open');
+  document.getElementById('vl-left').innerHTML = '';
   document.body.style.overflow = '';
 }
 
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') { document.getElementById('vl-overlay').classList.remove('open'); document.body.style.overflow = ''; }
+  const open = document.getElementById('vl-overlay').classList.contains('open');
+  if (e.key === 'Escape') { closeVisual(); return; }
+  if (!open) return;
   if (e.key === 'ArrowRight') stepVisual(1);
   if (e.key === 'ArrowLeft') stepVisual(-1);
 });
 
-function scroll_work(dir) {
-  const track = document.getElementById('work-track');
-  const item = track.querySelector('.work-item');
-  track.scrollBy({ left: dir * (item.offsetWidth + 32), behavior: 'smooth' });
-}
-
 window.addEventListener('load', function() {
+  renderGalleries();
+
   const pDiv = document.getElementById('particles-js');
   if (pDiv) {
     pDiv.style.pointerEvents = 'none';

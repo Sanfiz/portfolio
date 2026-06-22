@@ -11,15 +11,16 @@ include-after-body: footer.html
 
 <div class="ms-page">
 
-  <a href="../index.html#projects" class="back-link">← Back to Main Page</a>
+  <a href="../index.html#milestones" class="back-link">← Back to milestones</a>
 
   <div class="ms-hero">
-    <span class="ms-tag">Paleoclimate · Research</span>
-    <h1 class="ms-title">Palaeoclimate Research at University College London</h1>
+    <span class="ms-tag">EU Project · Coastal Climate Adaptation</span>
+    <h1 class="ms-title">MarRISK — Coastal Risk Assessment for Northwest Iberia</h1>
     <div class="ms-meta-row">
-      <span>🏛️ University College London</span>
-      <span>📍 London, United Kingdom</span>
-      <span>📅 2018</span>
+      <span>🌊 MeteoGalicia</span>
+      <span>📍 Santiago de Compostela, Spain</span>
+      <span>📅 2018 – 2021</span>
+      <span>💶 Budget: €3.5M</span>
     </div>
   </div>
 
@@ -27,26 +28,30 @@ include-after-body: footer.html
 
     <div class="ms-main">
 
-      <p class="ms-desc">After completing my PhD, I joined one of the world's leading research universities to work at the intersection of palaeoclimate science and computational modelling. UCL's Department of Geography is home to some of the most respected palaeoclimate researchers in Europe, and joining that environment — even for a year — was a formative experience.</p>
+      <p class="ms-desc">MarRISK was a European Interreg POCTEP project focused on climate change adaptation for the coastlines of Galicia and Northern Portugal. The goal was to evaluate the most significant coastal risks under future climate scenarios — flooding, extreme events, toxic algal blooms, coastal erosion — and improve the resilience of traditional economic sectors and emerging industries such as marine renewable energy.</p>
 
-      <p class="ms-desc">The project focused on stalagmites as climate proxies. Stalagmites grow inside caves over thousands of years, and their chemical composition records past changes in temperature, rainfall, and atmospheric circulation. By simulating how stalagmites grow, we can reconstruct what the climate looked like long before instrumental records began.</p>
+      <p class="ms-desc">I joined the project as a climate scientist at MeteoGalicia, the regional meteorological service of Galicia, where I worked on the oceanographic and climate components of the project. My work involved processing large volumes of model output and observational buoy data to characterise the current and projected coastal climate of the region.</p>
 
       <div class="ms-callout">
-        <p>Working at UCL meant attending interdisciplinary project meetings in London and Reading, collaborating with geologists, isotope chemists and climate modellers, and learning to communicate across very different scientific cultures. It also pushed my Python skills in a new direction — building physical simulations from scratch rather than postprocessing model output.</p>
+        <p>MarRISK brought together researchers, public authorities and stakeholders from both sides of the Spanish-Portuguese border. That cross-border collaboration — coordinating with partners in Vigo, Porto and Lisbon, communicating results to non-scientific audiences — was as valuable as the technical work itself.</p>
       </div>
 
       <h2 class="ms-subtitle">What I did</h2>
       <ul class="ms-list">
-        <li>Developed a Python model to simulate stalagmite growth behaviour from first principles</li>
-        <li>Built a comprehensive database of speleothem proxy climate records</li>
-        <li>Wrote scientific reports and contributed to project documentation</li>
-        <li>Attended research meetings in London and Reading with interdisciplinary teams</li>
+        <li>Processed outputs from oceanographic models and observational buoy networks along the Galician and Northern Portuguese coast</li>
+        <li>Conducted regional climate analysis to characterise present and projected future conditions</li>
+        <li>Prepared scientific and technical reports on coastal climate risks</li>
+        <li>Contributed to stakeholder communication and project dissemination materials</li>
       </ul>
 
       <h2 class="ms-subtitle">Tools & methods</h2>
       <div class="ms-chips">
-        <span>Python</span><span>Proxy climate data</span><span>Stalagmite modelling</span>
-        <span>Palaeoclimate reconstruction</span><span>Speleothem analysis</span>
+        <span>Python</span><span>Oceanographic modelling</span><span>Buoy data processing</span>
+        <span>Regional climate analysis</span><span>FEDER / Interreg POCTEP</span>
+      </div>
+
+      <div class="ms-links">
+        <a href="https://marrisk.eu" target="_blank" class="ms-btn">Project website →</a>
       </div>
 
     </div>
@@ -54,18 +59,18 @@ include-after-body: footer.html
     <div class="ms-side">
       <div class="ms-info-box">
         <p class="ms-info-label">Institution</p>
-        <p class="ms-info-val">University College London (UCL)</p>
-        <p class="ms-info-label">Department</p>
-        <p class="ms-info-val">Geography — Palaeoclimate Group</p>
-        <p class="ms-info-label">Location</p>
-        <p class="ms-info-val">London, United Kingdom</p>
-        <p class="ms-info-label">Year</p>
-        <p class="ms-info-val">2018</p>
-        <p class="ms-info-label">Role</p>
-        <p class="ms-info-val">Palaeoclimate Researcher (Assistant)</p>
+        <p class="ms-info-val">MeteoGalicia (Xunta de Galicia)</p>
+        <p class="ms-info-label">Project</p>
+        <p class="ms-info-val">MarRISK — Interreg V-A España-Portugal (POCTEP) 2014–2020</p>
+        <p class="ms-info-label">Funding</p>
+        <p class="ms-info-val">FEDER — European Regional Development Fund</p>
+        <p class="ms-info-label">Budget</p>
+        <p class="ms-info-val">€3,525,236</p>
+        <p class="ms-info-label">Duration</p>
+        <p class="ms-info-val">2017–2021 (3 years at MeteoGalicia)</p>
         <p class="ms-info-label">Focus</p>
         <div class="ms-chips-sm">
-          <span>Palaeoclimate</span><span>Proxy data</span><span>Stalagmites</span><span>Modelling</span>
+          <span>Coastal climate</span><span>Risk assessment</span><span>Climate adaptation</span><span>Oceanography</span>
         </div>
       </div>
     </div>
@@ -96,6 +101,9 @@ h1,h2,h3 { font-family: 'Playfair Display', serif !important; color: #0A102B !im
 .ms-list li { margin-bottom: 0.4rem; }
 .ms-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; }
 .ms-chips span { font-family: monospace; font-size: 0.7rem; background: rgba(24,37,71,0.07); color: #182547; padding: 0.3rem 0.7rem; border-radius: 3px; letter-spacing: 0.04em; }
+.ms-links { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 0.5rem; }
+.ms-btn { font-family: 'DM Sans', sans-serif; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; text-decoration: none; background: #182547; color: white !important; padding: 0.6rem 1.3rem; border-radius: 4px; display: inline-block; transition: opacity 0.2s; }
+.ms-btn:hover { opacity: 0.85; }
 .ms-info-box { background: white; border: 1px solid rgba(24,37,71,0.1); border-radius: 8px; padding: 1.5rem; position: sticky; top: 2rem; }
 .ms-info-label { font-family: monospace; font-size: 0.65rem; color: #182547; letter-spacing: 0.1em; text-transform: uppercase; margin: 1rem 0 0.2rem 0; }
 .ms-info-label:first-child { margin-top: 0; }
